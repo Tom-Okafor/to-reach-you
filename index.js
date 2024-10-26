@@ -16,6 +16,8 @@ APP.get("/", (request, response) => {
 });
 
 APP.listen(PORT, err => {
-    if (err) throw err;
+    if (err) {
+        throw err;
+    }
     console.log(`Server is currently listening at http://localhost:${PORT}`);
 });
