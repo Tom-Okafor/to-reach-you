@@ -1,9 +1,17 @@
 :root {
     --color1: #000000;
-    --color2: #14213d;
-    --color3: #fca311;
+    --color2: #193778;
+    --color3: #ff9e00;
     --color4: #e5e5e5;
     --color5: #ffffff;
+    --color6: #38c0b0;
+    --color7: #007870;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -13,4 +21,38 @@ body {
 h1 {
     color: var(--color2);
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color5);
+    background: var(--color3);
+    padding: 7px 15px;
+    border-radius: 5px;
+    outline: 1.5px solid var(--color2);
+    outline-offset: 3px;
+    box-shadow: 0 0 3px 0.5px var(--color2);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px #777;
+    visibility: hidden;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+header > img {
+    height: 60px;
+}
+.line {
+    wwidth: 100vw;
+    height: 2px;
+    background: linear-gradient(
+       
+        var(--color2),
+        var(--color6),
+        var(--color2),
+        var(--color7)
+    );
 }
