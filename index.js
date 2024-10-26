@@ -7,12 +7,12 @@ import path from "path";
 const APP = express();
 const PORT = 1510;
 
-APP.set("views", path.join(__dirname, "views/"));
+APP.set("views", "views/");
 APP.set("view engine", "ejs");
-APP.use(express.static(path.join(__dirname, "public/")));
+APP.use(express.static("public/"));
 
 APP.get("/", (request, response) => {
-  response.render("index.ejs")
+    response.render("index.ejs");
 });
 
 APP.listen(PORT, err => {
