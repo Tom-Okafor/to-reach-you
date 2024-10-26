@@ -1,8 +1,16 @@
+::root {
+    --color1: #000000;
+    --color2: #14213d;
+    --color3: #fca311;
+    --color4: #e5e5e5;
+    --color5: #ffffff;
+}
+
 body {
-    background-color: #d0d0d0;
+    background-color: var(--color5);
 }
 
 h1 {
-    color: #8b0000;
-    text-align: centr;
+    color: var(--color2);
+    text-align: center;
 }
