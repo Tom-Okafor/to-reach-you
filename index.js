@@ -11,6 +11,10 @@ APP.set("views", path.join(__dirname, "views/"));
 APP.set("view engine", "ejs");
 APP.use(express.static(path.join(__dirname, "public/")));
 
+APP.get("/", (request, response) => {
+  response.render("index.ejs")
+});
+
 APP.listen(PORT, err => {
     if (err) throw err;
     console.log(`Server is currently listening at http://localhost:${PORT}`);
