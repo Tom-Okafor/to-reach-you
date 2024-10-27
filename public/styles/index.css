@@ -39,32 +39,31 @@ a {
 }
 
 header {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
 }
 .logoBase {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 .logoBase > img {
     height: 65px;
+    margin-left: 3vw;
 }
 .logoBase > p {
     font-size: 0.8rem;
     font-family: Sans-Serif;
-    background: linear-gradient(
-        240deg,
-        var(--color2),
-        var(--color6),
-        var(--color3)
-    );
+    background: linear-gradient(240deg, var(--color6) 40%, var(--color3) 55%);
     background-clip: text;
     color: transparent;
     font-weight: 700;
     word-spacing: 2px;
     letter-spacing: 1px;
+    background-size: 80%;
+    padding-bottom: 1rem;
+    padding-right: 5vw;
 }
 .line {
     wwidth: 100vw;
@@ -76,4 +75,31 @@ header {
         var(--color2),
         var(--color6)
     );
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.brandName > p {
+    font-size: 0.8rem;
+    color: var(--color2);
+    line-height: 1.4rem;
+    word-spacing: 2px;
+}
+
+.brandName > h1 {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 10px 5px;
+}
+.brandName span {
+    display: block;
+}
+
+.brandName {
+    padding-inline: 7vw;
 }
