@@ -40,19 +40,40 @@ a {
 
 header {
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
 }
-
-header > img {
-    height: 60px;
+.logoBase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoBase > img {
+    height: 65px;
+}
+.logoBase > p {
+    font-size: 0.8rem;
+    font-family: Sans-Serif;
+    background: linear-gradient(
+        240deg,
+        var(--color2),
+        var(--color6),
+        var(--color3)
+    );
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    word-spacing: 2px;
+    letter-spacing: 1px;
 }
 .line {
     wwidth: 100vw;
-    height: 2px;
+    height: 3px;
     background: linear-gradient(
-       
+        to right,
         var(--color2),
         var(--color6),
         var(--color2),
-        var(--color7)
+        var(--color6)
     );
 }
