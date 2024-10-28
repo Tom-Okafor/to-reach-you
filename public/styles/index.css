@@ -162,8 +162,8 @@ header {
     line-height: 1.3rem;
     word-spacing: 3px;
     letter-spacing: 1px;
-}
     max-width: 40ch;
+}
 
 .features article {
     margin-bottom: 2.5rem;
