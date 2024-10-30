@@ -23,21 +23,6 @@ h1 {
     text-align: center;
 }
 
-a {
-    text-decoration: none;
-    color: var(--color5);
-    background: var(--color3);
-    padding: 7px 15px;
-    border-radius: 5px;
-    outline: 1.5px solid var(--color2);
-    outline-offset: 3px;
-    box-shadow: 0 0 3px 0.5px var(--color2);
-    letter-spacing: 1.5px;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px #777;
-    visibility: hidden;
-}
-
 header {
     margin-bottom: 5rem;
     display: flex;
@@ -82,7 +67,8 @@ header {
     flex-direction: column;
     align-items: center;
 }
-.brandName > p {
+.brandName > p,
+.call p {
     font-size: 0.8rem;
     color: var(--color2);
     line-height: 1.4rem;
@@ -107,7 +93,8 @@ header {
 .brandName h1 > span {
     display: block;
 }
-.brandName span {
+.brandName span,
+.call span {
     width: fit-content;
     background: linear-gradient(
         60deg,
@@ -156,15 +143,16 @@ header {
     text-align: center;
     margin-bottom: 0.5rem;
     padding-top: 30px;
+    padding-inline: 20px;
 }
 
 .features p {
     font-size: 0.85rem;
     line-height: 1.3rem;
-    word-spacing: 3px;
-    letter-spacing: 1px;
+    word-spacing: 4px;
+    letter-spacing: 1.5px;
     max-width: 35ch;
-    padding-left: 20px;
+    padding-inline: 15px;
     padding-bottom: 30px;
 }
 
@@ -193,6 +181,54 @@ header {
     width: 100px;
 }
 
-.features hr {
-    height: 10px;
+.call {
+    padding-inline: 7vw;
+    background: var(--color4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.call span {
+    font-family: Serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+}
+.call img {
+    width: 95vw;
+    position: relative;
+    top: -25px;
+}
+
+.call a,
+.intro a {
+    text-decoration: none;
+    color: var(--color5);
+    background: var(--color3);
+    padding: 7px 15px;
+    border-radius: 5px;
+    outline: 1.5px solid var(--color2);
+    outline-offset: 3px;
+    box-shadow: 0 0 3px 0.5px var(--color2);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px #777;
+    width: fit-content;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.call p {
+    padding-inline: 20px;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.call > div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
