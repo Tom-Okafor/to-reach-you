@@ -76,7 +76,9 @@ header {
     letter-spacing: 1px;
     margin-top: 1rem;
 }
-
+.brandName p {
+    margin-bottom: 1.2rem;
+}
 .brandName > h1 {
     text-align: left;
     display: flex;
@@ -198,13 +200,12 @@ header {
     letter-spacing: 3px;
 }
 .call img {
-    width: 95vw;
+    width: 90vw;
     position: relative;
     top: -25px;
 }
 
-.call a,
-.intro a {
+.aTag {
     text-decoration: none;
     color: var(--color5);
     background: var(--color3);
@@ -219,6 +220,18 @@ header {
     width: fit-content;
     margin-bottom: 50px;
     margin-left: 20px;
+    transition: all 300ms ease;
+}
+
+.intro a {
+    margin-left: 5px;
+}
+
+.aTag:hover {
+    background: var(--color2);
+    outline: 1.5px solid var(--color3);
+    box-shadow: 0 0 4px 1px var(--color6);
+    box-shadow: 0 0 4px 1px var(--color6);
 }
 
 .call p {
