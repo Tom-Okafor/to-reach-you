@@ -256,6 +256,14 @@ h2 {
     height: 2px;
 }
 
+footer {
+    background: var(--color4);
+    color: var(--color2);
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
 @media only screen and (min-width: 600px) {
     .logoBase > img {
         height: 80px;
@@ -363,5 +371,91 @@ h2 {
         width: 60vw;
         position: relative;
         top: -30px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .logoBase > img {
+        height: 90px;
+    }
+    .logoBase > p {
+        font-size: 1.1rem;
+        padding-bottom: 1.3rem;
+    }
+    .brandName > h1 {
+        font-size: 4rem;
+        border-radius: 15px;
+        padding-left: 2rem;
+    }
+
+    .brandName {
+        padding-inline: 7vw;
+    }
+
+    .brandName > p {
+        width: 40ch;
+        line-height: 1.8rem;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .intro {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .introImage > img {
+        width: 45vw;
+    }
+    .introImage > img:nth-child(2) {
+        width: 85%;
+        left: 80px;
+        top: 30px;
+        filter: blur(2px);
+    }
+    .hLine {
+        height: 5px;
+        margin: 2rem 0;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .features article img {
+        width: 100px;
+    }
+    .features article {
+        border-radius: 15px;
+        width: 27vw;
+        padding-inline: 0.8rem;
+    }
+
+    .features article:nth-of-type(odd) {
+        border: 2px solid var(--color3);
+    }
+    .featuresBlock article:nth-child(even) {
+        border: 2px solid var(--color2);
+    }
+
+    .featuresBlock article:last-child {
+        margin-right: auto;
+    }
+    .featuresBlock article:nth-child(7) {
+        margin-left: auto;
+        margin-right: 5rem;
+    }
+
+    .call {
+        margin-top: 2rem;
+    }
+
+    .call img {
+        width: 40vw;
+        position: relative;
+        top: -30px;
+    }
+
+    .call .aTag {
+        margin-bottom: 3rem;
     }
 }

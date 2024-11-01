@@ -1,0 +1,19 @@
+:root {
+    --color1: #000000;
+    --color2: #193778;
+    --color3: #ff9e00;
+    --color4: #e5e5e5;
+    --color5: #ffffff;
+    --color6: #38c0b0;
+    --color7: #007870;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url("/images/features/background.png");
+    color: var(--color3);
+}
