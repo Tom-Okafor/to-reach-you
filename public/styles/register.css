@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 body {
-    background: url("/images/features/background.png"), #00000011;
+    background: url("/images/features/background.png"), #0000001a;
     height: 100vh;
     background-size: cover;
     display: flex;
@@ -70,4 +70,25 @@ a {
 .band span {
     font-weight: 900;
     letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 700px) {
+    .band {
+        height: 400px;
+        width: 400px;
+        gap: 20px;
+    }
+
+    .band a {
+        width: 60%;
+        padding: 15px 0;
+        border-radius: 7px;
+        box-shadow: 1.5px 1.5px 3px 1px #555;
+        font-size: 1.15rem;
+    }
+
+    .band p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
 }
