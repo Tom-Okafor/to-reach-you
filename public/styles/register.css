@@ -14,6 +14,60 @@
     box-sizing: border-box;
 }
 body {
-    background: url("/images/features/background.png");
-    color: var(--color3);
+    background: url("/images/features/background.png"), #00000011;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+}
+
+.band {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.band a {
+    color: var(--color1);
+    border: 1px solid var(--color3);
+    width: 60%;
+    padding: 10px 0;
+    border-radius: 5px;
+    display: grid;
+    place-content: center;
+    color: var(--color1);
+    box-shadow: 1px 1px 3px 0.5px #555;
+    transition: all 50ms ease-out;
+}
+
+.bamd a:hover,
+.band a:focus {
+    box-shadow: 2px 3px 5px 1px #555;
+}
+
+.band p {
+    margin-top: 2rem;
+    font-family: serif;
+    font-weight: 500;
+    color: #555;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.3rem;
+    word-spacing: 3px;
+}
+
+.band strong {
+}
+.band span {
+    font-weight: 900;
+    letter-spacing: 2px;
 }

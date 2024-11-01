@@ -92,7 +92,8 @@ header {
 }
 .brandName span,
 .call span,
-h2 {
+h2,
+.band span {
     width: fit-content;
     background: linear-gradient(
         60deg,
