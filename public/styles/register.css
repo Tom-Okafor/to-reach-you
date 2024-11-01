@@ -15,12 +15,13 @@
 }
 body {
     background: url("/images/features/background.png"), #0000001a;
-    height: 100vh;
+    height: 90vh;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-repeat: no-repeat;
 }
 a {
     text-decoration: none;
@@ -34,6 +35,7 @@ a {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-top: auto;
 }
 
 .band a {
@@ -70,6 +72,11 @@ a {
 .band span {
     font-weight: 900;
     letter-spacing: 2px;
+}
+
+footer {
+    margin-top: auto;
+    font-size: 0.9rem;
 }
 
 @media only screen and (min-width: 700px) {
