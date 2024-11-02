@@ -79,6 +79,58 @@ footer {
     font-size: 0.9rem;
 }
 
+form,
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form {
+    gap: 0.5rem;
+}
+fieldset {
+    gap: 5px;
+    border: 0;
+}
+
+input {
+    width: clamp(200px, 60vw, 600px);
+    padding: 0.8rem 15px;
+    border: 2px solid var(--color3);
+    border-radius: 5px;
+    box-shadow: 1px 3px 4px #555;
+    -webkit-box-shadow: 1px 3px 4px #555;
+    -moz-box-shadow: 1px 3px 4px #555;
+    background-color: transparent;
+}
+form > input:last-of-type {
+    margin-top: 0.5rem;
+    background-color: var(--color6);
+    border: none;
+    box-shadow: 2px 3px 5px #555;
+    -webkit-box-shadow: 2px 3px 5px #555;
+    -moz-box-shadow: 2px 3px 5px #555;
+    font-family: serif;
+    font-weight: bold;
+    color: var(--color5);
+    transition: all 300ms ease;
+}
+input:focus {
+    outline: 2px solid var(--color6);
+    outline-offset: 2px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+form > input:last-of-type:hover,
+form > input:last-of-type:focus {
+    background: var(--color3);
+}
+form input:not(form > input:last-of-type) {
+    color: var(--color7);
+}
+
 @media only screen and (min-width: 700px) {
     .band {
         height: 400px;

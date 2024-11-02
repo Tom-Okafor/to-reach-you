@@ -1,15 +1,36 @@
 
-
-
 <%- include("../partials/header.ejs")%>
+<link rel="stylesheet" href="/styles/register.css">
   <title>Sign Up</title>
   
+          <form action="/register/signUpDone" method="post">
+            <fieldset>
+                <input placeholder="your name" name="name" id="name" /><span
+                    class="name"
+                ></span>
+            </fieldset>
+
+            <fieldset>
+                <input placeholder="your email" name="email" id="email" /><span
+                    class="email"
+                ></span>
+            </fieldset>
+
+            <fieldset>
+                <input
+                    placeholder="your password"
+                    name="password"
+                    id="password"
+                /><span class="password"></span>
+            </fieldset>
+
+            <input placeholder="confirm password" id="passwordCheck" />
+            <input type="submit" value="Sign Up" id="submit" />
+        </form>
+
   
-  <form action="/register/signUpDone" method="post">
-    <input placeholder="your name">
-    <input placeholder="your email">
-    <input placeholder="your password">
-    <input placeholder="confirm password">
-    <input type="submit" value="Sign Up">
-  </form>
-  
+  <%- include("../partials/footer.ejs")%>
+ 
+ 
+ <script src="/scripts/signUp.js"></script>
+      
