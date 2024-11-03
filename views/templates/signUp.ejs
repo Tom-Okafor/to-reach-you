@@ -2,16 +2,17 @@
 <%- include("../partials/header.ejs")%>
 <link rel="stylesheet" href="/styles/register.css">
   <title>Sign Up</title>
+  <body>
   
           <form action="/register/signUpDone" method="post">
             <fieldset>
-                <input placeholder="your name" name="name" id="name" /><span
+                <input placeholder="your name" name="name" id="name" required /><span
                     class="name"
                 ></span>
             </fieldset>
 
             <fieldset>
-                <input placeholder="your email" name="email" id="email" /><span
+                <input placeholder="your email" name="email" id="email" required="required" /><span
                     class="email"
                 ></span>
             </fieldset>
@@ -20,7 +21,7 @@
                 <input
                     placeholder="your password"
                     name="password"
-                    id="password"
+                    id="password" required
                 /><span class="password"></span>
             </fieldset>
 
@@ -34,3 +35,4 @@
  
  <script src="/scripts/signUp.js"></script>
       
+</body>

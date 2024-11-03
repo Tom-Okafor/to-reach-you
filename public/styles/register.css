@@ -15,7 +15,7 @@
 }
 body {
     background: url("/images/features/background.png"), #0000001a;
-    height: 90vh;
+    height: 94vh;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -87,6 +87,7 @@ fieldset {
 }
 form {
     gap: 0.5rem;
+    margin-top: auto;
 }
 fieldset {
     gap: 5px;
@@ -126,6 +127,7 @@ input:focus {
 form > input:last-of-type:hover,
 form > input:last-of-type:focus {
     background: var(--color3);
+    outline: none;
 }
 form input:not(form > input:last-of-type) {
     color: var(--color7);
