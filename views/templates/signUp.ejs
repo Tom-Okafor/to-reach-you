@@ -3,16 +3,24 @@
 <link rel="stylesheet" href="/styles/register.css">
   <title>Sign Up</title>
   <body>
-  
           <form action="/register/signUpDone" method="post">
             <fieldset>
-                <input placeholder="your name" name="name" id="name" required /><span
-                    class="name"
-                ></span>
+                <input
+                    placeholder="your firstname"
+                    name="firstname"
+                    id="firstname"
+                /><span class="firstname"></span>
+            </fieldset>
+            <fieldset>
+                <input
+                    placeholder="your lastname"
+                    name="lastname"
+                    id="lastname"
+                /><span class="lastname"></span>
             </fieldset>
 
             <fieldset>
-                <input placeholder="your email" name="email" id="email" required="required" /><span
+                <input placeholder="your email" name="email" id="email" /><span
                     class="email"
                 ></span>
             </fieldset>
@@ -21,13 +29,14 @@
                 <input
                     placeholder="your password"
                     name="password"
-                    id="password" required
+                    id="password"
                 /><span class="password"></span>
             </fieldset>
 
             <input placeholder="confirm password" id="passwordCheck" />
             <input type="submit" value="Sign Up" id="submit" />
         </form>
+
 
   
   <%- include("../partials/footer.ejs")%>
