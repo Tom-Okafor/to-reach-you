@@ -3,11 +3,16 @@
 
 <%- include("../partials/header.ejs")%>
   <title>Sign In</title>
-  
-  
-  <form action="/home" method="post">
-    <input placeholder="your name">
-    <input placeholder="your email">
+  <link rel="stylesheet" href="/styles/register.css">
+  <body>
+      <form action="/home" method="post">
+    <input placeholder="your email" id="email" name="email">
+    <input placeholder="your password" id="password" name="password">
     <input type="submit" value="Sign In">
   </form>
+  
+  </body>
+  
+  
+  <%- include("../partials/footer.ejs")%>
   
