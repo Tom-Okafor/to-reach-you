@@ -103,6 +103,7 @@ input {
     -webkit-box-shadow: 1px 3px 4px #555;
     -moz-box-shadow: 1px 3px 4px #555;
     background-color: transparent;
+    backdrop-filter: blur(5px);
 }
 form > input:last-of-type {
     margin-top: 0.5rem;
@@ -139,6 +140,13 @@ form span {
     font-weight: bold;
 }
 
+form p {
+    font-size: 0.8rem;
+    text-align: center;
+    max-width: 40ch;
+    margin-top: 1.5rem;
+}
+
 .error {
     color: red;
     margin-top: 0.5rem;
@@ -168,5 +176,18 @@ form span {
     .band p {
         font-size: 1.2rem;
         line-height: 1.8rem;
+    }
+
+    input {
+        padding: 1rem 20px;
+    }
+
+    form {
+        gap: 0.8rem;
+    }
+
+    form p {
+        max-width: 60ch;
+        font-size: 1.2rem;
     }
 }

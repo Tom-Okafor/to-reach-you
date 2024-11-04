@@ -20,7 +20,7 @@ ROUTER.get("/signUp", (request, response) => {
 ROUTER.post("/signUpDone", (request, response) => {
       console.log(request.body);
       
-    response.render("templates/register.ejs");
+    response.render("templates/signIn.ejs");
 });
 
 export { ROUTER };
