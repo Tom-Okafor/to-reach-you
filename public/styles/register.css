@@ -133,6 +133,14 @@ form input:not(form > input:last-of-type) {
     color: var(--color7);
 }
 
+form span {
+    color: red;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
 @media only screen and (min-width: 700px) {
     .band {
         height: 400px;
