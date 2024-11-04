@@ -147,6 +147,47 @@ form p {
     margin-top: 1.5rem;
 }
 
+.passwordBox {
+    width: clamp(200px, 60vw, 600px);
+    border: 2px solid var(--color3);
+    border-radius: 5px;
+    box-shadow: 1px 3px 4px #555;
+    -webkit-box-shadow: 1px 3px 4px #555;
+    -moz-box-shadow: 1px 3px 4px #555;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.passwordBox input {
+    width: 80%;
+    border: none;
+    box-shadow: none;
+}
+
+.passwordBox a {
+    font-size: 0.8rem;
+    padding-right: 5px;
+}
+
+.passwordBox a:hover,
+.passwordBox a:focus {
+    color: var(--color7);
+}
+
+.passwordBox input:focus {
+    outline: none;
+}
+
+.passwordBox:hover {
+    outline: 2px solid var(--color6);
+    outline-offset: 2px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
 .error {
     color: red;
     margin-top: 0.5rem;

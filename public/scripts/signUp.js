@@ -1,8 +1,5 @@
 (() => {
     // script for Sign Up Page
-    document.querySelectorAll("fieldset input").forEach(input => {
-        input.value = "";
-    });
 
     document.querySelector("form").addEventListener("submit", event => {
         if (!validateForm()) {
@@ -10,7 +7,6 @@
         }
     });
     function validateForm() {
-        /*const VALID_NAME = /^[A-Za-z]+(?:[-'\s][A-Za-z]+)*$/;*/
         const VALID_NAME = /^[a-zA-Z]+([\s'-]{1}[a-zA-Z]+)*$/;
         const VALID_EMAIL = /^[\w.]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
         const VALID_PASSWORD =
@@ -109,4 +105,30 @@
             span.className = span.classList[0];
         });
     }
+
+    function togglePasswordVisibility() {
+        let isPasswordVisible = false;
+        const TOGGLE_KEYS = document.querySelectorAll(".passwordBox a");
+        TOGGLE_KEYS.forEach(ToggleKey => {
+            ToggleKey.addEventListener("click", () => {
+                if (!isPasswordVisible) {
+                    ToggleKey.previousElementSibling.setAttribute(
+                        "type",
+                        "text"
+                    );
+                    ToggleKey.innerText = "hide";
+                    isPasswordVisible = true;
+                } else {
+                    ToggleKey.previousElementSibling.setAttribute(
+                        "type",
+                        "password"
+                    );
+                                        ToggleKey.innerText = 'show'
+                                        
+                    isPasswordVisible = false;
+                }
+            });
+        });
+    }
+    togglePasswordVisibility();
 })();
