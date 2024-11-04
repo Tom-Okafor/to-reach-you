@@ -1,5 +1,8 @@
 (() => {
     // script for Sign Up Page
+    document.querySelectorAll("fieldset input").forEach(input => {
+        input.value = "";
+    });
 
     document.querySelector("form").addEventListener("submit", event => {
         if (!validateForm()) {
@@ -8,7 +11,7 @@
     });
     function validateForm() {
         /*const VALID_NAME = /^[A-Za-z]+(?:[-'\s][A-Za-z]+)*$/;*/
-        const VALID_NAME = /^[a-zA-Z]+([\s'-]{1}[a-zA-Z])*$/;
+        const VALID_NAME = /^[a-zA-Z]+([\s'-]{1}[a-zA-Z]+)*$/;
         const VALID_EMAIL = /^[\w.]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
         const VALID_PASSWORD =
             /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@=!?#&*"'√π$%`]).{8,}$/;
@@ -17,6 +20,8 @@
         const EMAIL = document.getElementById("email");
         const PASSWORD = document.getElementById("password");
         const PASSWORD_CHECK = document.getElementById("passwordCheck");
+
+        clearErrorMessage();
 
         if (
             !checkValue(
@@ -50,24 +55,58 @@
 
         if (PASSWORD.value !== PASSWORD_CHECK.value) {
             const CLASSNAME = PASSWORD_CHECK.getAttribute("id");
-            showFormError(CLASSNAME, "Your passwords do not match");
+            showFormError(CLASSNAME, "Your passwords do not match", "error");
+            PASSWORD_CHECK.focus();
+            PASSWORD_CHECK.addEventListener("input", () => {
+                if (PASSWORD.value !== PASSWORD_CHECK.value) {
+                    showFormError(
+                        CLASSNAME,
+                        "Your passwords do not match",
+                        "error"
+                    );
+                } else {
+                    showFormError(CLASSNAME, "Match!🎊🎊", "correct");
+                }
+            });
             return false;
         }
-        return true
+        return true;
     }
 
-    function showFormError(className, message) {
+    function showFormError(className, message, formatClass) {
         document.querySelector(`.${className}`).innerText = message;
+        document.querySelector(
+            `.${className}`
+        ).className = `${className} ${formatClass}`;
     }
 
     function checkValue(input, regularExp, message) {
-        if (!regularExp.test(input.value)) {
+        if (!regularExp.test(input.value.trim())) {
             input.focus();
             const CLASSNAME = input.getAttribute("id");
-            showFormError(CLASSNAME, message);
+            showFormError(CLASSNAME, message, "error");
+            input.addEventListener("input", () => {
+                clearErrorMessage();
+                if (regularExp.test(input.value.trim())) {
+                    showFormError(CLASSNAME, "Correct!", "correct");
+                } else {
+                    showFormError(
+                        CLASSNAME,
+                        `Please, input a valid ${CLASSNAME}`,
+                        "error"
+                    );
+                }
+            });
             return false;
         } else {
             return true;
         }
+    }
+
+    function clearErrorMessage() {
+        document.querySelectorAll("fieldset span").forEach(span => {
+            span.innerText = "";
+            span.className = span.classList[0];
+        });
     }
 })();

@@ -134,9 +134,18 @@ form input:not(form > input:last-of-type) {
 }
 
 form span {
-    color: red;
     font-size: 0.8rem;
     text-align: center;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+.correct {
+    color: green;
     margin-top: 0.5rem;
     margin-bottom: 1.2rem;
 }
