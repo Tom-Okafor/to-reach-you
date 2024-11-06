@@ -6,13 +6,24 @@
   <link rel="stylesheet" href="/styles/register.css">
   <body>
       <form action="/home" method="post">
-    <input placeholder="your email" id="email" name="email">
-    <input placeholder="your password" id="password" name="password">
+    <input placeholder="your email" id="email" name="email">              <div class="passwordBox">
+                  <input
+                    placeholder="your password"
+                    name="password"
+                    id="password" type="password"
+                />
+                <a>show</a>
+       </div>
+
     <input type="submit" value="Sign In">
   </form>
   
+  
+    <%- include("../partials/footer.ejs")%>
+    
+     <script src="/scripts/passwordVisibility.js"></script>
+     
   </body>
   
   
-  <%- include("../partials/footer.ejs")%>
   
