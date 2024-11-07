@@ -2,6 +2,7 @@ import { Router } from "express";
 import express from "express";
 
 const ROUTER = Router();
+let signUpDetails;
 
 ROUTER.use(express.urlencoded({ extended: true }));
 
@@ -18,9 +19,9 @@ ROUTER.get("/signUp", (request, response) => {
 });
 
 ROUTER.post("/signUpDone", (request, response) => {
-      console.log(request.body);
-      
     response.render("templates/signIn.ejs");
+    signUpDetails = request.body;
 });
 
 export { ROUTER };
+export { signUpDetails };

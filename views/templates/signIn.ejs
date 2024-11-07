@@ -4,6 +4,7 @@
 <%- include("../partials/header.ejs")%>
   <title>Sign In</title>
   <link rel="stylesheet" href="/styles/register.css">
+  
   <body>
       <form action="/home" method="post">
     <input placeholder="your email" id="email" name="email">              <div class="passwordBox">
@@ -16,6 +17,9 @@
        </div>
 
     <input type="submit" value="Sign In">
+    
+                <p>If you don't have an account, please <a href="/register/signUp">SIGN UP</a></p>
+                
   </form>
   
   
