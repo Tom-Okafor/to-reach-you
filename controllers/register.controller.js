@@ -19,8 +19,8 @@ ROUTER.get("/signUp", (request, response) => {
 });
 
 ROUTER.post("/signUpDone", (request, response) => {
-    response.render("templates/signIn.ejs");
     signUpDetails = request.body;
+    response.render("templates/signIn.ejs", { forURL: signUpDetails });
 });
 
 export { ROUTER };

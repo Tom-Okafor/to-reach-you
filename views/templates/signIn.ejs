@@ -6,7 +6,11 @@
   <link rel="stylesheet" href="/styles/register.css">
   
   <body>
-      <form action="/home" method="post">
+      <form 
+      <% if (locals.forURL) { %>
+      action="/user-<%=forURL.firstname%><%=forURL.lastname%>-digit009"
+      <% } %>
+       method="post">
         
         <% if (locals.errorMessage) { %>
        <p class="error">

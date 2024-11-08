@@ -18,7 +18,7 @@ APP.get("/", (request, response) => {
     response.render("index.ejs");
 });
 APP.use("/register", registerRouter);
-APP.use("/home", homePageRouter);
+APP.use(/\/(user-)[a-zA-Z]+(-)[a-zA-Z0-9]+/, homePageRouter);
 APP.listen(PORT, err => {
     if (err) {
         throw err;
