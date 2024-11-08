@@ -7,6 +7,14 @@
   
   <body>
       <form action="/home" method="post">
+        
+        <% if (locals.errorMessage) { %>
+       <p class="error">
+       <%=errorMessage%>
+       </p>
+       
+       <% } %>
+        
     <input placeholder="your email" id="email" name="email">              <div class="passwordBox">
                   <input
                     placeholder="your password"
