@@ -1,0 +1,36 @@
+:root {
+    --color1: #000000;
+    --color2: #193778;
+    --color3: #ff9e00;
+    --color4: #e5e5e5;
+    --color5: #ffffff;
+    --color6: #38c0b0;
+    --color7: #007870;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+}
+
+.parent {
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--color2);
+    display: grid;
+    grid-template-rows: 10px 1fr 10px;
+    grid-template-columns: 5px 1fr 5px;
+    gap: 1.5px;
+}
+
+.parent > div {
+    background-color: var(--color5);
+}
+
+footer {
+    visibility: hidden;
+}

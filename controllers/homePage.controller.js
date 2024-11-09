@@ -6,7 +6,7 @@ const ROUTER = Router();
 ROUTER.use(bodyParser.urlencoded({ extended: true }));
 ROUTER.post("/", (request, response) => {
     const SIGN_IN_INPUT = request.body;
-    if (!signUpDetails ||signUpDetails.email !== SIGN_IN_INPUT.email) {
+    if (!signUpDetails || signUpDetails.email !== SIGN_IN_INPUT.email) {
         response.render("templates/signIn.ejs", {
             errorMessage: "The email you inputed has not been registered"
         });
@@ -15,8 +15,13 @@ ROUTER.post("/", (request, response) => {
             errorMessage: "Incorrect Password"
         });
     } else {
-            response.send("THIS IS THE HOME PAGE. YAY!!!");
+        response.render("templates/homePage.ejs");
     }
 });
 
+/*ROUTER.get("/", (request, response) => {
+    console.log(request);
+    response.render("templates/homePage.ejs")
+});
+*/
 export { ROUTER };
