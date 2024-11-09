@@ -3,7 +3,8 @@ import express from "express";
 
 const ROUTER = Router();
 let signUpDetails;
-
+    let userId = Math.floor(Math.random() * 1000000 + 10000);
+    
 ROUTER.use(express.urlencoded({ extended: true }));
 
 ROUTER.get("/", (request, response) => {
@@ -20,7 +21,19 @@ ROUTER.get("/signUp", (request, response) => {
 
 ROUTER.post("/signUpDone", (request, response) => {
     signUpDetails = request.body;
-    response.render("templates/signIn.ejs", { forURL: signUpDetails });
+    /*let userId = "";
+    for (const eachLetter of signUpDetails.firstname) {
+        userId += Math.floor(Math.random() * 10);
+    }
+    for (let i = signUpDetails.lastname.length; i > 0; i++) {
+        userId += signUpDetails.lastname[i - 1];
+    }
+    console.log(userId);*/
+
+    response.render("templates/signIn.ejs", {
+        forURL: signUpDetails,
+        userId
+    });
 });
 
 export { ROUTER };

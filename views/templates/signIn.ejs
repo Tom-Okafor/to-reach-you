@@ -8,10 +8,14 @@
   <body>
       <form 
       <% if (locals.forURL) { %>
-      action="/user-<%=forURL.firstname%><%=forURL.lastname%>-digit009"
-      <% } %>
-       method="post">
+      action="/user-<%=forURL.firstname.trim()%><%=forURL.lastname.trim()%>-<%=userId%>"
+        method="post">
+             
+      <% } else { %>
         
+        action="/register/signUp" method="get">
+        
+       <% } %>
         <% if (locals.errorMessage) { %>
        <p class="error">
        <%=errorMessage%>

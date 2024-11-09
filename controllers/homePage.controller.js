@@ -6,7 +6,7 @@ const ROUTER = Router();
 ROUTER.use(bodyParser.urlencoded({ extended: true }));
 ROUTER.post("/", (request, response) => {
     const SIGN_IN_INPUT = request.body;
-    if (signUpDetails.email !== SIGN_IN_INPUT.email) {
+    if (!signUpDetails ||signUpDetails.email !== SIGN_IN_INPUT.email) {
         response.render("templates/signIn.ejs", {
             errorMessage: "The email you inputed has not been registered"
         });
