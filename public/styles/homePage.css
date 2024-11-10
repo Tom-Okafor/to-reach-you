@@ -20,7 +20,7 @@ body {
 .parent {
     width: 100vw;
     min-height: 100vh;
-    background: var(--color2);
+    background: var(--color3);
     display: grid;
     grid-template-rows: 10px 1fr 10px;
     grid-template-columns: 5px 1fr 5px;
@@ -28,7 +28,8 @@ body {
 }
 
 .parent > div {
-    background-color: var(--color5);
+    background-color: var(--color4);
+    mix-blend-mode: screen;
 }
 
 footer {
