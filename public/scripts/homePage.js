@@ -35,37 +35,28 @@
         const BALL = document.querySelector(".ball");
         const CONTAINER = document.querySelector(".main");
         CONTAINER.addEventListener("touchstart", event => {
-            const LEFT_TOUCH = event.touches[0].clientX;
-            const LEFT_POSITION = LEFT_TOUCH - CONTAINER.offsetLeft;
-            const TOP_TOUCH = event.touches[0].clientY;
-            const TOP_POSITION = TOP_TOUCH - CONTAINER.offsetTop;
-            const BALL_WIDTH = BALL.offsetWidth;
-            const BALL_HEIGHT = BALL.offsetHeight;
-            BALL.style.transform = `translate(${
-                LEFT_POSITION - BALL_WIDTH / 2
-            }px, ${TOP_POSITION - BALL_HEIGHT / 2}px)`;
-            if (event.touches[0].target.tagName === "FOOTER") {
-                document.querySelector("footer").style.color = "var(--color3)";
-            } else {
-                document.querySelector("footer").style.color = "var(--color2)";
-            }
+           handleMovement(event.touches[0])
         });
         CONTAINER.addEventListener("mousemove", event => {
-            const LEFT_TOUCH = event.touches[0].clientX;
+            handleMovement(event);
+        });
+
+        function handleMovement(event) {
+            const LEFT_TOUCH = event.clientX;
             const LEFT_POSITION = LEFT_TOUCH - CONTAINER.offsetLeft;
-            const TOP_TOUCH = event.touches[0].clientY;
+            const TOP_TOUCH = event.clientY;
             const TOP_POSITION = TOP_TOUCH - CONTAINER.offsetTop;
             const BALL_WIDTH = BALL.offsetWidth;
             const BALL_HEIGHT = BALL.offsetHeight;
             BALL.style.transform = `translate(${
                 LEFT_POSITION - BALL_WIDTH / 2
             }px, ${TOP_POSITION - BALL_HEIGHT / 2}px)`;
-            if (event.touches[0].target.tagName === "FOOTER") {
+            if (event.target.tagName === "FOOTER") {
                 document.querySelector("footer").style.color = "var(--color3)";
             } else {
                 document.querySelector("footer").style.color = "var(--color2)";
             }
-        });
+        }
     }
     addBackgroundText();
     moveBall();
