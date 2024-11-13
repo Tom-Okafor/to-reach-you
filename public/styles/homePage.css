@@ -71,15 +71,92 @@ footer {
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background: var(--color2);
+    background: var(--color6);
     top: 0;
     left: 0;
-    outline: 1px solid var(--color3);
+    outline: 1px solid var(--color6);
     outline-offset: 2px;
     opacity: 0;
     transition: all 300ms ease-out;
+    mix-blend-mode: multiply;
+    pointer-events: none;
 }
 
 .main:hover .ball {
     opacity: 1;
+}
+
+.header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    z-index: 2;
+}
+
+.header a {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--color2);
+    cursor: pointer;
+}
+
+.header img {
+    height: 70px;
+    backdrop-filter: blur(0px);
+}
+
+.post {
+    margin-top: 1.5rem;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    z-index: 2;
+    gap: 20px;
+}
+.post > .svg {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: var(--color3);
+}
+
+.post > .makepost {
+    width: 80%;
+    height: 70px;
+    border: 2px solid var(--color2);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #00000077;
+    word-spacing: 2px;
+    line-height: 1rem;
+    letter-spacing: 1.5px;
+    backdrop-filter: blur(0px);
+    box-shadow: 1px 1px 3px #777;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 1.5rem;
+    z-index: 2;
+}
+
+h3 {
+    font-family: serif;
+    background: conic-gradient(
+        var(--color2) 25%,
+        var(--color6) 25% 65%,
+        var(--color3) 65%
+    );
+    width: fit-content;
+    margin-left: 20px;
+    padding: 5px 5px;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
 }

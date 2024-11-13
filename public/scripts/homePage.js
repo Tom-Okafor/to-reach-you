@@ -34,8 +34,8 @@
     function moveBall() {
         const BALL = document.querySelector(".ball");
         const CONTAINER = document.querySelector(".main");
-        CONTAINER.addEventListener("touchstart", event => {
-           handleMovement(event.touches[0])
+        CONTAINER.addEventListener("touchmove", event => {
+            handleMovement(event.touches[0]);
         });
         CONTAINER.addEventListener("mousemove", event => {
             handleMovement(event);
