@@ -89,6 +89,8 @@ footer {
     mix-blend-mode: difference;
     background: var(--color3);
     outline: 1px solid var(--color3);
+    width: 15px;
+    height: 15px;
 }
 
 .main:hover .ball {
@@ -169,4 +171,65 @@ h3 {
     color: transparent;
     -webkit-background-clip: text;
     font-size:;
+}
+
+.filter {
+    width: 60px;
+    height: 20px;
+    border-radius: 3px;
+    background: var(--color3);
+    outline: none;
+    border: none;
+    display: flex;
+    margin: 1rem 30px 1rem auto;
+}
+
+.categories {
+    width: 100%;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transition: all 500ms cubic-bezier(1, 0.6, 0, 1.05);
+}
+
+.categories button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 7px;
+    background: var(--color7);
+    color: var(--color5);
+    box-shadow: 0px 1px 3px 2px #555;
+    transition: all 300ms ease-out;
+}
+
+.categories button:nth-child(3n) {
+    background: linear-gradient(
+        150deg,
+        var(--color7) 80%,
+        var(--color6) 82% 84%,
+        var(--color3) 86% 88%,
+        var(--color7) 90%
+    );
+}
+.categories button:nth-child(6n + 1) {
+    background: linear-gradient(
+        330deg,
+        var(--color7) 80%,
+        var(--color6) 82% 84%,
+        var(--color3) 86% 88%,
+        var(--color7) 90%
+    );
+}
+
+.categories button:hover,
+.categories button:focus {
+    box-shadow: 0px 0px 3px 2px var(--color3);
+    scale: 1.01;
+}
+
+.articles {
 }
