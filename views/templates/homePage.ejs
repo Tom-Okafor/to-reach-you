@@ -1,24 +1,44 @@
 <%- include("../partials/header.ejs")%>
 <link rel="stylesheet" href="/styles/homePage.css">
-
- <body>        <div class="parent">
+    <body>
+        <div class="parent">
             <div></div>
             <div></div>
             <div></div>
             <div class="main">
-                <footer>
-                    ©️ notesTech
-                    <span> 2024 </span>
-                    🧡 🖤 🤍 💙
-                </footer>
+                <div class="bgText"></div>
+                <div class="ball"></div>
+                <div class="header">
+                    <a class="profile blend"></a>
+
+                    <img alt="logo" class="blend" src="/images/logo/logo.png" />
+
+                    <a class="notification s blend"></a>
+                </div>
+
+                <section class="post">
+                    <div class="svg blend"></div>
+                    <a class="makepost blend"
+                        >Have something to you'd love to share? Share it now!</a
+                    >
+                </section>
+
+                <section class="content">
+                    <h3 class="blend">Top Posts For You!</h3>
+                    <div class="articles">
+                        <article></article>
+                    </div>
+                </section>
+      
+      <%- include("../partials/footer.ejs")%>
+
             </div>
             <div></div>
             <div></div>
-          
         </div>
-
         <script src="/scripts/homePage.js"></script>
     </body>
+
 </html>
 
 

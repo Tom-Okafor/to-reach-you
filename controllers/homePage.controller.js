@@ -1,8 +1,10 @@
 import { Router } from "express";
 import { signUpDetails } from "./register.controller.js";
+import { userId } from "./register.controller.js";
 import bodyParser from "body-parser";
 const ROUTER = Router();
 
+let pageUrl;
 ROUTER.use(bodyParser.urlencoded({ extended: true }));
 ROUTER.post("/", (request, response) => {
     const SIGN_IN_INPUT = request.body;

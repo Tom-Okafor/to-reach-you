@@ -38,3 +38,4 @@ ROUTER.post("/signUpDone", (request, response) => {
 
 export { ROUTER };
 export { signUpDetails };
+export {userId}
