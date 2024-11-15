@@ -6,6 +6,7 @@
     --color5: #ffffff;
     --color6: #38c0b0;
     --color7: #007870;
+    --deviceHeight: 100vh;
 }
 
 * {
@@ -15,7 +16,7 @@
 }
 body {
     background: url("/images/features/background.png"), #0000001a;
-    height: 93vh;
+    height: var(--deviceHeight);
     background-size: cover;
     display: flex;
     flex-direction: column;

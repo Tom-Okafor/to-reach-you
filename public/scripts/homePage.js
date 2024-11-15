@@ -17,6 +17,10 @@
         }
     }
     createGrid();*/
+    
+    document
+        .querySelector("body")
+        .style.setProperty("--deviceHeight", window.innerHeight + "px");
 
     function addBackgroundText() {
         const BG_TEXT_HOLDER = document.querySelector(".bgText");

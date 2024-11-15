@@ -18,4 +18,7 @@
             }
         });
     });
+    document
+        .querySelector("body")
+        .style.setProperty("--deviceHeight", window.innerHeight + "px");
 })();
