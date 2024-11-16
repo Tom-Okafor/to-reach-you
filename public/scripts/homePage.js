@@ -13,7 +13,6 @@
         }
         BG_TEXT_HOLDER.innerText += bulkText;
         BG_TEXT_HOLDER.style.height = HEIGHT + "px";
-        console.log(BG_TEXT_HOLDER.style.height);
     }
 
     function moveBall() {
@@ -60,9 +59,7 @@
                 TOP_TOUCH + window.scrollY - CONTAINER.offsetTop;
             const BALL_WIDTH = BALL.offsetWidth;
             const BALL_HEIGHT = BALL.offsetHeight;
-            console.log(
-                `Left pos: ${LEFT_POSITION} and top pos: ${TOP_POSITION} and container off top: ${window.scrollY}`
-            );
+           
             let touchIndex = 0;
             DIMENSIONS.forEach((eachDimension, index) => {
                 if (
@@ -87,7 +84,6 @@
     (function toggleCategories() {
         const FILTER_BUTTON = document.querySelector(".filter");
         const CATEGORIES = document.querySelector(".categories");
-        CATEGORIES.style.display = "none";
         let IsCategoriesVisible = false;
         FILTER_BUTTON.addEventListener("click", () => {
             if (IsCategoriesVisible) {
@@ -95,9 +91,7 @@
 
                 IsCategoriesVisible = false;
             } else {
-                CATEGORIES.style.display = "flex";
-                addBackgroundText();
-                moveBall();
+                CATEGORIES.style.visibility = "visible";
 
                 requestAnimationFrame(show);
                 IsCategoriesVisible = true;
@@ -110,7 +104,7 @@
             function hide() {
                 CATEGORIES.style.opacity = 0;
                 setTimeout(function () {
-                    CATEGORIES.style.display = "none";
+                    CATEGORIES.style.visibility = "hidden";
                 }, 500);
             }
         });
