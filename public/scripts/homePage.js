@@ -56,9 +56,13 @@
             const LEFT_TOUCH = event.clientX;
             const LEFT_POSITION = LEFT_TOUCH - CONTAINER.offsetLeft;
             const TOP_TOUCH = event.clientY;
-            const TOP_POSITION = TOP_TOUCH - CONTAINER.offsetTop;
+            const TOP_POSITION =
+                TOP_TOUCH + window.scrollY - CONTAINER.offsetTop;
             const BALL_WIDTH = BALL.offsetWidth;
             const BALL_HEIGHT = BALL.offsetHeight;
+            console.log(
+                `Left pos: ${LEFT_POSITION} and top pos: ${TOP_POSITION} and container off top: ${window.scrollY}`
+            );
             let touchIndex = 0;
             DIMENSIONS.forEach((eachDimension, index) => {
                 if (
@@ -69,7 +73,6 @@
             });
             if (touchIndex) {
                 BALL.classList.add("ball-blend");
-                console.log("touching");
                 touchIndex = 0;
             } else {
                 BALL.className = "ball";
@@ -93,8 +96,9 @@
                 IsCategoriesVisible = false;
             } else {
                 CATEGORIES.style.display = "flex";
-                                moveBall();
-                                
+                addBackgroundText();
+                moveBall();
+
                 requestAnimationFrame(show);
                 IsCategoriesVisible = true;
             }
