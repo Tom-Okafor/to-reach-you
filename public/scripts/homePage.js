@@ -31,6 +31,7 @@
                     element.getBoundingClientRect().y + element.offsetHeight
             });
         });
+        console.log(DIMENSIONS)
         function isMouseOnBlendElement(
             mousePositionX,
             mousePositionY,
@@ -44,22 +45,18 @@
             );
         }
 
-        CONTAINER.addEventListener("touchmove", event => {
-            handleMovement(event.touches[0]);
-        });
-        CONTAINER.addEventListener("mousemove", event => {
+        CONTAINER.addEventListener("pointermove", event => {
             handleMovement(event);
         });
 
         function handleMovement(event) {
-            const LEFT_TOUCH = event.clientX;
+            const LEFT_TOUCH = event.pageX;
             const LEFT_POSITION = LEFT_TOUCH - CONTAINER.offsetLeft;
-            const TOP_TOUCH = event.clientY;
-            const TOP_POSITION =
-                TOP_TOUCH + window.scrollY - CONTAINER.offsetTop;
+            const TOP_TOUCH = event.pageY;
+            const TOP_POSITION = TOP_TOUCH - CONTAINER.offsetTop;
             const BALL_WIDTH = BALL.offsetWidth;
             const BALL_HEIGHT = BALL.offsetHeight;
-           
+
             let touchIndex = 0;
             DIMENSIONS.forEach((eachDimension, index) => {
                 if (

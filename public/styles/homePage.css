@@ -54,6 +54,7 @@ footer {
     backdrop-filter: blur(1px);
     z-index: 2;
     color: var(--color2);
+    width: fit-content;
 }
 
 .bgText {
