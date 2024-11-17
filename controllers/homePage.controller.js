@@ -2,9 +2,17 @@ import { Router } from "express";
 import { signUpDetails } from "./register.controller.js";
 import { userId } from "./register.controller.js";
 import bodyParser from "body-parser";
+import { GET_DATA } from "../models/posts.model.js";
 const ROUTER = Router();
 
 let pageUrl;
+
+async function getData() {
+    const RESPONSE = await GET_DATA();
+    return RESPONSE;
+}
+const DATA = await getData();
+
 ROUTER.use(bodyParser.urlencoded({ extended: true }));
 ROUTER.post("/", (request, response) => {
     const SIGN_IN_INPUT = request.body;
@@ -18,11 +26,11 @@ ROUTER.post("/", (request, response) => {
             errorMessage: "Incorrect Password"
         });
     } else {
-        response.render("templates/homePage.ejs", { pageUrl });
+        response.render("templates/homePage.ejs", { DATA });
     }
 });
 
-ROUTER.get("/", (request, response) => {
-    response.render("templates/homePage.ejs")
+ROUTER.get("/", (request, response) => {        response.render("templates/homePage.ejs", { DATA });
+
 });
 export { ROUTER };
