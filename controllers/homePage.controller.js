@@ -22,9 +22,7 @@ ROUTER.post("/", (request, response) => {
     }
 });
 
-/*ROUTER.get("/", (request, response) => {
-    console.log(request);
+ROUTER.get("/", (request, response) => {
     response.render("templates/homePage.ejs")
 });
-*/
 export { ROUTER };
