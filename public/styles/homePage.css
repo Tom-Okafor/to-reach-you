@@ -266,23 +266,40 @@ h3 {
     display: flex;
     gap: 10px;
     padding: 5px 0;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .detailsBlock img {
     width: 50px;
     height: 50px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 .detailsBlock p {
-    font-size: 0.7rem;
-    margin-top: 5px;
+    font-size: 0.8rem;
+    margin-top: 7px;
     color: var(--color5);
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: fit-content;
+    padding: 7px;
+    border-radius: 5px;
+    background: linear-gradient(350deg, var(--color2) 40%, var(--color6) 45%);
+    background-size: 350% 350%;
+    background-position: left top;
+    animation: gradient 10s infinite ease alternate;
+}
+
+@keyframes gradient {
+    to {
+        background-position: right bottom;
+    }
 }
 
 .detailsBlock h4 {
-    font-size: .9rem;
+    font-size: 1.1rem;
     font-family: serif;
     color: var(--color4);
 }
