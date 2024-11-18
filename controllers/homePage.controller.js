@@ -14,13 +14,29 @@ async function getData() {
 const DATA = await getData();
 
 const SHUFFLE_INDEX = function () {
+    // create an empty array
     const SHUFFLE_ARR = [];
+    // number 9f blog posts categories
     const NUM_OF_KEYS = Object.keys(DATA).length;
+    //average number 9f content per category
     const NUM_OF_CONTENT = 5;
-    const KEYS_ARRAY = createIndexArray(5, NUM_OF_KEYS);
-    const VALUES_ARRAY = createIndexArray(4, NUM_OF_CONTENT);
+    //to display 20 posts we need 4 posts from 5 categories. hence KEYS_ITERATION_COUNT for random keys and VALUES_ITERATION_COUNT for 4 random contents
+    const KEYS_ITERATION_COUNT = 5,
+        VALUES_ITERATION_COUNT = 4;
+
+    //create an array of 5 random numbers between 0 and 7. there are 8 categories, max-indexed at 7
+    const KEYS_ARRAY = createIndexArray(KEYS_ITERATION_COUNT, NUM_OF_KEYS);
+    //create an array of 4 random numbers for the posts
+    const VALUES_ARRAY = createIndexArray(
+        VALUES_ITERATION_COUNT,
+        NUM_OF_CONTENT
+    );
+
+    //push both arrays into mother array
     SHUFFLE_ARR.push(KEYS_ARRAY);
     SHUFFLE_ARR.push(VALUES_ARRAY);
+
+    // create function that creates the array considering the number of items needed (iterations ) and the range of values available (range)
     function createIndexArray(iterations, range) {
         const RANDOM_ARRAY = [];
         for (let i = 0; i < iterations; i++) {
@@ -29,6 +45,8 @@ const SHUFFLE_INDEX = function () {
         }
         return RANDOM_ARRAY;
     }
+
+    //check to see if a random number has been added to the arra; since we want distinct values, create a new number if the original number is already in the array or push it into the array if the number hasn't been added yet
     function addIndexToArray(index, collection, range) {
         if (collection.indexOf(index) === -1) {
             collection.push(index);
@@ -38,12 +56,13 @@ const SHUFFLE_INDEX = function () {
         }
     }
 
+    //generate random number from 0 to range
     function generateRandomNum(range) {
         return Math.floor(Math.random() * range);
     }
     return SHUFFLE_ARR;
 };
-console.log(SHUFFLE_INDEX())
+console.log(SHUFFLE_INDEX());
 
 ROUTER.use(bodyParser.urlencoded({ extended: true }));
 ROUTER.post("/", (request, response) => {
@@ -58,13 +77,21 @@ ROUTER.post("/", (request, response) => {
             errorMessage: "Incorrect Password"
         });
     } else {
-        response.render("templates/homePage.ejs", { pageUrl, DATA });
+        response.render("templates/homePage.ejs", {
+            pageUrl,
+            DATA,
+            blogIndices: SHUFFLE_INDEX()
+        });
     }
 });
 
 ROUTER.get("/", (request, response) => {
     pageUrl = request.baseUrl;
+        response.render("templates/homePage.ejs", {
+            pageUrl,
+            DATA,
+            blogIndices: SHUFFLE_INDEX()
+        });
 
-    response.render("templates/homePage.ejs", { pageUrl, DATA });
 });
 export { ROUTER };
