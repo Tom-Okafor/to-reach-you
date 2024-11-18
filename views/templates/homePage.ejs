@@ -39,7 +39,11 @@
                         </button>
                     </div>
                     <div class="articles">
+                        <%  const HREF = function(id) {
+                  return (pageUrl + "/" + id)
+                          }   %>
                         <article class="blend">
+                      
                             <div class="bookmark"></div>
                             <div class="detailsBlock">
                                 <img
@@ -48,7 +52,7 @@
                                 />
                                 <div class="titleText">
                                     <h4><%=DATA[Object.keys(DATA)[3]][0].title%></h4>
-                                    <p><%=Object.keys(DATA)[3]%></p>
+                                    <p><%=Object.keys(DATA)[3]%> </p>
                                 </div>
                             </div>
                         </article>
