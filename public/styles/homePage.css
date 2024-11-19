@@ -286,8 +286,8 @@ h3 {
     width: fit-content;
     padding: 7px;
     border-radius: 5px;
-    background: linear-gradient(350deg, var(--color2) 40%, var(--color6) 45%);
-    background-size: 350% 350%;
+    background: linear-gradient(90deg, var(--color2), var(--color6));
+    background-size: 250% 250%;
     background-position: left top;
     animation: gradient 10s infinite ease alternate;
 }

@@ -42,6 +42,29 @@
                         <%  const HREF = function(id) {
                   return (pageUrl + "/" + id)
                           }   %>
+                          <% const CREATE_ARTICLES = function(startCount){
+                          const CONTENT_INDEX = blogIndices[1];
+                          const CONTENT_LOOP_RANGE = Math.ceil(CONTENT_INDEX.length / 2); 
+                          const CATEGORY_INDEX = blogIndices[0];
+                          let articleHTML = ""
+                          for (let i = 0; i < CATEGORY_INDEX.length; i++) {
+                            for (let t = startCount; t < CONTENT_LOOP_RANGE; t++) {
+                              articleHTML+= `<article class="blend">
+                      
+                            <div class="bookmark"></div>
+                            <div class="detailsBlock">
+                                <img
+                                    alt="profileImage"
+                                    src="images/images (21).jpeg"
+                                />
+                                <div class="titleText">
+                                    <h4>${DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]].title}</h4><p>${Object.keys(DATA)[CATEGORY_INDEX[i]]}</p></div></div></article>`
+                            }
+                          }
+                          return articleHTML
+                          } %>
+                         
+                          <%- CREATE_ARTICLES(0)%>
                         <article class="blend">
                       
                             <div class="bookmark"></div>
