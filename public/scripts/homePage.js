@@ -2,13 +2,12 @@
     document
         .querySelector("body")
         .style.setProperty("--deviceHeight", window.innerHeight + "px");
-
     function addBackgroundText() {
         const BG_TEXT_HOLDER = document.querySelector(".bgText");
         const TEXT = "to reach you ";
         let bulkText = "";
         const HEIGHT = document.querySelector(".main").clientHeight;
-        for (let i = 1000; i > 0; i--) {
+        for (let i = 10000; i > 0; i--) {
             bulkText += TEXT;
         }
         BG_TEXT_HOLDER.innerText += bulkText;
@@ -31,7 +30,7 @@
                     element.getBoundingClientRect().y + element.offsetHeight
             });
         });
-        console.log(DIMENSIONS)
+        console.log(DIMENSIONS);
         function isMouseOnBlendElement(
             mousePositionX,
             mousePositionY,
