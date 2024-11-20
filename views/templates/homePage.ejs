@@ -25,7 +25,7 @@
 
                 <section class="content">
                     <h3 class="blend">Top Posts For You!</h3>
-                    <button class="filter blend"></button>
+                   <!-- <button class="filter blend"></button>
                     <div class="categories">
                         <button class="blend">Lifestyle</button>
                         <button class="blend">Science</button>
@@ -37,18 +37,31 @@
                         <button class="blend">
                             Inspiration and Self-development
                         </button>
-                    </div>
+                    </div>-->
                     <div class="articles">
                         <%  const HREF = function(id) {
                   return (pageUrl + "/" + id)
                           }   %>
-                          <% const CREATE_ARTICLES = function(startCount){
+                        
+                         
+                          <%- createArticles(0)%>
+                    </div>
+                </section>
+                  <!--<section class="content-controls">
+                    <button class="blend">1</button>
+                    <button class="blend">2</button>
+                </section>-->
+      
+      <%- include("../partials/footer.ejs")%>
+  <% function createArticles(startCount){
                           const CONTENT_INDEX = blogIndices[1];
-                          const CONTENT_LOOP_RANGE = Math.ceil(CONTENT_INDEX.length / 2); 
+                          const CONTENT_LOOP_RANGE = CONTENT_INDEX.length
                           const CATEGORY_INDEX = blogIndices[0];
                           let articleHTML = ""
+                           for (let t = startCount; t < CONTENT_LOOP_RANGE; t++) {
+                           
                           for (let i = 0; i < CATEGORY_INDEX.length; i++) {
-                            for (let t = startCount; t < CONTENT_LOOP_RANGE; t++) {
+                           
                               articleHTML+= `<article class="blend">
                       
                             <div class="bookmark"></div>
@@ -61,43 +74,9 @@
                                     <h4>${DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]].title}</h4><p>${Object.keys(DATA)[CATEGORY_INDEX[i]]}</p></div></div></article>`
                             }
                           }
+                         
                           return articleHTML
                           } %>
-                         
-                          <%- CREATE_ARTICLES(0)%>
-                        <article class="blend">
-                      
-                            <div class="bookmark"></div>
-                            <div class="detailsBlock">
-                                <img
-                                    alt="profileImage"
-                                    src="images/images (21).jpeg"
-                                />
-                                <div class="titleText">
-                                    <h4><%=DATA[Object.keys(DATA)[3]][0].title%></h4>
-                                    <p><%=Object.keys(DATA)[3]%> </p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="blend">
-                            <div class="bookmark"></div>
-                            <div class="detailsBlock">
-                                <img
-                                    alt="profileImage"
-                                    src="images/images (21).jpeg"
-                                />
-                                <div class="titleText">
-                                    <h4>Blog Post Title</h4>
-                                    <p>01234 56789 01234...</p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-                
-      
-      <%- include("../partials/footer.ejs")%>
-
             </div>
             <div></div>
             <div></div>
