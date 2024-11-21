@@ -3,6 +3,8 @@ import { signUpDetails } from "./register.controller.js";
 import { userId } from "./register.controller.js";
 import bodyParser from "body-parser";
 import { GET_DATA } from "../models/posts.model.js";
+import fs from "fs";
+import path from "path";
 const ROUTER = Router();
 
 let pageUrl;
@@ -16,17 +18,17 @@ const DATA = await getData();
 const SHUFFLE_INDEX = function () {
     // create an empty array
     const SHUFFLE_ARR = [];
-    // number 9f blog posts categories
+    // number of blog posts categories
     const NUM_OF_KEYS = Object.keys(DATA).length;
-    //average number 9f content per category
-    const NUM_OF_CONTENT = 5;
-    //to display 20 posts we need 4 posts from 5 categories. hence KEYS_ITERATION_COUNT for random keys and VALUES_ITERATION_COUNT for 4 random contents
-    const KEYS_ITERATION_COUNT = 5,
-        VALUES_ITERATION_COUNT = 4;
+    //average number of content per category
+    const NUM_OF_CONTENT = 6;
+    //to display the posts we need the average number of posts from all categories. hence KEYS_ITERATION_COUNT for random keys and VALUES_ITERATION_COUNT for 6 random contents
+    const KEYS_ITERATION_COUNT = NUM_OF_KEYS,
+        VALUES_ITERATION_COUNT = NUM_OF_CONTENT;
 
-    //create an array of 5 random numbers between 0 and 7. there are 8 categories, max-indexed at 7
+    //create an array of 8 random numbers between 0 and 7. there are 8 categories, max-indexed at 7
     const KEYS_ARRAY = createIndexArray(KEYS_ITERATION_COUNT, NUM_OF_KEYS);
-    //create an array of 4 random numbers for the posts
+    //create an array of 6 random numbers for the posts
     const VALUES_ARRAY = createIndexArray(
         VALUES_ITERATION_COUNT,
         NUM_OF_CONTENT
@@ -62,7 +64,7 @@ const SHUFFLE_INDEX = function () {
     }
     return SHUFFLE_ARR;
 };
-
+console.log(SHUFFLE_INDEX());
 ROUTER.use(bodyParser.urlencoded({ extended: true }));
 ROUTER.post("/", (request, response) => {
     const SIGN_IN_INPUT = request.body;
@@ -86,11 +88,10 @@ ROUTER.post("/", (request, response) => {
 
 ROUTER.get("/", (request, response) => {
     pageUrl = request.baseUrl;
-        response.render("templates/homePage.ejs", {
-            pageUrl,
-            DATA,
-            blogIndices: SHUFFLE_INDEX()
-        });
-
+    response.render("templates/homePage.ejs", {
+        pageUrl,
+        DATA,
+        blogIndices: SHUFFLE_INDEX()
+    });
 });
 export { ROUTER };

@@ -25,7 +25,7 @@
 
                 <section class="content">
                     <h3 class="blend">Top Posts For You!</h3>
-                   <!-- <button class="filter blend"></button>
+                  <!--  <button class="filter blend"></button>
                     <div class="categories">
                         <button class="blend">Lifestyle</button>
                         <button class="blend">Science</button>
@@ -37,31 +37,31 @@
                         <button class="blend">
                             Inspiration and Self-development
                         </button>
-                    </div>-->
+                    </div> -->
                     <div class="articles">
                         <%  const HREF = function(id) {
                   return (pageUrl + "/" + id)
                           }   %>
                         
                          
-                          <%- createArticles(0)%>
+                          <%- createArticles()%>
                     </div>
                 </section>
-                  <!--<section class="content-controls">
+                 <!-- <section class="content-controls">
                     <button class="blend">1</button>
                     <button class="blend">2</button>
                 </section>-->
       
       <%- include("../partials/footer.ejs")%>
-  <% function createArticles(startCount){
+  <% function createArticles(){
                           const CONTENT_INDEX = blogIndices[1];
                           const CONTENT_LOOP_RANGE = CONTENT_INDEX.length
                           const CATEGORY_INDEX = blogIndices[0];
                           let articleHTML = ""
-                           for (let t = startCount; t < CONTENT_LOOP_RANGE; t++) {
+                           for (let t = 0; t < CONTENT_LOOP_RANGE; t++) {
                            
                           for (let i = 0; i < CATEGORY_INDEX.length; i++) {
-                           
+                          if (!DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]]) {continue} 
                               articleHTML+= `<article class="blend">
                       
                             <div class="bookmark"></div>

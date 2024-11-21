@@ -77,7 +77,7 @@
         }
     }
 
-    (function toggleCategories() {
+    /*  (function toggleCategories() {
         const FILTER_BUTTON = document.querySelector(".filter");
         const CATEGORIES = document.querySelector(".categories");
         let IsCategoriesVisible = false;
@@ -104,7 +104,7 @@
                 }, 500);
             }
         });
-    })();
+    })();*/
     addBackgroundText();
     moveBall();
 })();
