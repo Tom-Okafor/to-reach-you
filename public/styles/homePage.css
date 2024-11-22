@@ -61,6 +61,9 @@ footer {
     color: var(--color4);
     overflow: hidden;
     font-size: 0.4rem;
+    line-height: 0.4rem;
+    word-spacing: 0;
+    letter-spacing: 0px;
     font-family: Monospace;
     position: absolute;
     top: 0;
@@ -253,9 +256,7 @@ h3 {
     background-position: center;
     transition: all 800ms ease-out;
     box-shadow: 1px 2px 5px 1px var(--color2);
-}
-.articles article:not(:first-child) {
-    transform: rotate3d(0, 1, 0, 85deg);
+    transform: rotate3d(-1, 0, 0, 85deg);
     opacity: 0;
     filter: grayscale(1);
     animation-name: rotate;
@@ -263,15 +264,15 @@ h3 {
     animation-fill-mode: forwards;
     animation-timeline: view();
     animation-range-start: 200px;
-    animation-range-end: 450px;
+    animation-range-end: 550px;
 }
 
-.articles article:nth-child(odd):not(:first-child) {
+.articles article:nth-child(odd) {
     transform: rotate3d(0, -1, 0, 85deg);
 }
 .articles article:last-child {
     animation-range-start: 100px;
-    animation-range-end: 300px;
+    animation-range-end: 350px;
     margin-bottom: 2rem;
 }
 @keyframes rotate {
@@ -391,15 +392,24 @@ h3 {
     outline: 2px dotted var(--color7);
     outline-offset: 3px;
 }
-
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
+    .articles {
+        margin-top: 1.5rem;
+        border-top: 2px solid var(--color2);
+        padding: 0;
+        padding-top: 2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+@media only screen and (min-width: 1000px) {
     .header a:last-child {
         height: 600px;
         width: 20vw;
         position: fixed;
         right: 28px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 10%;
         border-radius: 5px;
         background: transparent;
         backdrop-filter: blur(10px);
@@ -410,6 +420,7 @@ h3 {
     .content {
         width: 75vw;
         padding-inline: 5vw;
+        margin-bottom: 3rem;
     }
 
     .parent {
@@ -424,8 +435,49 @@ h3 {
     }
 
     .ball-blend {
-      height: 25px;
-      width: 25px;
+        height: 25px;
+        width: 25px;
     }
-    
+
+    .post .makepost {
+        width: 60%;
+        height: 100px;
+        padding: 1rem;
+    }
+
+    .post {
+        margin-top: 0.6rem;
+    }
+
+    .post .svg {
+        height: 60px;
+        width: 60px;
+    }
+
+    .bgText {
+        font-size: 0.6rem;
+    }
+
+    .header {
+        height: 80px;
+    }
+
+    .header a {
+        height: 60px;
+        width: 60px;
+    }
+
+    .header img {
+        height: 80px;
+        margin-right: auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .content {
+        margin-top: 0.6rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
 }
