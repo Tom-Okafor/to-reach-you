@@ -77,6 +77,15 @@
         }
     }
 
+    (function recalibrateBlendPosition() {
+        let timeout;
+        window.addEventListener("resize", function () {
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                moveBall();
+            }, 500);
+        });
+    })();
     /*  (function toggleCategories() {
         const FILTER_BUTTON = document.querySelector(".filter");
         const CATEGORIES = document.querySelector(".categories");
