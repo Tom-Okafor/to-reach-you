@@ -256,7 +256,7 @@ h3 {
     background-position: center;
     transition: all 800ms ease-out;
     box-shadow: 1px 2px 5px 1px var(--color2);
-    transform: rotate3d(-1, 0, 0, 85deg);
+    transform: rotate3d(-1, 0, 0, 85deg) rotate3d(0, 0, -1, 5deg);
     opacity: 0;
     filter: grayscale(1);
     animation-name: rotate;
@@ -268,7 +268,7 @@ h3 {
 }
 
 .articles article:nth-child(odd) {
-    transform: rotate3d(0, -1, 0, 85deg);
+    transform: rotate3d(0, -1, 0, 85deg) rotate3d(0, 0, 1, 3deg);
 }
 .articles article:last-child {
     animation-range-start: 100px;
