@@ -64,7 +64,6 @@ const SHUFFLE_INDEX = function () {
     }
     return SHUFFLE_ARR;
 };
-console.log(SHUFFLE_INDEX());
 ROUTER.use(bodyParser.urlencoded({ extended: true }));
 ROUTER.post("/", (request, response) => {
     const SIGN_IN_INPUT = request.body;
