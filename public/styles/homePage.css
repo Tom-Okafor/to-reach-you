@@ -241,7 +241,9 @@ h3 {
     align-items: flex-start;
     gap: 2rem;
 }
-
+.article {
+    perspective: 800px;
+}
 .articles article {
     height: 280px;
     width: 300px;
@@ -255,8 +257,9 @@ h3 {
     background-size: 100% 100%;
     background-position: center;
     transition: all 800ms ease-out;
+    transform-style: preserve-3d;
     box-shadow: 1px 2px 5px 1px var(--color2);
-    transform: rotate3d(-1, 0, 0, 85deg) rotate3d(0, 0, -1, 5deg);
+    transform: rotate3d(-1, 0, 0, 85deg) rotate3d(0, 0, -1, 1deg);
     opacity: 0;
     filter: grayscale(1);
     animation-name: rotate;
@@ -267,10 +270,10 @@ h3 {
     animation-range-end: 550px;
 }
 
-.articles article:nth-child(odd) {
+.articles .article:nth-child(odd) article {
     transform: rotate3d(0, -1, 0, 85deg) rotate3d(0, 0, 1, 3deg);
 }
-.articles article:last-child {
+.articles .article:last-child article {
     animation-range-start: 100px;
     animation-range-end: 350px;
     margin-bottom: 2rem;
@@ -292,12 +295,12 @@ h3 {
     background-size: 150% 150%;
     background-position: center;
     box-shadow:
-        1px 5px 5px 1px var(--color2),
-        3px 7px 5px 2px var(--color6),
-        5px 8px 5px 3px var(--color3),
-        -1px -5px 5px 1px var(--color2),
-        -3px -7px 5px 2px var(--color6),
-        -5px -8px 5px 3px var(--color3);
+        2px 5px 5px 1px var(--color2),
+        3px 7px 5px 3px var(--color6),
+        5px 8px 5px 5px var(--color3),
+        -2px -5px 5px 1px var(--color2),
+        -3px -7px 5px 3px var(--color6),
+        -5px -8px 5px 5px var(--color3);
 }
 
 .articles article:hover h4,
