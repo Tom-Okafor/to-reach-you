@@ -93,4 +93,8 @@ ROUTER.get("/", (request, response) => {
         blogIndices: SHUFFLE_INDEX()
     });
 });
+
+ROUTER.get("/:id", (request, response) => {
+    response.send(`${request.params.id} PAGE`);
+});
 export { ROUTER };

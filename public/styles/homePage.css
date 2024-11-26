@@ -205,6 +205,8 @@ h3 {
     border: 2px solid var(--color3);
     border-radius: 5%;
     visibility: hidden;
+    z-index: 2;
+    backdrop-filter: blur(2px);
 }
 
 .categories button {
@@ -242,7 +244,7 @@ h3 {
     gap: 2rem;
 }
 .article {
-    perspective: 800px;
+    perspective: 700px;
 }
 .articles article {
     height: 280px;
@@ -259,7 +261,7 @@ h3 {
     transition: all 800ms ease-out;
     transform-style: preserve-3d;
     box-shadow: 1px 2px 5px 1px var(--color2);
-    transform: rotate3d(-1, 0, 0, 85deg) rotate3d(0, 0, -1, 1deg);
+    transform: rotate3d(-1, 0, 0, 85deg);
     opacity: 0;
     filter: grayscale(1);
     animation-name: rotate;

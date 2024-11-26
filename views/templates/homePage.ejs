@@ -22,26 +22,26 @@
                         >Have something to you'd love to share? Share it now!</a
                     >
                 </section>
-
-                <section class="content">
-                    <h3 class="blend">Top Posts For You!</h3>
-                  <!--  <button class="filter blend"></button>
-                    <div class="categories">
-                        <button class="blend">Lifestyle</button>
-                        <button class="blend">Science</button>
-                        <button class="blend">Technology</button>
-                        <button class="blend">Gossip</button>
-                        <button class="blend">Health and Wellness</button>
-                        <button class="blend">Entertainment</button>
-                        <button class="blend">Travel And Adventure</button>
-                        <button class="blend">
-                            Inspiration and Self-development
-                        </button>
-                    </div> -->
-                    <div class="articles">
-                        <%  const HREF = function(id) {
+   <%  const HREF = function(id) {
                   return (pageUrl + "/" + id)
                           }   %>
+                <section class="content">
+                    <h3 class="blend">Top Posts For You!</h3>
+                    <button class="filter blend"></button>
+                    <div class="categories">
+                        <button class="blend" id="lifestyle" onclick="window.location.href='<%=HREF("lifestyle")%>'">Lifestyle</button>
+                        <button class="blend" id="science" onclick="window.location.href='<%=HREF("science")%>'">Science</button>
+                        <button class="blend" id="technology" onclick="window.location.href='<%=HREF("technology")%>'">Technology</button>
+                        <button class="blend" id="gossip" onclick="window.location.href='<%=HREF("gossip")%>'">Gossip</button>
+                        <button class="blend" id="health" onclick="window.location.href='<%=HREF("health")%>'">Health and Wellness</button>
+                        <button class="blend" id="entertainment" onclick="window.location.href='<%=HREF("entertainment")%>'">Entertainment</button>
+                        <button class="blend" id="travel" onclick="window.location.href='<%=HREF("travel")%>'">Travel And Adventure</button>
+                        <button class="blend" id="inspiration" onclick="window.location.href='<%=HREF("inspiration")%>'">
+                            Inspiration and Self-development
+                        </button>
+                    </div>
+                    <div class="articles">
+                     
                         
                          
                           <%- createArticles()%>
@@ -71,7 +71,7 @@
                                     src="images/images (21).jpeg"
                                 />
                                 <div class="titleText">
-                                    <h4>${DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]].title}</h4><p>${Object.keys(DATA)[CATEGORY_INDEX[i]]}</p></div></div></article>`
+                                    <h4>${DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]].title}</h4><p>${Object.keys(DATA)[CATEGORY_INDEX[i]]}</p></div></div></article></div>`
                             }
                           }
                          
