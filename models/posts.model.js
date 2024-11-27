@@ -605,7 +605,7 @@ const POSTS_DATA = {
     entertainment: [
         {
             id: "ENT0",
-            title: "he Art of Meme Culture: From LOLcats to Viral Trends",
+            title: "The Art of Meme Culture: From LOLcats to Viral Trends",
             content: `<h2>The Art of Meme Culture: From LOLcats to Viral Trends</h2>
 
             <h3>Introduction</h3>

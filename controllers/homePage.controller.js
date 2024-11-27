@@ -95,6 +95,10 @@ ROUTER.get("/", (request, response) => {
 });
 
 ROUTER.get("/:id", (request, response) => {
-    response.send(`${request.params.id} PAGE`);
+    response.render("templates/homePage.ejs", {
+        pageUrl,
+        categoryName: request.params.id,
+        category: DATA[request.params.id]
+    });
 });
 export { ROUTER };
