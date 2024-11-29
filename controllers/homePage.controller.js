@@ -58,7 +58,6 @@ const SHUFFLE_INDEX = function () {
         }
     }
 
-    //generate random number from 0 to range
     function generateRandomNum(range) {
         return Math.floor(Math.random() * range);
     }
