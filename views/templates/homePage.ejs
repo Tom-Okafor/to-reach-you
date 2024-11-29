@@ -67,7 +67,7 @@
                            
                           for (let i = 0; i < CATEGORY_INDEX.length; i++) {
                           if (!DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]]) {continue} 
-                              articleHTML+= `<div class="article"><article class="blend">
+                              articleHTML+= `<div class="article"><a href="${HREF(Object.keys(DATA)[CATEGORY_INDEX[i]])}/${DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]].id}" class="blend">
                       
                             <div class="bookmark"></div>
                             <div class="detailsBlock">
@@ -76,7 +76,7 @@
                                     src="/images/images(21).jpeg"
                                 />
                                 <div class="titleText">
-                                    <h4>${DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]].title}</h4><p>${Object.keys(DATA)[CATEGORY_INDEX[i]]}</p></div></div></article></div>`
+                                    <h4>${DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]].title}</h4><p>${Object.keys(DATA)[CATEGORY_INDEX[i]]}</p></div></div></a></div>`
                             }
                           }
                          
@@ -91,16 +91,16 @@
         <% function createCategory(category){
         let categoryHTML = "";
         category.forEach((content) => {
-          categoryHTML += `<div class="article"><article class="blend">
+          categoryHTML += `<div class="article"><a href="${categoryName}/${content.id}" class="blend">
                       
                             <div class="bookmark"></div>
                             <div class="detailsBlock">
                                 <img
                                     alt="profileImage"
-                                    src="images/images (21).jpeg"
+                                    src="/images/images(21).jpeg"
                                 />
                                 <div class="titleText">
-                                    <h4>${content.title}</h4><p>${categoryName}</p></div></div></article></div>`
+                                    <h4>${content.title}</h4><p>${categoryName}</p></div></div></a></div>`
         })
         return categoryHTML;
         } %>

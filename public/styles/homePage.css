@@ -255,7 +255,7 @@ h3 {
 .article {
   perspective: 700px;
 }
-.articles article {
+.articles a {
   height: 280px;
   width: 300px;
   padding: 10px 15px;
@@ -283,9 +283,10 @@ h3 {
   animation-timeline: view();
   animation-range-start: 150px;
   animation-range-end: 400px;
+  text-decoration: none;
 }
 
-.articles .article:nth-child(odd) article {
+.articles .article:nth-child(odd) a {
   transform: rotate3d(0, -1, 0, 85deg) rotate3d(0, 0, 1, 3deg);
 }
 
@@ -316,8 +317,8 @@ h3 {
   }
 }
 
-.articles article:hover,
-.articles article:focus {
+.articles a:hover,
+.articles a:focus {
   background-size: 150% 150%;
   background-position: center;
   box-shadow: 2px 5px 5px 1px var(--color2), 3px 7px 5px 3px var(--color6),
@@ -325,10 +326,10 @@ h3 {
     -3px -7px 5px 3px var(--color6), -5px -8px 5px 5px var(--color3);
 }
 
-.articles article:hover h4,
-.articles article:hover img,
-.articles article:hover p,
-.articles article:hover .bookmark {
+.articles a:hover h4,
+.articles a:hover img,
+.articles a:hover p,
+.articles a:hover .bookmark {
   scale: 0.9;
 }
 
@@ -472,7 +473,7 @@ h3 {
     -moz-transition: all 300ms cubic-bezier(1, 0.6, 0, 1.05);
     -ms-transition: all 300ms cubic-bezier(1, 0.6, 0, 1.05);
     -o-transition: all 300ms cubic-bezier(1, 0.6, 0, 1.05);
-}
+  }
 
   .categories button:hover,
   .categories button:focus {
