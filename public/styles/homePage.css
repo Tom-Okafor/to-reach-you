@@ -15,9 +15,6 @@
   box-sizing: border-box;
 }
 
-body {
-}
-
 .parent {
   width: 100vw;
   min-height: var(--deviceHeight);
@@ -51,9 +48,12 @@ footer {
   margin-top: auto;
   font-size: 0.7rem;
   background: transparent;
+  -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
   z-index: 2;
   color: var(--color2);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -66,6 +66,9 @@ footer {
   top: 0;
   left: 0;
   z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -117,6 +120,7 @@ footer {
 
 .header img {
   height: 70px;
+  -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
 }
 
@@ -148,6 +152,7 @@ footer {
   word-spacing: 2px;
   line-height: 1rem;
   letter-spacing: 1.5px;
+  -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
   box-shadow: 1px 1px 3px #777;
   cursor: pointer;
@@ -166,6 +171,8 @@ h3 {
     var(--color7) 25% 65%,
     var(--color2) 65%
   );
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin-left: 20px;
   padding: 5px 5px;
@@ -197,11 +204,13 @@ h3 {
   position: absolute;
   top: 80px;
   left: 0;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 2px solid var(--color3);
   border-radius: 5%;
   visibility: hidden;
   z-index: 2;
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
 }
 
@@ -259,9 +268,13 @@ h3 {
   box-shadow: 1px 2px 5px 1px var(--color2);
   transform: rotate3d(-1, 0, 0, 85deg);
   opacity: 0;
+  -webkit-filter: grayscale(1);
   filter: grayscale(1);
+  -webkit-animation-name: rotate;
   animation-name: rotate;
+  -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   animation-timeline: view();
   animation-range-start: 200px;
@@ -276,13 +289,28 @@ h3 {
   animation-range-end: 350px;
   margin-bottom: 2rem;
 }
-@keyframes rotate {
+@-webkit-keyframes rotate {
   60% {
+    -webkit-filter: grayscale(1);
     filter: grayscale(1);
   }
 
   to {
     opacity: 1;
+    -webkit-filter: none;
+    filter: none;
+    transform: rotate(0);
+  }
+}
+@keyframes rotate {
+  60% {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-filter: none;
     filter: none;
     transform: rotate(0);
   }
@@ -325,6 +353,7 @@ h3 {
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   transition: scale 800ms ease-out;
 }
@@ -336,14 +365,23 @@ h3 {
   text-transform: capitalize;
   font-weight: 600;
   letter-spacing: 1px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 7px;
   border-radius: 5px;
   background: linear-gradient(90deg, var(--color2), var(--color6));
   background-size: 250% 250%;
   background-position: left top;
+  -webkit-animation: gradient 10s infinite ease alternate;
   animation: gradient 10s infinite ease alternate;
   transition: scale 800ms ease-out;
+}
+
+@-webkit-keyframes gradient {
+  to {
+    background-position: right bottom;
+  }
 }
 
 @keyframes gradient {
@@ -381,6 +419,7 @@ h3 {
 }
 
 .content-controls:hover button:not(:hover) {
+  -webkit-filter: grayscale(0.8);
   filter: grayscale(0.8);
   scale: 0.9;
 }
@@ -409,6 +448,7 @@ h3 {
     top: 10%;
     border-radius: 5px;
     background: transparent;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-left: 2px solid var(--color2);
   }
