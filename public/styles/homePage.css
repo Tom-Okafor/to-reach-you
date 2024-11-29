@@ -81,11 +81,15 @@ footer {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: all 300ms ease-out;
+  transition: all 100ms ease-out;
   mix-blend-mode: multiply;
   pointer-events: none;
   cursor: pointer;
   z-index: 1;
+  -webkit-transition: all 100ms ease-out;
+  -moz-transition: all 100ms ease-out;
+  -ms-transition: all 100ms ease-out;
+  -o-transition: all 100ms ease-out;
 }
 
 .ball-blend {
@@ -193,7 +197,7 @@ h3 {
 }
 
 .categories {
-  width: 100%;
+  width: 98%;
   padding: 30px 20px;
   display: flex;
   flex-wrap: wrap;
@@ -203,7 +207,7 @@ h3 {
   transition: all 500ms cubic-bezier(1, 0.6, 0, 1.05);
   position: absolute;
   top: 80px;
-  left: 0;
+  left: 2%;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 2px solid var(--color3);
@@ -277,18 +281,14 @@ h3 {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   animation-timeline: view();
-  animation-range-start: 200px;
-  animation-range-end: 550px;
+  animation-range-start: 150px;
+  animation-range-end: 400px;
 }
 
 .articles .article:nth-child(odd) article {
   transform: rotate3d(0, -1, 0, 85deg) rotate3d(0, 0, 1, 3deg);
 }
-.articles .article:last-child article {
-  animation-range-start: 100px;
-  animation-range-end: 350px;
-  margin-bottom: 2rem;
-}
+
 @-webkit-keyframes rotate {
   60% {
     -webkit-filter: grayscale(1);
@@ -438,6 +438,47 @@ h3 {
     flex-wrap: wrap;
     gap: 2rem;
   }
+
+  .categories button {
+    padding: 15px;
+    min-width: 100px;
+    border-radius: 7px;
+    color: var(--color5);
+    box-shadow: 0px 1px 3px 2px #aaa;
+    transition: all 300ms ease-out;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+  }
+
+  .categories {
+    top: 1.5%;
+    padding-inline: 50px;
+    padding-block: 35px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transition: all 300ms cubic-bezier(1, 0.6, 0, 1.05);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: all 300ms cubic-bezier(1, 0.6, 0, 1.05);
+    -moz-transition: all 300ms cubic-bezier(1, 0.6, 0, 1.05);
+    -ms-transition: all 300ms cubic-bezier(1, 0.6, 0, 1.05);
+    -o-transition: all 300ms cubic-bezier(1, 0.6, 0, 1.05);
+}
+
+  .categories button:hover,
+  .categories button:focus {
+    box-shadow: 0px 0px 20px 2px var(--color1), 0px 0px 20px 2px var(--color1);
+    scale: 1.05;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .header a:last-child {
@@ -448,8 +489,6 @@ h3 {
     top: 10%;
     border-radius: 5px;
     background: transparent;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     border-left: 2px solid var(--color2);
   }
   .header,
