@@ -1,0 +1,169 @@
+:root {
+  --color1: #000000;
+  --color2: #193778;
+  --color3: #ff9e00;
+  --color4: #e5e5e5;
+  --color5: #ffffff;
+  --color6: #38c0b0;
+  --color7: #007870;
+}
+
+ul {
+  list-style: none;
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  margin-right: 5px;
+  height: 30px;
+  width: 30px;
+  background-image: url(/images/blob1.png);
+  background-size: cover;
+}
+li {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+strong {
+  margin-right: 1px;
+}
+
+body {
+  background: linear-gradient(
+    65deg,
+    var(--color7),
+    var(--color5) 15% 70%,
+    var(--color3)
+  );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 7vw;
+  padding-top: 30px;
+}
+
+footer {
+  background-color: transparent;
+  margin-top: auto;
+}
+
+h3.category {
+  font-size: 1rem;
+  height: fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+  background: linear-gradient(
+    130deg,
+    var(--color3) 20%,
+    var(--color2),
+    var(--color6),
+    var(--color7)
+  );
+  background-size: 200%;
+  background-position: left top;
+  font-weight: 900;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: transparent;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-fill-color: var(--color5);
+  animation: moveBG 5s linear infinite alternate;
+  -webkit-animation: moveBG 2s linear infinite alternate;
+  border: 2px solid var(--color2);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes moveBG {
+  to {
+    background-position: right bottom;
+  }
+}
+
+h2 {
+  font-weight: 900;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: var(--color2);
+  height: fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+  background: linear-gradient(
+    130deg,
+    var(--color2) 25%,
+    var(--color6),
+    var(--color7) 75%
+  );
+  background-clip: text;
+  color: transparent;
+  margin-top: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  max-width: 60ch;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 800px) {
+  body {
+    padding-inline: 15vw;
+    padding-top: 50px;
+  }
+
+  h3.category {
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+
+  h2 {
+    font-weight: 900;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    line-height: 3rem;
+  }
+
+  strong {
+    margin-right: 3px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    max-width: 80ch;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  li {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    max-width: 80ch;
+  }
+}

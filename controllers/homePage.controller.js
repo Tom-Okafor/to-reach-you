@@ -103,8 +103,9 @@ ROUTER.get("/:category/:id", (request, response) => {
     if (category.id === request.params.id) categoryId = index;
   });
   const CONTENT = DATA[request.params.category][categoryId].content;
-  response.send(
-    `showing post for category: ${request.params.category} and for id: ${request.params.id} and content: ${CONTENT}`
-  );
+  response.render("templates/blogpost.ejs", {
+    category: request.params.category,
+    content: CONTENT,
+  });
 });
 export { ROUTER };
