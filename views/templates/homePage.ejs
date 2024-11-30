@@ -14,6 +14,7 @@
                     <img alt="logo" class="blend" src="/images/logo/logo.png" />
 
                     <a class="notifications blend"></a>
+                    <a class="notifications blend for-large"></a>
                 </div>
 
                 <section class="post">
@@ -26,8 +27,15 @@
                   return (pageUrl + "/" + id)
                           }   %>
                 <section class="content">
-                    <h3 class="blend">Top Posts For You!</h3>
-                    <button class="filter blend"></button>
+                    <% if (locals.category) {  %>
+                   <h3 class="blend"><%=categoryName%></h3>
+
+                  <%  } else { %>
+
+                <h3 class="blend">Top Posts For You!</h3>
+
+                  <%} %>
+                                        <button class="filter blend"></button>
                     <div class="categories">
                         <button class="blend" id="lifestyle" onclick="window.location.href='<%=HREF("lifestyle")%>'">Lifestyle</button>
                         <button class="blend" id="science" onclick="window.location.href='<%=HREF("science")%>'">Science</button>
@@ -56,7 +64,7 @@
                     <button class="blend">1</button>
                     <button class="blend">2</button>
                 </section>-->
-      
+      <div class="space"></div>
       <%- include("../partials/footer.ejs")%>
   <% function createArticles(){
                           const CONTENT_INDEX = blogIndices[1];

@@ -75,6 +75,7 @@
     window.addEventListener("resize", function () {
       clearTimeout(timeout);
       timeout = setTimeout(function () {
+        addBackgroundText();
         moveBall();
       }, 500);
     });
@@ -107,6 +108,7 @@
       }
     });
   })();
+
   addBackgroundText();
   moveBall();
 })();

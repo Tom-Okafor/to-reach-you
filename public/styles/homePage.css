@@ -183,6 +183,7 @@ h3 {
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
+  text-transform: capitalize;
 }
 
 .filter {
@@ -282,7 +283,7 @@ h3 {
   animation-fill-mode: forwards;
   animation-timeline: view();
   animation-range-start: 150px;
-  animation-range-end: 400px;
+  animation-range-end: 450px;
   text-decoration: none;
 }
 
@@ -429,6 +430,15 @@ h3 {
   outline: 2px dotted var(--color7);
   outline-offset: 3px;
 }
+
+.for-large {
+  display: none;
+}
+
+.space {
+  height: 5rem;
+  width: 100%;
+}
 @media only screen and (min-width: 700px) {
   .articles {
     margin-top: 1.5rem;
@@ -482,6 +492,13 @@ h3 {
   }
 }
 @media only screen and (min-width: 1000px) {
+  a.notifications:not(.for-large) {
+    display: none;
+  }
+
+  .for-large {
+    display: flex;
+  }
   .header a:last-child {
     height: 600px;
     width: 20vw;
