@@ -98,6 +98,13 @@ ROUTER.get("/:id", (request, response) => {
   });
 });
 ROUTER.get("/:category/:id", (request, response) => {
-  response.send("Well, page!");
+  let categoryId;
+  DATA[request.params.category].forEach((category, index) => {
+    if (category.id === request.params.id) categoryId = index;
+  });
+  const CONTENT = DATA[request.params.category][categoryId].content;
+  response.send(
+    `showing post for category: ${request.params.category} and for id: ${request.params.id} and content: ${CONTENT}`
+  );
 });
 export { ROUTER };

@@ -2,7 +2,6 @@
 
 import express from "express";
 import multer from "multer";
-import ejs from "ejs";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { ROUTER as registerRouter } from "./controllers/register.controller.js";
