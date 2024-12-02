@@ -97,10 +97,20 @@ ROUTER.get("/:id", (request, response) => {
     category: DATA[request.params.id],
   });
 });
-ROUTER.get("/:category/:id", (request, response) => {
+ROUTER.get("/:category/:title", (request, response) => {
   let categoryId;
+
   DATA[request.params.category].forEach((category, index) => {
-    if (category.id === request.params.id) categoryId = index;
+    let title = category.title;
+    let newTitle = "";
+    for (let i = 0; i < title.length; i++) {
+      let titleCharacter = title[i];
+      if (titleCharacter === " ") {
+        titleCharacter = "_";
+      }
+      newTitle += titleCharacter;
+    }
+    if (newTitle === request.params.title) categoryId = index;
   });
   const CONTENT = DATA[request.params.category][categoryId].content;
   response.render("templates/blogpost.ejs", {

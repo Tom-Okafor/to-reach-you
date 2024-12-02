@@ -83,7 +83,17 @@
                            
                           for (let i = 0; i < CATEGORY_INDEX.length; i++) {
                           if (!DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]]) {continue} 
-                              articleHTML+= `<div class="article"><a href="${HREF(Object.keys(DATA)[CATEGORY_INDEX[i]])}/${DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]].id}" class="blend">
+                          let title = DATA[Object.keys(DATA)[CATEGORY_INDEX[i]]][CONTENT_INDEX[t]].title;
+                          let newTitle = "";
+                          for (let i = 0; i < title.length; i++) {
+                            let titleCharacter = title[i];
+                            if (titleCharacter === " "){
+                                titleCharacter = "_"
+                            }
+                            newTitle += titleCharacter;
+                            
+                          }
+                              articleHTML+= `<div class="article"><a href="${HREF(Object.keys(DATA)[CATEGORY_INDEX[i]])}/${newTitle}" class="blend">
                       
                             <div class="bookmark"></div>
                             <div class="detailsBlock">
@@ -107,7 +117,7 @@
         <% function createCategory(category){
         let categoryHTML = "";
         category.forEach((content) => {
-          categoryHTML += `<div class="article"><a href="${categoryName}/${content.id}" class="blend">
+          categoryHTML += `<div class="article"><a href="${categoryName}/${content.title}" class="blend">
                       
                             <div class="bookmark"></div>
                             <div class="detailsBlock">

@@ -56,7 +56,11 @@ footer {
 
 h3.category {
   font-size: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0.5rem;
   background: linear-gradient(
@@ -71,6 +75,7 @@ h3.category {
   font-weight: 900;
   letter-spacing: 7px;
   text-transform: uppercase;
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-stroke: transparent;
@@ -85,6 +90,12 @@ h3.category {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   margin-bottom: 1.5rem;
+}
+
+@-webkit-keyframes moveBG {
+  to {
+    background-position: right bottom;
+  }
 }
 
 @keyframes moveBG {
@@ -103,7 +114,11 @@ h2 {
 h3 {
   font-size: 1.3rem;
   color: var(--color2);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0.5rem;
   background: linear-gradient(
@@ -112,6 +127,7 @@ h3 {
     var(--color6),
     var(--color7) 75%
   );
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   margin-top: 1.5rem;
@@ -125,6 +141,7 @@ p {
   max-width: 60ch;
   margin-bottom: 1rem;
 }
+
 @media screen and (min-width: 800px) {
   body {
     padding-inline: 15vw;
@@ -165,5 +182,43 @@ p {
     word-spacing: 2px;
     letter-spacing: 1px;
     max-width: 80ch;
+  }
+}
+
+.space {
+  height: 150px;
+  width: 100%;
+}
+
+h2,
+h3:not(:first-of-type),
+li,
+p,
+strong,
+img {
+  scale: 0.85;
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-timeline: view();
+  animation-range-start: 50px;
+  animation-range-end: 400px;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    scale: 1;
   }
 }

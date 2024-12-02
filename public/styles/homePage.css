@@ -184,6 +184,7 @@ h3 {
   color: transparent;
   -webkit-background-clip: text;
   text-transform: capitalize;
+  user-select: none;
 }
 
 .filter {
