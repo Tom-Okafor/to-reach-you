@@ -14,5 +14,10 @@
         "ejs": "^3.1.10",
         "express": "^4.21.1",
         "multer": "^1.4.5-lts.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.16.0",
+        "eslint": "^9.16.0",
+        "globals": "^15.13.0"
     }
 }

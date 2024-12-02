@@ -448,18 +448,25 @@ h3 {
   top: 70px;
   width: 180px;
   pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .menu > li {
   padding: 10px;
-  border: 1px solid var(--color2);
+  border: 1px solid var(--color7);
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   margin-bottom: 2rem;
-  box-shadow: 0px 2px 4px 1px var(--color2);
+  box-shadow: 0px 2px 4px 1px var(--color7);
   backdrop-filter: blur(5px);
   pointer-events: all;
   transition: all 1s ease-in-out;
@@ -471,7 +478,7 @@ h3 {
 
 .menu > li > a {
   text-decoration: none;
-  color: var(--color2);
+  color: var(--color7);
   height: 100%;
   width: 100%;
   display: flex;
@@ -624,6 +631,7 @@ h3 {
     top: 150px;
     z-index: 2;
     width: 180px;
+    opacity: 1;
   }
 
   .menu > li {

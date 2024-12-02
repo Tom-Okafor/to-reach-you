@@ -52,7 +52,7 @@
       const BALL_HEIGHT = BALL.offsetHeight;
 
       let touchIndex = 0;
-      DIMENSIONS.forEach((eachDimension, index) => {
+      DIMENSIONS.forEach((eachDimension) => {
         if (isMouseOnBlendElement(LEFT_TOUCH, TOP_TOUCH, eachDimension)) {
           touchIndex++;
         }
@@ -109,6 +109,27 @@
     });
   })();
 
+  const TOGGLE_BUTTON = function () {
+    let isMenuVisible = false;
+    const MENU_TOGGLE_BUTTON = document.getElementById("for-small");
+    const MENU = document.querySelector(".menu");
+    MENU_TOGGLE_BUTTON.addEventListener("click", () => {
+      if (!isMenuVisible) {
+        MENU.style.visibility = "visible";
+        setTimeout(() => {
+          MENU.style.opacity = 1;
+          isMenuVisible = true;
+        }, 500);
+      } else {
+        MENU.style.opacity = 0;
+        setTimeout(() => {
+          MENU.style.visibility = "visible";
+          isMenuVisible = false;
+        }, 500);
+      }
+    });
+  };
+requestAnimationFrame(TOGGLE_BUTTON)
   addBackgroundText();
   moveBall();
 })();

@@ -1,10 +1,7 @@
 import { Router } from "express";
 import { signUpDetails } from "./register.controller.js";
-import { userId } from "./register.controller.js";
 import bodyParser from "body-parser";
 import { GET_DATA } from "../models/posts.model.js";
-import fs from "fs";
-import path from "path";
 const ROUTER = Router();
 
 let pageUrl;
