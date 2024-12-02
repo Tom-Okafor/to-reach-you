@@ -13,24 +13,16 @@
 
                     <img alt="logo" class="blend" src="/images/logo/logo.png" />
 
-                    <a class="notifications blend">
-                        <div class="menu">
-                        <a href="" class="menu-item blend">Update Profile Image</a>
-                        <a href="" class="menu-item blend">Make Blog Post</a>
-                        <a href="" class="menu-item blend">Make Diary Entry</a>
-                        <a href="" class="menu-item blend">View Bookmarks</a>
-                        <a href="" class="menu-item blend">View Favourites</a>
-                        </div>
-                    </a>
+                    <a class="notifications blend"></a>
                     <a class="notifications blend for-large">
-                         <div class="menu">
-                        <a href="" class="menu-item blend">Update Profile Image</a>
-                        <a href="" class="menu-item blend">Make Blog Post</a>
-                        <a href="" class="menu-item blend">Make Diary Entry</a>
-                        <a href="" class="menu-item blend">View Bookmarks</a>
-                        <a href="" class="menu-item blend">View Favourites</a>
-                        </div>
+                        
                     </a>
+                    <ul class="menu">
+                            <li class="blend"><a href="">update profile image</a></li>
+                            <li class="blend"><a href="">create blog post</a></li>
+                            <li class="blend"><a href="">create diary entry</a></li>
+                            <li class="blend"><a href="">view bookmarks</a></li>
+                   </ul>
                 </div>
 
                 <section class="post">
@@ -44,7 +36,7 @@
                           }   %>
                 <section class="content">
                     <% if (locals.category) {  %>
-                   <h3 class="blend"><%=categoryName%></h3>
+                   <h3 class="blend">Top posts on <%=categoryName%></h3>
 
                   <%  } else { %>
 
@@ -53,14 +45,14 @@
                   <%} %>
                                         <button class="filter blend"></button>
                     <div class="categories">
-                        <button class="blend" id="lifestyle" onclick="window.location.href='<%=HREF("lifestyle")%>'">Lifestyle</button>
-                        <button class="blend" id="science" onclick="window.location.href='<%=HREF("science")%>'">Science</button>
-                        <button class="blend" id="technology" onclick="window.location.href='<%=HREF("technology")%>'">Technology</button>
-                        <button class="blend" id="gossip" onclick="window.location.href='<%=HREF("gossip")%>'">Gossip</button>
-                        <button class="blend" id="health" onclick="window.location.href='<%=HREF("health")%>'">Health and Wellness</button>
-                        <button class="blend" id="entertainment" onclick="window.location.href='<%=HREF("entertainment")%>'">Entertainment</button>
-                        <button class="blend" id="travel" onclick="window.location.href='<%=HREF("travel")%>'">Travel And Adventure</button>
-                        <button class="blend" id="inspiration" onclick="window.location.href='<%=HREF("inspiration")%>'">
+                        <button class="blend" id="lifestyle" onclick=window.location.href='<%=HREF("lifestyle")%>'>Lifestyle</button>
+                        <button class="blend" id="science" onclick=window.location.href='<%=HREF("science")%>'>Science</button>
+                        <button class="blend" id="technology" onclick=window.location.href='<%=HREF("technology")%>'>Technology</button>
+                        <button class="blend" id="gossip" onclick=window.location.href='<%=HREF("gossip")%>'>Gossip</button>
+                        <button class="blend" id="health" onclick=window.location.href='<%=HREF("health")%>'>Health and Wellness</button>
+                        <button class="blend" id="entertainment" onclick=window.location.href='<%=HREF("entertainment")%>'>Entertainment</button>
+                        <button class="blend" id="travel" onclick=window.location.href='<%=HREF("travel")%>'>Travel And Adventure</button>
+                        <button class="blend" id="inspiration" onclick=window.location.href='<%=HREF("inspiration")%>'>
                             Inspiration and Self-development
                         </button>
                     </div>
