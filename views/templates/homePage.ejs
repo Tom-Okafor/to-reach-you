@@ -18,20 +18,20 @@
                         
                     </a>
                     <ul class="menu">
-                            <li class="blend"><a href="">update profile image</a></li>
-                            <li class="blend"><a href="">create blog post</a></li>
-                            <li class="blend"><a href="">create diary entry</a></li>
-                            <li class="blend"><a href="">view bookmarks</a></li>
+                            <li class="blend"><a href="<%=HREF("updateProfilePicture") %>">update profile image</a></li>
+                            <li class="blend"><a href="<%=HREF("createBlogPost") %>">create blog post</a></li>
+                            <li class="blend"><a href="<%=HREF("createDiaryEntry") %>">create diary entry</a></li>
+                            <li class="blend"><a href="<%=HREF("viewBookmarks") %>">view bookmarks</a></li>
                    </ul>
                 </div>
 
                 <section class="post">
                     <div class="svg blend"></div>
-                    <a class="makepost blend"
+                    <a class="makepost blend" href="<%=HREF("updateProfilePicture")%>"
                         >Have something to you'd love to share? Share it now!</a
                     >
                 </section>
-   <%  const HREF = function(id) {
+   <%   function HREF(id) {
                   return (pageUrl + "/" + id)
                           }   %>
                 <section class="content">

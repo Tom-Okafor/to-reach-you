@@ -160,6 +160,7 @@ footer {
   backdrop-filter: blur(0px);
   box-shadow: 1px 1px 3px #777;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .content {
@@ -184,6 +185,9 @@ h3 {
   color: transparent;
   -webkit-background-clip: text;
   text-transform: capitalize;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -442,14 +446,23 @@ h3 {
 }
 
 .menu {
+  box-sizing: content-box;
   list-style: none;
   position: absolute;
+  padding: 25px;
   right: 30px;
   top: 70px;
   width: 180px;
-  pointer-events: none;
+  border: 2px solid var(--color7);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   opacity: 0;
   visibility: hidden;
+  backdrop-filter: blur(3px);
+  background-color: #77777722;
   transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -467,6 +480,7 @@ h3 {
   -o-border-radius: 6px;
   margin-bottom: 2rem;
   box-shadow: 0px 2px 4px 1px var(--color7);
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   pointer-events: all;
   transition: all 1s ease-in-out;
@@ -498,6 +512,11 @@ h3 {
   filter: blur(1px);
   -webkit-filter: blur(1px);
 }
+
+body {
+  scrollbar-width: thin;
+}
+
 @media only screen and (min-width: 700px) {
   .articles {
     margin-top: 1.5rem;
@@ -577,6 +596,7 @@ h3 {
   }
 
   .parent {
+    width: calc(100vw - 18px);
     grid-template-rows: 25px 1fr 25px;
     grid-template-columns: 25px 1fr 28px;
     gap: 2px;
@@ -632,6 +652,7 @@ h3 {
     z-index: 2;
     width: 180px;
     opacity: 1;
+    visibility: visible;
   }
 
   .menu > li {
