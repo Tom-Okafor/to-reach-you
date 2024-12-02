@@ -115,4 +115,17 @@ ROUTER.get("/:category/:title", (request, response) => {
     content: CONTENT,
   });
 });
+
+ROUTER.get("/updateProfilePicture", (request, response) => {
+  response.send("UPDATE PROFILE PICTURE");
+});
+ROUTER.get("/createBlogPost", (request, response) => {
+  response.send("CREATE BLOG POST");
+});
+ROUTER.get("/createDiaryEntry", (request, response) => {
+  response.send("CREATE DIARY ENTRY");
+});
+ROUTER.get("/viewBookmarks", (request, response) => {
+  response.send("VIEW BOOKMARKS");
+});
 export { ROUTER };

@@ -647,12 +647,16 @@ body {
   .menu {
     list-style: none;
     position: fixed;
-    right: 40px;
+    right: 45px;
     top: 150px;
     z-index: 2;
     width: 180px;
     opacity: 1;
     visibility: visible;
+    background-color: transparent;
+    border: none;
+    backdrop-filter: none;
+    padding: 0;
   }
 
   .menu > li {
