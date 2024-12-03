@@ -7,3 +7,47 @@
   --color6: #38c0b0;
   --color7: #007870;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+}
+main {
+  width: clamp(300px, 80vw, 1000px);
+}
+footer {
+  background-color: transparent;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+.avatarBody {
+  width: clamp(300px, 80vw, 1000px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.avatarBody div {
+  width: 200px;
+  height: 200px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+.avatarBody img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 800px) {
+  p {
+    font-size: 1.1rem;
+  }
+}

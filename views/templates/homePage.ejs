@@ -18,22 +18,27 @@
                         
                     </a>
                     <ul class="menu">
-                            <li class="blend"><a href="<%=HREF("updateProfilePicture") %>">update profile image</a></li>
-                            <li class="blend"><a href="<%=HREF("createBlogPost") %>">create blog post</a></li>
-                            <li class="blend"><a href="<%=HREF("createDiaryEntry") %>">create diary entry</a></li>
-                            <li class="blend"><a href="<%=HREF("viewBookmarks") %>">view bookmarks</a></li>
+                            <li class="blend"><a href="<%=setUpHref("updateProfilePicture") %>">update profile image</a></li>
+                            <li class="blend"><a href="<%=setUpHref("createBlogPost") %>">create blog post</a></li>
+                            <li class="blend"><a href="<%=setUpHref("createDiaryEntry") %>">create diary entry</a></li>
+                            <li class="blend"><a href="<%=setUpHref("viewBookmarks") %>">view bookmarks</a></li>
                    </ul>
                 </div>
 
                 <section class="post">
                     <div class="svg blend"></div>
-                    <a class="makepost blend" href="<%=HREF("updateProfilePicture")%>"
+                    <a class="makepost blend" href="<%=setUpHref("updateProfilePicture")%>"
                         >Have something to you'd love to share? Share it now!</a
                     >
                 </section>
    <%   function HREF(id) {
-                  return (pageUrl + "/" + id)
-                          }   %>
+                  return (`${pageUrl}/blogs/${id}`)
+                          }
+        function setUpHref(id) {
+        return (`${pageUrl}/${id}`)
+
+        }%>
+
                 <section class="content">
                     <% if (locals.category) {  %>
                    <h3 class="blend">Top posts on <%=categoryName%></h3>
@@ -117,7 +122,17 @@
         <% function createCategory(category){
         let categoryHTML = "";
         category.forEach((content) => {
-          categoryHTML += `<div class="article"><a href="${categoryName}/${content.title}" class="blend">
+            let title = content.title;
+            let newTitle = "";
+            for (let i = 0; i < title.length; i++) {
+            let titleCharacter = title[i];
+            if (titleCharacter === " "){
+                titleCharacter = "_"
+            }
+            newTitle += titleCharacter;
+            
+            }
+          categoryHTML += `<div class="article"><a href="${categoryName}/${newTitle}" class="blend">
                       
                             <div class="bookmark"></div>
                             <div class="detailsBlock">

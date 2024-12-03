@@ -87,14 +87,14 @@ ROUTER.get("/", (request, response) => {
   });
 });
 
-ROUTER.get("/:id", (request, response) => {
+ROUTER.get("/blogs/:id", (request, response) => {
   response.render("templates/homePage.ejs", {
     pageUrl,
     categoryName: request.params.id,
     category: DATA[request.params.id],
   });
 });
-ROUTER.get("/:category/:title", (request, response) => {
+ROUTER.get("/blogs/:category/:title", (request, response) => {
   let categoryId;
 
   DATA[request.params.category].forEach((category, index) => {
@@ -109,6 +109,7 @@ ROUTER.get("/:category/:title", (request, response) => {
     }
     if (newTitle === request.params.title) categoryId = index;
   });
+
   const CONTENT = DATA[request.params.category][categoryId].content;
   response.render("templates/blogpost.ejs", {
     category: request.params.category,
@@ -117,7 +118,7 @@ ROUTER.get("/:category/:title", (request, response) => {
 });
 
 ROUTER.get("/updateProfilePicture", (request, response) => {
-  response.send("UPDATE PROFILE PICTURE");
+  response.render("templates/updateImage.ejs");
 });
 ROUTER.get("/createBlogPost", (request, response) => {
   response.send("CREATE BLOG POST");
