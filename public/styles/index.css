@@ -1,161 +1,350 @@
 :root {
-    --color1: #000000;
-    --color2: #193778;
-    --color3: #ff9e00;
-    --color4: #e5e5e5;
-    --color5: #ffffff;
-    --color6: #38c0b0;
-    --color7: #007870;
+  --color1: #000000;
+  --color2: #193778;
+  --color3: #ff9e00;
+  --color4: #e5e5e5;
+  --color5: #ffffff;
+  --color6: #38c0b0;
+  --color7: #007870;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--color5);
+  background-color: var(--color5);
 }
 
 header {
-    margin-bottom: 5rem;
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
 }
 .logoBase {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .logoBase > img {
-    height: 65px;
-    margin-left: 3vw;
+  height: 65px;
+  margin-left: 3vw;
 }
 .logoBase > p {
-    font-size: 0.8rem;
-    font-family: Sans-Serif;
-    background: linear-gradient(240deg, var(--color6) 40%, var(--color3) 55%);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 700;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    background-size: 80%;
-    padding-bottom: 1rem;
-    padding-right: 5vw;
+  font-size: 0.8rem;
+  font-family: Sans-Serif;
+  background: linear-gradient(240deg, var(--color6) 40%, var(--color3) 55%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  background-size: 80%;
+  padding-bottom: 1rem;
+  padding-right: 5vw;
 }
 .line {
-    wwidth: 100vw;
-    height: 3px;
-    background: linear-gradient(
-        to right,
-        var(--color2),
-        var(--color6),
-        var(--color2),
-        var(--color6)
-    );
+  width: 100vw;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--color2),
+    var(--color6),
+    var(--color2),
+    var(--color6)
+  );
 }
 
 .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .brandName > p,
 .call p {
-    font-size: 0.8rem;
-    color: var(--color2);
-    line-height: 1.4rem;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--color2);
+  line-height: 1.4rem;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  margin-top: 1rem;
 }
 .brandName p {
-    margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 .brandName > h1 {
-    text-align: left;
-    display: flex;
-    gap: 5px;
-    flex-direction: column;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    border-left: 3px solid var(--color2);
-    border-radius: 5px;
-    padding-left: 10px;
-    font-weight: 900;
-    letter-spacing: 3px;
+  text-align: left;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  border-left: 3px solid var(--color2);
+  border-radius: 5px;
+  padding-left: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
 }
 .brandName h1 > span {
-    display: block;
+  display: block;
 }
 .brandName span,
 .call span,
 h2,
 .band span {
-    width: fit-content;
-    background: linear-gradient(
-        60deg,
-        var(--color2) 30%,
-        var(--color6) 50%,
-        var(--color3) 70%
-    );
-    -webkit-background-clip: text;
-    color: transparent;
+  width: fit-content;
+  background: linear-gradient(
+    60deg,
+    var(--color2) 30%,
+    var(--color6) 50%,
+    var(--color3) 70%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .brandName {
-    padding-inline: 7vw;
+  padding-inline: 7vw;
 }
 
 .introImage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    width: 100vw;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100vw;
+  position: relative;
 }
 .introImage > img {
-    width: 80vw;
+  width: 80vw;
 }
 .introImage > img:nth-child(2) {
-    position: absolute;
-    z-index: -1;
-    width: 80%;
-    left: 40px;
-    top: 40px;
-    filter: blur(4px);
+  position: absolute;
+  z-index: -1;
+  width: 80%;
+  left: 40px;
+  top: 40px;
+  filter: blur(4px);
 }
 
 .features {
-    margin-top: 7rem;
-    padding-inline: 7vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 7rem;
+  padding-inline: 7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .features h3 {
-    color: var(--color2);
-    text-align: center;
-    margin-bottom: 0.5rem;
-    padding-top: 30px;
-    padding-inline: 20px;
+  color: var(--color2);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding-top: 30px;
+  padding-inline: 20px;
 }
 
 .features p {
-    font-size: 0.85rem;
-    line-height: 1.3rem;
-    word-spacing: 4px;
-    letter-spacing: 1.5px;
-    max-width: 35ch;
-    padding-inline: 15px;
-    padding-bottom: 30px;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+  word-spacing: 4px;
+  letter-spacing: 1.5px;
+  max-width: 35ch;
+  padding-inline: 15px;
+  padding-bottom: 30px;
 }
 
 .features article {
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #888;
+  border: 2px solid var(--color3);
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 1px #666;
+  width: 85vw;
+  gap: 10px;
+}
+
+.features article:nth-of-type(odd) {
+  border: 2px solid var(--color2);
+}
+
+.features article:nth-of-type(odd) h3 {
+  color: var(--color3);
+}
+
+.features article img {
+  width: 100px;
+}
+
+.call {
+  padding-inline: 7vw;
+  background: var(--color4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.call span {
+  font-family: Serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+}
+.call img {
+  width: 90vw;
+  position: relative;
+  top: -25px;
+}
+
+.aTag {
+  text-decoration: none;
+  color: var(--color5);
+  background: var(--color3);
+  padding: 7px 15px;
+  border-radius: 5px;
+  outline: 1.5px solid var(--color2);
+  outline-offset: 3px;
+  box-shadow: 0 0 3px 0.5px var(--color2);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #777;
+  width: fit-content;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  transition: all 300ms ease;
+}
+
+.intro a {
+  margin-left: 5px;
+}
+
+.aTag:hover {
+  background: var(--color2);
+  outline: 1.5px solid var(--color3);
+  box-shadow: 0 0 4px 1px var(--color6);
+  box-shadow: 0 0 4px 1px var(--color6);
+}
+
+.call p {
+  padding-inline: 20px;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.call > div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.hLine {
+  background-color: var(--color4);
+  position: relative;
+  top: 3rem;
+  width: 100%;
+  height: 2px;
+}
+
+footer {
+  background: var(--color4);
+  color: var(--color2);
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .logoBase > img {
+    height: 80px;
+    margin-left: 7vw;
+  }
+  .logoBase > p {
+    font-size: 1rem;
+    padding-bottom: 1.2rem;
+    padding-right: 5vw;
+  }
+  .brandName > h1 {
+    font-size: 3rem;
+    border-radius: 10px;
+    padding-left: 20px;
+    letter-spacing: 5px;
+  }
+
+  .brandName {
+    padding-inline: 9vw;
+  }
+
+  .brandName > p,
+  .call p {
+    width: 55ch;
+    line-height: 1.6rem;
+    font-size: 1rem;
+    word-spacing: 4px;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .call p {
+    margin-bottom: 1rem;
+  }
+
+  .intro {
+    align-items: flex-start;
+  }
+
+  .aTag {
+    padding: 10px 15px;
+    border-radius: 7px;
+    outline-offset: 5px;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+  }
+  .introImage > img {
+    width: 60vw;
+  }
+  .introImage > img:nth-child(2) {
+    position: absolute;
+    z-index: -1;
+    width: 60%;
+    left: 200px;
+    top: 0px;
+    filter: blur(6px);
+  }
+  .hLine {
+    height: 5px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+  .features {
+    padding-inline: 7vw;
+  }
+  .featuresBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .features article img {
+    width: 100px;
+  }
+  .features article {
     margin-bottom: 3.5rem;
     display: flex;
     flex-direction: column;
@@ -164,299 +353,112 @@ h2,
     border: 2px solid var(--color3);
     border-radius: 15px;
     box-shadow: 0px 0px 5px 1px #666;
-    width: 85vw;
+    width: 40vw;
     gap: 10px;
-}
+  }
 
-.features article:nth-of-type(odd) {
+  .featuresBlock article {
+    border: 2px solid var(--color3);
+  }
+  .features article:nth-of-type(odd) {
+    border: 2px solid var(--color3);
+  }
+  .featuresBlock article:nth-child(2),
+  .featuresBlock article:nth-child(3),
+  .featuresBlock article:nth-child(6),
+  .featuresBlock article:nth-child(7) {
     border: 2px solid var(--color2);
-}
+  }
 
-.features article:nth-of-type(odd) h3 {
-    color: var(--color3);
-}
-
-.features article img {
-    width: 100px;
-}
-
-.call {
-    padding-inline: 7vw;
-    background: var(--color4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.call span {
-    font-family: Serif;
-    font-weight: 800;
-    font-size: 0.9rem;
-    letter-spacing: 3px;
-}
-.call img {
-    width: 90vw;
+  .call img {
+    width: 60vw;
     position: relative;
-    top: -25px;
-}
-
-.aTag {
-    text-decoration: none;
-    color: var(--color5);
-    background: var(--color3);
-    padding: 7px 15px;
-    border-radius: 5px;
-    outline: 1.5px solid var(--color2);
-    outline-offset: 3px;
-    box-shadow: 0 0 3px 0.5px var(--color2);
-    letter-spacing: 1.5px;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px #777;
-    width: fit-content;
-    margin-bottom: 50px;
-    margin-left: 20px;
-    transition: all 300ms ease;
-}
-
-.intro a {
-    margin-left: 5px;
-}
-
-.aTag:hover {
-    background: var(--color2);
-    outline: 1.5px solid var(--color3);
-    box-shadow: 0 0 4px 1px var(--color6);
-    box-shadow: 0 0 4px 1px var(--color6);
-}
-
-.call p {
-    padding-inline: 20px;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
-}
-
-.call > div {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-h2 {
-    margin-bottom: 2rem;
-    font-weight: 700;
-    margin-right: auto;
-}
-
-.hLine {
-    background-color: var(--color4);
-    position: relative;
-    top: 3rem;
-    width: 100%;
-    height: 2px;
-}
-
-footer {
-    background: var(--color4);
-    color: var(--color2);
-    padding-left: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-}
-
-@media only screen and (min-width: 600px) {
-    .logoBase > img {
-        height: 80px;
-        margin-left: 7vw;
-    }
-    .logoBase > p {
-        font-size: 1rem;
-        padding-bottom: 1.2rem;
-        padding-right: 5vw;
-    }
-    .brandName > h1 {
-        font-size: 3rem;
-        border-radius: 10px;
-        padding-left: 20px;
-        letter-spacing: 5px;
-    }
-
-    .brandName {
-        padding-inline: 9vw;
-    }
-
-    .brandName > p,
-    .call p {
-        width: 55ch;
-        line-height: 1.6rem;
-        font-size: 1rem;
-        word-spacing: 4px;
-        letter-spacing: 3px;
-        margin-bottom: 2rem;
-        margin-top: 1.5rem;
-    }
-
-    .call p {
-        margin-bottom: 1rem;
-    }
-
-    .intro {
-        align-items: flex-start;
-    }
-
-    .aTag {
-        padding: 10px 15px;
-        border-radius: 7px;
-        outline-offset: 5px;
-        letter-spacing: 2px;
-        font-size: 1.2rem;
-    }
-    .introImage > img {
-        width: 60vw;
-    }
-    .introImage > img:nth-child(2) {
-        position: absolute;
-        z-index: -1;
-        width: 60%;
-        left: 200px;
-        top: 0px;
-        filter: blur(6px);
-    }
-    .hLine {
-        height: 5px;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-
-    .features {
-        padding-inline: 7vw;
-    }
-    .featuresBlock {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .features article img {
-        width: 100px;
-    }
-    .features article {
-        margin-bottom: 3.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #888;
-        border: 2px solid var(--color3);
-        border-radius: 15px;
-        box-shadow: 0px 0px 5px 1px #666;
-        width: 40vw;
-        gap: 10px;
-    }
-
-    .featuresBlock article {
-        border: 2px solid var(--color3);
-    }
-    .features article:nth-of-type(odd) {
-        border: 2px solid var(--color3);
-    }
-    .featuresBlock article:nth-child(2),
-    .featuresBlock article:nth-child(3),
-    .featuresBlock article:nth-child(6),
-    .featuresBlock article:nth-child(7) {
-        border: 2px solid var(--color2);
-    }
-
-    .call img {
-        width: 60vw;
-        position: relative;
-        top: -30px;
-    }
+    top: -30px;
+  }
 }
 
 @media only screen and (min-width: 900px) {
-    .logoBase > img {
-        height: 90px;
-    }
-    .logoBase > p {
-        font-size: 1.1rem;
-        padding-bottom: 1.3rem;
-    }
-    .brandName > h1 {
-        font-size: 4rem;
-        border-radius: 15px;
-        padding-left: 2rem;
-    }
+  .logoBase > img {
+    height: 90px;
+  }
+  .logoBase > p {
+    font-size: 1.1rem;
+    padding-bottom: 1.3rem;
+  }
+  .brandName > h1 {
+    font-size: 4rem;
+    border-radius: 15px;
+    padding-left: 2rem;
+  }
 
-    .brandName {
-        padding-inline: 7vw;
-    }
+  .brandName {
+    padding-inline: 7vw;
+  }
 
-    .brandName > p {
-        width: 40ch;
-        line-height: 1.8rem;
-        margin-bottom: 2rem;
-        margin-top: 1.5rem;
-    }
+  .brandName > p {
+    width: 40ch;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+  }
 
-    .intro {
-        flex-direction: row;
-        align-items: center;
-    }
+  .intro {
+    flex-direction: row;
+    align-items: center;
+  }
 
-    .introImage > img {
-        width: 45vw;
-    }
-    .introImage > img:nth-child(2) {
-        width: 85%;
-        left: 80px;
-        top: 30px;
-        filter: blur(2px);
-    }
-    .hLine {
-        height: 5px;
-        margin: 2rem 0;
-    }
-    h2 {
-        font-size: 2.5rem;
-    }
+  .introImage > img {
+    width: 45vw;
+  }
+  .introImage > img:nth-child(2) {
+    width: 85%;
+    left: 80px;
+    top: 30px;
+    filter: blur(2px);
+  }
+  .hLine {
+    height: 5px;
+    margin: 2rem 0;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
 
-    .features article img {
-        width: 100px;
-    }
-    .features article {
-        border-radius: 15px;
-        width: 27vw;
-        padding-inline: 0.8rem;
-    }
+  .features article img {
+    width: 100px;
+  }
+  .features article {
+    border-radius: 15px;
+    width: 27vw;
+    padding-inline: 0.8rem;
+  }
 
-    .features article:nth-of-type(odd) {
-        border: 2px solid var(--color3);
-    }
-    .featuresBlock article:nth-child(even) {
-        border: 2px solid var(--color2);
-    }
+  .features article:nth-of-type(odd) {
+    border: 2px solid var(--color3);
+  }
+  .featuresBlock article:nth-child(even) {
+    border: 2px solid var(--color2);
+  }
 
-    .featuresBlock article:last-child {
-        margin-right: auto;
-    }
-    .featuresBlock article:nth-child(7) {
-        margin-left: auto;
-        margin-right: 5rem;
-    }
+  .featuresBlock article:last-child {
+    margin-right: auto;
+  }
+  .featuresBlock article:nth-child(7) {
+    margin-left: auto;
+    margin-right: 5rem;
+  }
 
-    .call {
-        margin-top: 2rem;
-    }
+  .call {
+    margin-top: 2rem;
+  }
 
-    .call img {
-        width: 40vw;
-        position: relative;
-        top: -30px;
-    }
+  .call img {
+    width: 40vw;
+    position: relative;
+    top: -30px;
+  }
 
-    .call .aTag {
-        margin-bottom: 3rem;
-    }
+  .call .aTag {
+    margin-bottom: 3rem;
+  }
 }

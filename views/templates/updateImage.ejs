@@ -1,0 +1,48 @@
+<%- include('../partials/header.ejs') %>
+<link rel="stylesheet" href="/styles/setup.css" />
+<body>
+  <h2>Set Profile Image</h2>
+  <p>
+    You can either set an <a href="#image">Image</a> as your display picture or
+    you can select an <a href="#avatar">avatar</a>
+  </p>
+
+  <section class="avatar" id="avatar">
+    <h3>Choose Avatar</h3>
+    <div class="avatarBody">
+      <img src="../../public/images/images(21).jpeg" alt="first avatar" />
+      <img
+        src="../../public/images/2XtIFQKVuexFf0xyVRFAT78UDdUIDiuN2J08U5nWEv1cLhqTA.jpg"
+        alt="second avatar"
+      />
+      <img
+        src="../../public/images/axDYTtswngY8PZc1mfG5emFE089hqzhcrbjrNG9fn7feGMRdC.jpg"
+        alt="third avatar"
+      />
+      <img
+        src="../../public/images/GGXwxtixs9p4FFCscfjnCEWmql7vlDmQF2jWwRbX8VU5iE1JA.jpg"
+        alt="fourth avatar"
+      />
+      <img
+        src="../../public/images/Zb2D7GoPx26hLBZUkE2R7hqSL3w2pdTbeYWQCiLE52gOiE1JA.jpg"
+        alt="fifth avatar"
+      />
+      <img
+        src="../../public/images/igYPAuPRod4aCZOiPJCtWZrC3UaEvu8LOQcwnOHNsMz4Ri6E.jpg"
+        alt="sixth avatar"
+      />
+      <img src="../../public/images/girl.png" alt="seventh avatar" />
+    </div>
+  </section>
+
+  <form action="" method="post" enctype="multipart/form-data" id="image">
+    <label for="image">Select your profile image from your device</label>
+    <div class="selectImage">
+      <input type="file" name="profileImage" id="image" />
+      <div class="cover"></div>
+    </div>
+  </form>
+
+  <%- include('../partials/footer.ejs') %>
+  <script src="../../public/scripts/"></script>
+</body>

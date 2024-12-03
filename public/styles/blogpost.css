@@ -38,9 +38,10 @@ strong {
 body {
   background: linear-gradient(
     65deg,
-    var(--color7),
-    var(--color5) 15% 70%,
-    var(--color3)
+    #007870aa,
+    var(--color4) 20%,
+    var(--color5) 75%,
+    #ff9e00aa
   );
   min-height: 100vh;
   display: flex;
