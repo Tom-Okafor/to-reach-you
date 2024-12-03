@@ -35,6 +35,11 @@ p > a {
   text-decoration: underline;
   text-transform: capitalize;
   color: var(--color7);
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
 }
 
 .avatarBody {
@@ -43,8 +48,33 @@ p > a {
   grid-template-columns: 150px 20px 150px 20px 150px;
   grid-template-rows: 20px 150px 30px 150px 30px 150px 20px;
   gap: 5px;
-  
 }
+.avatar div {
+  perspective: 300px;
+}
+
+.avatarBody img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: left top;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+
+.avatarBody img:hover {
+  transform: rotate3d(1, 0, 0, 30deg);
+  -webkit-transform: rotate3d(1, 0, 0, 15deg);
+  -moz-transform: rotate3d(1, 0, 0, 15deg);
+  -ms-transform: rotate3d(1, 0, 0, 15deg);
+  -o-transform: rotate3d(1, 0, 0, 15deg);
+  object-position: center;
+}
+
 .avatarBody div:first-child {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -105,17 +135,68 @@ p > a {
   grid-row-start: 5;
   grid-row-end: 7;
 }
-.avatarBody img {
-  width: 100%;
+
+.avatar {
+  margin-bottom: 4rem;
+}
+.selectImage {
+  position: relative;
+  height: 250px;
+  width: 250px;
+}
+
+input[type="file"] {
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  width: 100%;
+  opacity: 0;
 }
 
-.avatar{
-    margin-bottom: 3rem;
+.cover {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/igYPAuPRod4aCZOiPJCtWZrC3UaEvu8LOQcwnOHNsMz4Ri6E.jpg");
+  background-size: cover;
+  z-index: -1;
 }
 
+form {
+  margin-block: 3rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: transparent;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  background: linear-gradient(var(--color2), var(--color7));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-fill-color: var(--color5);
+  text-transform: capitalize;
+  width: fit-content;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+}
+h3:hover {
+  background: #ff9e0f;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-fill-color: var(--color5);
+}
+p > a:hover {
+  font-size: 1.2rem;
+  color: #ff9e0f;
+}
 @media only screen and (min-width: 800px) {
   p {
     font-size: 1.1rem;
