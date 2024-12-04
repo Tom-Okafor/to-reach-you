@@ -43,6 +43,8 @@ p > a {
 }
 
 .avatarBody {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   display: grid;
   grid-template-columns: 150px 20px 150px 20px 150px;
@@ -58,6 +60,7 @@ p > a {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
   transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
@@ -81,7 +84,6 @@ p > a {
   filter: blur(3px);
   -webkit-filter: blur(3px);
   scale: 0.9;
-  z-index: -1;
 }
 
 .avatarBody div:first-child {
@@ -187,6 +189,8 @@ h3 {
   -webkit-text-stroke-color: transparent;
   -webkit-text-fill-color: var(--color5);
   text-transform: capitalize;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   transition: all 200ms ease-in-out;
   -webkit-transition: all 200ms ease-in-out;
@@ -206,6 +210,37 @@ p > a:hover {
   font-size: 1.2rem;
   color: #ff9e0f;
 }
+
+.float {
+  --width: clamp(200px, 40vw, 400px);
+  width: var(--width);
+  height: var(--width);
+  background-color: var(--color2);
+  filter: blur(50px);
+  -webkit-filter: blur(50px);
+  opacity: 0.4;
+  position: absolute;
+  top: 15%;
+  right: 9%;
+  z-index: -2;
+  border-radius: 30% 70% 15% 40% / 15% 21% 50% 55%;
+  -webkit-border-radius: 30% 70% 15% 40% / 15% 21% 50% 55%;
+  -moz-border-radius: 30% 70% 15% 40% / 15% 21% 50% 55%;
+  -ms-border-radius: 30% 70% 15% 40% / 15% 21% 50% 55%;
+  -o-border-radius: 30% 70% 15% 40% / 15% 21% 50% 55%;
+  mix-blend-mode: darken;
+  animation: float 2s ease-in-out infinite alternate both;
+  -webkit-animation: float 2s ease-in-out infinite alternate both;
+}
+
+.float:last-of-type {
+  --width: clamp(150px, 30vw, 300px);
+  background-color: var(--color3);
+  position: absolute;
+  top: 150%;
+  left: 2%;
+}
+
 @media only screen and (min-width: 800px) {
   p {
     font-size: 1.1rem;
@@ -231,6 +266,8 @@ p > a:hover {
     -webkit-text-stroke-color: transparent;
     -webkit-text-fill-color: var(--color5);
     text-transform: capitalize;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
 }
