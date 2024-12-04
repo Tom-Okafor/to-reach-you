@@ -60,14 +60,25 @@
       </div>
     </section>
 
-    <form action="" method="post" enctype="multipart/form-data" id="image">
+    <form
+      action="<%=pageUrl%>/imageAdded"
+      method="post"
+      enctype="multipart/form-data"
+      id="image"
+    >
       <label for="pfImage"
         ><h3>Select your profile image from your device</h3></label
       >
       <div class="selectImage">
-        <input type="file" name="profileImage" id="pfImage" />
+        <input
+          type="file"
+          name="profileImage"
+          id="pfImage"
+          accept=".jpg,.jpeg,.png,.gif"
+        />
         <div class="cover"></div>
       </div>
+      <input type="submit" value="submit" />
     </form>
   </main>
   <div class="float"></div>

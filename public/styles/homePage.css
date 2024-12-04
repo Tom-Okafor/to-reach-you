@@ -122,12 +122,22 @@ footer {
   cursor: pointer;
 }
 
-.header img {
+.header > img {
   height: 70px;
   -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
 }
 
+.profile > img {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
 .post {
   margin-top: 1.5rem;
   padding-inline: 20px;
@@ -217,11 +227,16 @@ h3 {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 2px solid var(--color3);
-  border-radius: 5%;
+  border-radius: 10px;
+  margin-left: -1%;
   visibility: hidden;
   z-index: 2;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .categories button {
@@ -542,7 +557,7 @@ body {
   }
 
   .categories {
-    top: 1.5%;
+    top: 100px;
     padding-inline: 50px;
     padding-block: 35px;
     justify-content: center;
@@ -626,11 +641,11 @@ body {
   }
 
   .header > a {
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
   }
 
-  .header img {
+  .header > img {
     height: 80px;
     margin-right: auto;
     margin-left: 50%;

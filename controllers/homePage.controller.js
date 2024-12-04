@@ -2,9 +2,19 @@ import { Router } from "express";
 import { signUpDetails } from "./register.controller.js";
 import bodyParser from "body-parser";
 import { GET_DATA } from "../models/posts.model.js";
+import fs from "fs";
+import path from "path";
+import multer from "multer";
 const ROUTER = Router();
-
 let pageUrl;
+let profileImageName;
+fs.access("./public/images/profile/profileImage.jpg", (err) => {
+  if (err) {
+    profileImageName = "IMG-20241026-WA0023.jpg";
+  } else {
+    profileImageName = "profileImage.jpg"
+  }
+});
 
 async function getData() {
   const RESPONSE = await GET_DATA();
@@ -80,18 +90,32 @@ ROUTER.post("/", (request, response) => {
 
 ROUTER.get("/", (request, response) => {
   pageUrl = request.baseUrl;
-  response.render("templates/homePage.ejs", {
-    pageUrl,
-    DATA,
-    blogIndices: SHUFFLE_INDEX(),
+
+  const PATH = `./public/images/profile/set`;
+  fs.access(PATH, (err) => {
+    if (err) {
+      response.render("templates/homePage.ejs", {
+        pageUrl,
+        DATA,
+        blogIndices: SHUFFLE_INDEX(),
+      });
+    } else {
+      response.render("templates/homePage.ejs", {
+        pageUrl,
+        DATA,
+        blogIndices: SHUFFLE_INDEX(),
+        source: profileImageName,
+      });
+    }
   });
 });
 
 ROUTER.get("/blogs/:id", (request, response) => {
   response.render("templates/homePage.ejs", {
-    pageUrl,
+    pageUrl: request.baseUrl,
     categoryName: request.params.id,
     category: DATA[request.params.id],
+    source: profileImageName,
   });
 });
 ROUTER.get("/blogs/:category/:title", (request, response) => {
@@ -118,8 +142,57 @@ ROUTER.get("/blogs/:category/:title", (request, response) => {
 });
 
 ROUTER.get("/updateProfilePicture", (request, response) => {
-  response.render("templates/updateImage.ejs");
+  response.render("templates/updateImage.ejs", { pageUrl: request.baseUrl });
 });
+
+//set up multer storage
+const STORAGE = multer.diskStorage({
+  destination: "./public/images/profile",
+  filename: (request, file, cb) => {
+    profileImageName = "profileImage.jpg";
+    cb(null, profileImageName);
+  },
+});
+
+//filter uploaded file types
+const FILE_FILTER = (request, file, cb) => {
+  const ACCEPTABLE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif"];
+  const FILE_EXTENSION = path.extname(file.originalname).toLowerCase();
+  if (ACCEPTABLE_EXTENSIONS.includes(FILE_EXTENSION)) {
+    cb(null, true);
+  } else {
+    cb(
+      new Error(
+        "Invalid File Type! Only .jpg, .jpeg, .png and .gif files are allowed!"
+      ),
+      false
+    );
+  }
+};
+
+const UPLOAD = multer({
+  storage: STORAGE,
+  fileFilter: FILE_FILTER,
+});
+ROUTER.post(
+  "/imageAdded",
+  UPLOAD.single("profileImage"),
+  (request, response) => {
+    fs.mkdir("./public/images/profile/set", (err) => {
+      if (err && err.code !== "EEXIST") {
+        console.log("Error creating dirrectory", err);
+      } else {
+        console.log("Directory creation successful.");
+      }
+    });
+    let location = "";
+    for (let i = 0; i < request.baseUrl.length; i++) {
+      if (i === 0) continue;
+      location += request.baseUrl[i];
+    }
+    response.redirect("/" + location);
+  }
+);
 ROUTER.get("/createBlogPost", (request, response) => {
   response.send("CREATE BLOG POST");
 });
