@@ -2,24 +2,28 @@ import { Router } from "express";
 import { signUpDetails } from "./register.controller.js";
 import bodyParser from "body-parser";
 import { GET_DATA } from "../models/posts.model.js";
+import { userId } from "./register.controller.js";
 import fs from "fs";
 import path from "path";
 import multer from "multer";
 const ROUTER = Router();
 let pageUrl;
-let profileImageName;
-fs.access("./public/images/profile/profileImage.jpg", (err) => {
+/*fs.access("./public/images/profile/profileImage.jpg", (err) => {
   if (err) {
     profileImageName = "IMG-20241026-WA0023.jpg";
   } else {
-    profileImageName = "profileImage.jpg"
+    profileImageName = `profileImage-${userId}.jpg`;
   }
-});
+});*/
+let name = fs.readFileSync("./models/currentImage.json", "utf-8");
 
+name = JSON.parse(name);
 async function getData() {
-  const RESPONSE = await GET_DATA();
+  const RESPONSE = GET_DATA();
   return RESPONSE;
 }
+let profileImageName = name.image;
+
 const DATA = await getData();
 
 const SHUFFLE_INDEX = function () {
@@ -91,22 +95,11 @@ ROUTER.post("/", (request, response) => {
 ROUTER.get("/", (request, response) => {
   pageUrl = request.baseUrl;
 
-  const PATH = `./public/images/profile/set`;
-  fs.access(PATH, (err) => {
-    if (err) {
-      response.render("templates/homePage.ejs", {
-        pageUrl,
-        DATA,
-        blogIndices: SHUFFLE_INDEX(),
-      });
-    } else {
-      response.render("templates/homePage.ejs", {
-        pageUrl,
-        DATA,
-        blogIndices: SHUFFLE_INDEX(),
-        source: profileImageName,
-      });
-    }
+  response.render("templates/homePage.ejs", {
+    pageUrl,
+    DATA,
+    blogIndices: SHUFFLE_INDEX(),
+    source: profileImageName,
   });
 });
 
@@ -149,7 +142,7 @@ ROUTER.get("/updateProfilePicture", (request, response) => {
 const STORAGE = multer.diskStorage({
   destination: "./public/images/profile",
   filename: (request, file, cb) => {
-    profileImageName = "profileImage.jpg";
+    profileImageName = `profileImage-${userId}.jpg`;
     cb(null, profileImageName);
   },
 });
@@ -178,21 +171,30 @@ ROUTER.post(
   "/imageAdded",
   UPLOAD.single("profileImage"),
   (request, response) => {
-    fs.mkdir("./public/images/profile/set", (err) => {
-      if (err && err.code !== "EEXIST") {
-        console.log("Error creating dirrectory", err);
-      } else {
-        console.log("Directory creation successful.");
-      }
-    });
     let location = "";
     for (let i = 0; i < request.baseUrl.length; i++) {
       if (i === 0) continue;
       location += request.baseUrl[i];
     }
+    const CURRENT_PROFILE_IMAGE = {
+      image: profileImageName,
+    };
+    fs.writeFile(
+      "./models/currentImage.json",
+      JSON.stringify(CURRENT_PROFILE_IMAGE),
+      (err) => {
+        if (err) throw err;
+        console.log("File writter");
+      }
+    );
     response.redirect("/" + location);
   }
 );
+ROUTER.get("/avatar", (request, response) => {
+  profileImageName = request.query.src;
+  setProfileImageName();
+  ROUTER.use(routeToBasePage(request, response));
+});
 ROUTER.get("/createBlogPost", (request, response) => {
   response.send("CREATE BLOG POST");
 });
@@ -202,4 +204,28 @@ ROUTER.get("/createDiaryEntry", (request, response) => {
 ROUTER.get("/viewBookmarks", (request, response) => {
   response.send("VIEW BOOKMARKS");
 });
+
+function setProfileImageName() {
+  const CURRENT_PROFILE_IMAGE = {
+    image: profileImageName,
+  };
+  fs.writeFile(
+    "./models/currentImage.json",
+    JSON.stringify(CURRENT_PROFILE_IMAGE),
+    (err) => {
+      if (err) throw err;
+      console.log("File writter");
+    }
+  );
+}
+
+function routeToBasePage(request, response) {
+  let location = "";
+  for (let i = 0; i < request.baseUrl.length; i++) {
+    if (i === 0) continue;
+    location += request.baseUrl[i];
+  }
+  response.redirect("/" + location);
+}
+
 export { ROUTER };

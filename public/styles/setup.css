@@ -51,9 +51,6 @@ p > a {
   grid-template-rows: 20px 150px 30px 150px 30px 150px 20px;
   gap: 5px;
 }
-.avatar div {
-  perspective: 300px;
-}
 
 .avatarBody img {
   width: 100%;
@@ -86,61 +83,61 @@ p > a {
   scale: 0.9;
 }
 
-.avatarBody div:first-child {
+.avatarBody a:first-child {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 3;
 }
-.avatarBody div:nth-child(2) {
+.avatarBody a:nth-child(2) {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 4;
 }
-.avatarBody div:nth-child(3) {
+.avatarBody a:nth-child(3) {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 3;
 }
-.avatarBody div:nth-child(4) {
+.avatarBody a:nth-child(4) {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 5;
 }
-.avatarBody div:nth-child(5) {
+.avatarBody a:nth-child(5) {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 4;
   grid-row-end: 6;
 }
-.avatarBody div:nth-child(6) {
+.avatarBody a:nth-child(6) {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 5;
 }
-.avatarBody div:nth-child(6) {
+.avatarBody a:nth-child(6) {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 5;
 }
-.avatarBody div:nth-child(7) {
+.avatarBody a:nth-child(7) {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 5;
   grid-row-end: 7;
 }
-.avatarBody div:nth-child(8) {
+.avatarBody a:nth-child(8) {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 6;
   grid-row-end: 8;
 }
-.avatarBody div:last-child {
+.avatarBody a:last-child {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 5;
@@ -215,19 +212,19 @@ p > a:hover {
   --width: clamp(200px, 40vw, 400px);
   width: var(--width);
   height: var(--width);
-  background-color: var(--color2);
+  background-color: var(--color6);
   filter: blur(50px);
   -webkit-filter: blur(50px);
   opacity: 0.4;
   position: absolute;
-  top: 15%;
-  right: 9%;
+  top: 35%;
+  right: 1%;
   z-index: -2;
-  border-radius: 30% 70% 15% 40% / 15% 21% 50% 55%;
-  -webkit-border-radius: 30% 70% 15% 40% / 15% 21% 50% 55%;
-  -moz-border-radius: 30% 70% 15% 40% / 15% 21% 50% 55%;
-  -ms-border-radius: 30% 70% 15% 40% / 15% 21% 50% 55%;
-  -o-border-radius: 30% 70% 15% 40% / 15% 21% 50% 55%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   mix-blend-mode: darken;
   animation: float 2s ease-in-out infinite alternate both;
   -webkit-animation: float 2s ease-in-out infinite alternate both;
@@ -239,6 +236,7 @@ p > a:hover {
   position: absolute;
   top: 150%;
   left: 2%;
+  opacity: 0.6;
 }
 
 @media only screen and (min-width: 800px) {
