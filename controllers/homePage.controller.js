@@ -138,38 +138,42 @@ ROUTER.get("/updateProfilePicture", (request, response) => {
   response.render("templates/updateImage.ejs", { pageUrl: request.baseUrl });
 });
 
-//set up multer storage
-const STORAGE = multer.diskStorage({
-  destination: "./public/images/profile",
-  filename: (request, file, cb) => {
-    profileImageName = `profileImage-${userId}.jpg`;
-    cb(null, profileImageName);
-  },
-});
+function uploadImage(imageName) {
+  //set up multer storage
+  const STORAGE = multer.diskStorage({
+    destination: "./public/images/profile",
+    filename: (request, file, cb) => {
+      profileImageName = `${imageName}.jpg`;
+      cb(null, profileImageName);
+    },
+  });
 
-//filter uploaded file types
-const FILE_FILTER = (request, file, cb) => {
-  const ACCEPTABLE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif"];
-  const FILE_EXTENSION = path.extname(file.originalname).toLowerCase();
-  if (ACCEPTABLE_EXTENSIONS.includes(FILE_EXTENSION)) {
-    cb(null, true);
-  } else {
-    cb(
-      new Error(
-        "Invalid File Type! Only .jpg, .jpeg, .png and .gif files are allowed!"
-      ),
-      false
-    );
-  }
-};
+  //filter uploaded file types
+  const FILE_FILTER = (request, file, cb) => {
+    const ACCEPTABLE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif"];
+    const FILE_EXTENSION = path.extname(file.originalname).toLowerCase();
+    if (ACCEPTABLE_EXTENSIONS.includes(FILE_EXTENSION)) {
+      cb(null, true);
+    } else {
+      cb(
+        new Error(
+          "Invalid File Type! Only .jpg, .jpeg, .png and .gif files are allowed!"
+        ),
+        false
+      );
+    }
+  };
 
-const UPLOAD = multer({
-  storage: STORAGE,
-  fileFilter: FILE_FILTER,
-});
+  const UPLOAD = multer({
+    storage: STORAGE,
+    fileFilter: FILE_FILTER,
+  });
+  return UPLOAD;
+}
+
 ROUTER.post(
   "/imageAdded",
-  UPLOAD.single("profileImage"),
+  uploadImage(`profileImage-${userId}`).single("profileImage"),
   (request, response) => {
     let location = "";
     for (let i = 0; i < request.baseUrl.length; i++) {
