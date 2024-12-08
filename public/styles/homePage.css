@@ -118,8 +118,12 @@ footer {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background: var(--color2);
+  background: transparent;
   cursor: pointer;
+}
+
+#for-small{
+  background-color: var(--color2);
 }
 
 .header > img {
