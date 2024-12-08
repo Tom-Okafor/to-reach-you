@@ -167,7 +167,9 @@ input[type="file"] {
   inset: 0;
   background-image: url("/images/igYPAuPRod4aCZOiPJCtWZrC3UaEvu8LOQcwnOHNsMz4Ri6E.jpg");
   background-size: cover;
-  z-index: -1;
+  /* z-index: -1; */
+  cursor: pointer;
+  pointer-events: none;
 }
 
 form {
@@ -244,21 +246,23 @@ p > a:hover {
 
 body.createPostBody {
   flex-direction: column;
-  height: 120vh;
+  height: 140vh;
 }
 
 .createPostBody form {
   padding: 3rem;
   backdrop-filter: blur(3px);
   margin: 0;
+  position: relative;
   margin-top: auto;
   width: clamp(300px, 85vw, 600px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
-  border: 2px solid var(--color3);
+  gap: 2rem;
+  border: 3px solid #ffb951;
   border-radius: 15px;
+  box-shadow: 0px 0px 7px 3px #ff9000;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
@@ -266,24 +270,99 @@ body.createPostBody {
 }
 .createPostBody form > *:not(.selectImage) {
   width: 100%;
-  height: 35px;
+  height: 40px;
   margin-inline: auto;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid var(--color6);
+  background-color: #00780011;
+  color: var(--color7);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 1px 3px 3px var(--color7);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.createPostBody form > *:focus {
+  outline: 2px solid var(--color3);
+  outline-offset: 5px;
 }
 
+::placeholder {
+  color: #007870cc;
+  font-family: "Courier New", Courier, monospace;
+}
 .createPostBody .selectImage {
   height: 150px;
   width: 150px;
+  box-shadow: 0 1px 3px 1px #555;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
 }
 
+.createPostBody .cover {
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+.createPostBody input[type="file"]:focus {
+  outline: 2px solid var(--color3);
+  outline-offset: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+input[type="submit"] {
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color6);
+  color: var(--color5);
+}
 .createPostBody form > textarea#text {
   height: 200px;
-  padding: 0.7rem;
+}
+
+.createPostBody h2 {
+  margin-inline: auto;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    #ff9e00,
+    #d1b106,
+    #a4bc37,
+    #7ac260,
+    #54c387,
+    #41bc92,
+    #32b59a,
+    #2cada0,
+    #239f94,
+    #199288,
+    #0d857c,
+    #007870
+  );
 }
 
 .createPostBody .wrapper {
   position: absolute;
   inset: 0;
-  height: 120vh;
+  height: 140vh;
   background-image: url("../images/band1.jpg");
   background-size: 100px 100px;
   background-position: center;

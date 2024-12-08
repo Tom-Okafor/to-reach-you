@@ -2,10 +2,21 @@
 <link rel="stylesheet" href="/styles/setup.css" />
 <body class="createPostBody">
   <div class="wrapper"></div>
+  <h2>Create Blog Post</h2>
   <form action="<%= pageUrl %>/sendPost">
-    <input type="text" name="" id="" />
-    <select name="" id=""></select>
-    <textarea name="" id="text"></textarea>
+    <input type="text" name="" id="" placeholder="Your Blog Post Title" />
+    <select name="" id="" required>
+      <option value="none" disabled selected>Select Blog Post Category</option>
+      <option value="science">Science</option>
+      <option value="technology">Technology</option>
+      <option value="lifestyle">Lifestyle</option>
+      <option value="gossip">Gossip</option>
+      <option value="entertainment">Entertainment</option>
+      <option value="health">Health</option>
+      <option value="travel">Travel</option>
+      <option value="inspiration">Inspiration</option>
+    </select>
+    <textarea name="" id="text" placeholder="Your Blog Post Content"></textarea>
     <div class="selectImage">
       <input
         type="file"
