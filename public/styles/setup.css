@@ -246,7 +246,7 @@ p > a:hover {
 
 body.createPostBody {
   flex-direction: column;
-  height: 140vh;
+  height: 150vh;
 }
 
 .createPostBody form {
@@ -282,7 +282,8 @@ body.createPostBody {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   box-shadow: 0 1px 3px 3px var(--color7);
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .createPostBody form > *:focus {
   outline: 2px solid var(--color3);
@@ -357,12 +358,13 @@ input[type="submit"]:hover {
     #0d857c,
     #007870
   );
+  margin-bottom: 3rem;
 }
 
 .createPostBody .wrapper {
   position: absolute;
   inset: 0;
-  height: 140vh;
+  height: 150vh;
   background-image: url("../images/band1.jpg");
   background-size: 100px 100px;
   background-position: center;

@@ -1,9 +1,9 @@
 const POSTS_DATA = {
-    lifestyle: [
-        {
-            id: "LST0",
-            title: "Unusual Holidays You Didn’t Know Existed",
-            content: `<h2>Unusual Holidays You Didn’t Know Existed</h2>
+  lifestyle: [
+    {
+      id: "LST0",
+      title: "Unusual Holidays You Didn’t Know Existed",
+      content: `<h2>Unusual Holidays You Didn’t Know Existed</h2>
             <h3>Introduction</h3>
             <p>While most of us celebrate traditional holidays, there are countless quirky and unusual holidays that can add some fun to your calendar. Here’s a look at some of the most interesting ones from around the world!</p>
             <h3>1. National Bubble Wrap Appreciation Day (Last Monday in January)</h3>
@@ -17,12 +17,12 @@ const POSTS_DATA = {
             <h3>5. Talk Like a Pirate Day (September 19)</h3>
             <p>Embrace your inner swashbuckler! On this day, use pirate lingo in your conversations. Arrr, matey!</p>
             <h3>Conclusion</h3>
-            <p>These unusual holidays provide a fun way to break up the monotony of everyday life. Whether you celebrate with friends or observe solo, each holiday offers a unique opportunity for enjoyment and awareness.</p>`
-        },
-        {
-            id: "LST1",
-            title: "Healthy Morning Routines to Kickstart Your Day",
-            content: `
+            <p>These unusual holidays provide a fun way to break up the monotony of everyday life. Whether you celebrate with friends or observe solo, each holiday offers a unique opportunity for enjoyment and awareness.</p>`,
+    },
+    {
+      id: "LST1",
+      title: "Healthy Morning Routines to Kickstart Your Day",
+      content: `
          <h2>Healthy Morning Routines to Kickstart Your Day</h2>
 
           <p>The way you start your morning sets the tone for the rest of your day. A healthy morning routine can help boost your energy, improve productivity, and promote long-term well-being. Here’s how you can start your mornings with intention and care.</p>
@@ -49,12 +49,12 @@ const POSTS_DATA = {
           <p>Gratitude is a powerful practice that can shift your mindset. Take a moment each morning to reflect on the things you’re grateful for. Whether it’s your health, your family, or a good night’s sleep, practicing gratitude promotes positivity and a sense of contentment.</p>
           
           <h3>Conclusion</h3>
-          <p>Incorporating these habits into your morning routine can significantly improve your physical and mental well-being. Start small and gradually build a routine that works for you. Remember, the key to success is consistency—when you start your day with purpose and intention, the rest of your day will follow suit.</p>`
-        },
-        {
-            id: "LST2",
-            title: "The Art of Minimalist Living: How to Simplify Your Life",
-            content: `
+          <p>Incorporating these habits into your morning routine can significantly improve your physical and mental well-being. Start small and gradually build a routine that works for you. Remember, the key to success is consistency—when you start your day with purpose and intention, the rest of your day will follow suit.</p>`,
+    },
+    {
+      id: "LST2",
+      title: "The Art of Minimalist Living: How to Simplify Your Life",
+      content: `
          <h2>The Art of Minimalist Living: How to Simplify Your Life</h2>
 
             <p>Minimalism is not just about decluttering your home—it’s about embracing a lifestyle that focuses on living with intention and purpose. In this post, we’ll explore the core principles of minimalist living and how they can help simplify your life, reduce stress, and enhance overall happiness.</p>
@@ -81,12 +81,13 @@ const POSTS_DATA = {
             <p>Minimalism also involves letting go of the pursuit of perfection. Embrace imperfection and allow yourself the freedom to make mistakes. Life doesn’t have to be perfect to be beautiful. By releasing the pressure to do everything perfectly, you can cultivate a sense of peace and contentment in the present moment.</p>
             
             <h3>Conclusion</h3>
-            <p>Minimalism is a powerful approach to simplifying your life and finding greater fulfillment. By embracing the principles of minimalism, you can create more space, time, and mental clarity. Remember, minimalism is a journey, not a destination—start small and gradually make intentional choices that enhance your well-being.</p>`
-        },
-        {
-            id: "LST3",
-            title: "Sustainable Living: Easy Ways to Make Your Life More Eco-Friendly",
-            content: `
+            <p>Minimalism is a powerful approach to simplifying your life and finding greater fulfillment. By embracing the principles of minimalism, you can create more space, time, and mental clarity. Remember, minimalism is a journey, not a destination—start small and gradually make intentional choices that enhance your well-being.</p>`,
+    },
+    {
+      id: "LST3",
+      title:
+        "Sustainable Living: Easy Ways to Make Your Life More Eco-Friendly",
+      content: `
          <h2>Sustainable Living: Easy Ways to Make Your Life More Eco-Friendly</h2>
 
             <p>In a world increasingly affected by climate change and environmental degradation, adopting sustainable living practices is more important than ever. Making small changes in your daily routine can reduce your environmental impact and contribute to a more sustainable future. Here are some easy ways to live more eco-friendly and reduce your carbon footprint.</p>
@@ -113,12 +114,13 @@ const POSTS_DATA = {
             <p>Growing your own plants or creating a garden is not only rewarding but also beneficial for the environment. Plants absorb carbon dioxide and release oxygen, helping improve air quality. Even if you don’t have a yard, consider indoor plants or balcony gardens that can reduce your ecological footprint.</p>
             <h3>Conclusion</h3>
             <p>Living sustainably doesn’t require drastic changes—it’s about making mindful decisions in your daily life. Whether it’s reducing waste, supporting eco-friendly brands, or conserving water, each small change makes a difference. By adopting sustainable habits, you contribute to the preservation of the planet for future generations. Start small, and you’ll find that living sustainably can be both fulfilling and rewarding.</p>
-            `
-        },
-        {
-            id: "LST4",
-            title: "The Power of Digital Detox: How to Unplug and Reconnect with Life",
-            content: `<h2>The Power of Digital Detox: How to Unplug and Reconnect with Life</h2>
+            `,
+    },
+    {
+      id: "LST4",
+      title:
+        "The Power of Digital Detox: How to Unplug and Reconnect with Life",
+      content: `<h2>The Power of Digital Detox: How to Unplug and Reconnect with Life</h2>
 
             <p>In today’s hyper-connected world, it's easy to feel overwhelmed by constant notifications, endless scrolling, and the pressure to stay online. A digital detox is a powerful way to take a break from technology, reset your mind, and reconnect with the present moment. Here’s how you can benefit from a digital detox and find balance in the digital age.</p>
             
@@ -147,14 +149,14 @@ const POSTS_DATA = {
             <p>A digital detox is an opportunity to reflect on your relationship with technology. After disconnecting for a period of time, take a step back and reassess how technology fits into your life. Are you using it in a way that enhances your well-being, or are you allowing it to control your time and energy? Use your detox as a chance to set new intentions for how you engage with digital devices moving forward.</p>
             
             <h3>Conclusion</h3>
-            <p>A digital detox can have profound benefits for your mental and emotional health. By setting boundaries, embracing offline hobbies, and reconnecting with nature and loved ones, you can regain a sense of balance and well-being. Start by taking small steps to unplug, and you’ll discover the power of living in the moment without the constant pull of screens.</p>`
-        }
-    ],
-    science: [
-        {
-            id: "SCS0",
-            title: "The Impact of Climate Change on Biodiversity",
-            content: `<h2>The Impact of Climate Change on Biodiversity</h2>
+            <p>A digital detox can have profound benefits for your mental and emotional health. By setting boundaries, embracing offline hobbies, and reconnecting with nature and loved ones, you can regain a sense of balance and well-being. Start by taking small steps to unplug, and you’ll discover the power of living in the moment without the constant pull of screens.</p>`,
+    },
+  ],
+  science: [
+    {
+      id: "SCS0",
+      title: "The Impact of Climate Change on Biodiversity",
+      content: `<h2>The Impact of Climate Change on Biodiversity</h2>
 
               <h3>Introduction</h3>
               <p>Climate change poses a significant threat to biodiversity worldwide. This article examines the effects of climate change on ecosystems, species, and what can be done to protect our planet's natural diversity.</p>
@@ -175,12 +177,12 @@ const POSTS_DATA = {
               <p>To combat these challenges, conservation efforts must be prioritized. Protected areas, habitat restoration, and sustainable practices can help preserve biodiversity and mitigate the effects of climate change.</p>
               
               <h3>Conclusion</h3>
-              <p>The intersection of climate change and biodiversity is a critical concern for our planet's future. By understanding these impacts and taking action, we can work towards a more sustainable world.</p>`
-        },
-        {
-            id: "SCS1",
-            title: "The Wonders of Quantum Physics: How It Shapes Our World",
-            content: `<h2>The Wonders of Quantum Physics: How It Shapes Our World</h2>
+              <p>The intersection of climate change and biodiversity is a critical concern for our planet's future. By understanding these impacts and taking action, we can work towards a more sustainable world.</p>`,
+    },
+    {
+      id: "SCS1",
+      title: "The Wonders of Quantum Physics: How It Shapes Our World",
+      content: `<h2>The Wonders of Quantum Physics: How It Shapes Our World</h2>
 
           <p>Quantum physics, the study of the smallest particles in the universe, has revolutionized our understanding of nature. From everyday technologies to mind-boggling theories, quantum mechanics plays a critical role in shaping our world. Let’s explore some key concepts and their real-world applications.</p>
           
@@ -202,12 +204,12 @@ const POSTS_DATA = {
           </ul>
           
           <h3>Conclusion</h3>
-          <p>Quantum physics continues to challenge our understanding of the universe. Its principles drive technological innovations and inspire philosophical discussions about the nature of reality. The quantum realm is not just theoretical—it's integral to modern life.</p>`
-        },
-        {
-            id: "SCS2",
-            title: "The Science of Climate Change: Understanding the Crisis",
-            content: `<h2>The Science of Climate Change: Understanding the Crisis</h2>
+          <p>Quantum physics continues to challenge our understanding of the universe. Its principles drive technological innovations and inspire philosophical discussions about the nature of reality. The quantum realm is not just theoretical—it's integral to modern life.</p>`,
+    },
+    {
+      id: "SCS2",
+      title: "The Science of Climate Change: Understanding the Crisis",
+      content: `<h2>The Science of Climate Change: Understanding the Crisis</h2>
 
             <p>Climate change is one of the most pressing issues of our time. Understanding the science behind it is essential for addressing its impacts and finding solutions. Let’s break down the basics of climate change and its effects.</p>
             
@@ -228,12 +230,12 @@ const POSTS_DATA = {
             <p>Addressing climate change requires a collective effort. Reducing emissions, transitioning to renewable energy, and protecting natural ecosystems are vital steps. Individual actions, such as conserving energy and reducing waste, also make a difference.</p>
             
             <h3>Conclusion</h3>
-            <p>The science of climate change is clear: human activities are driving global warming. By understanding the problem and taking action, we can work towards a more sustainable future.</p>`
-        },
-        {
-            id: "SCS3",
-            title: "The Human Brain: A Marvel of Science and Complexity</h2>",
-            content: `<h2>The Human Brain: A Marvel of Science and Complexity</h2>
+            <p>The science of climate change is clear: human activities are driving global warming. By understanding the problem and taking action, we can work towards a more sustainable future.</p>`,
+    },
+    {
+      id: "SCS3",
+      title: "The Human Brain: A Marvel of Science and Complexity",
+      content: `<h2>The Human Brain: A Marvel of Science and Complexity</h2>
 
             <p>The human brain is one of the most complex and fascinating organs in the body. Responsible for thoughts, emotions, memories, and actions, it defines what it means to be human. Let’s delve into the science of the brain and uncover its mysteries.</p>
             
@@ -258,12 +260,12 @@ const POSTS_DATA = {
             </ul>
             
             <h3>Conclusion</h3>
-            <p>The human brain is a marvel of evolution and science. Despite its complexity, advancements in neuroscience are unlocking its secrets, paving the way for innovations in medicine, technology, and beyond.</p>`
-        },
-        {
-            id: "SCS4",
-            title: "Exploring Mars: Humanity’s Next Frontier",
-            content: `<h2>Exploring Mars: Humanity’s Next Frontier</h2>
+            <p>The human brain is a marvel of evolution and science. Despite its complexity, advancements in neuroscience are unlocking its secrets, paving the way for innovations in medicine, technology, and beyond.</p>`,
+    },
+    {
+      id: "SCS4",
+      title: "Exploring Mars: Humanity’s Next Frontier",
+      content: `<h2>Exploring Mars: Humanity’s Next Frontier</h2>
 
             <p>Mars has captivated humanity for centuries. As the focus of space exploration, this red planet holds the promise of scientific discovery and the potential for human colonization. Here’s why Mars is the next big frontier in space exploration.</p>
             
@@ -284,12 +286,12 @@ const POSTS_DATA = {
             <p>With plans from NASA, SpaceX, and other organizations, the future of Mars exploration looks promising. Concepts like terraforming and colonization, though ambitious, continue to inspire innovation.</p>
             
             <h3>Conclusion</h3>
-            <p>Mars represents the next step in humanity’s quest to explore the cosmos. As technology advances, the dream of setting foot on the red planet inches closer to reality.</p>`
-        },
-        {
-            id: "SCS5",
-            title: "Renewable Energy: Powering the Future",
-            content: `<h2>Renewable Energy: Powering the Future</h2>
+            <p>Mars represents the next step in humanity’s quest to explore the cosmos. As technology advances, the dream of setting foot on the red planet inches closer to reality.</p>`,
+    },
+    {
+      id: "SCS5",
+      title: "Renewable Energy: Powering the Future",
+      content: `<h2>Renewable Energy: Powering the Future</h2>
 
             <p>As the world faces environmental challenges, renewable energy has emerged as a key solution for a sustainable future. Harnessing natural resources like sunlight, wind, and water, renewable energy offers clean, abundant, and efficient alternatives to fossil fuels.</p>
             
@@ -316,14 +318,14 @@ const POSTS_DATA = {
             <p>While renewable energy offers many benefits, challenges like high initial costs, intermittency, and infrastructure limitations remain. Advances in energy storage, policy incentives, and technology are addressing these barriers.</p>
             
             <h3>Conclusion</h3>
-            <p>Renewable energy is transforming the way we power our world. By investing in these sustainable solutions, we can combat climate change, reduce pollution, and create a cleaner, greener future for generations to come.</p>`
-        }
-    ],
-    technology: [
-        {
-            id: "TCH0",
-            title: "The Rise of Artificial Intelligence in Everyday Life",
-            content: `
+            <p>Renewable energy is transforming the way we power our world. By investing in these sustainable solutions, we can combat climate change, reduce pollution, and create a cleaner, greener future for generations to come.</p>`,
+    },
+  ],
+  technology: [
+    {
+      id: "TCH0",
+      title: "The Rise of Artificial Intelligence in Everyday Life",
+      content: `
             <h2>The Rise of Artificial Intelligence in Everyday Life</h2>
 
             <h3>Introduction</h3>
@@ -345,12 +347,12 @@ const POSTS_DATA = {
             <p>While AI offers numerous benefits, it also raises ethical questions regarding privacy, job displacement, and bias. As AI continues to evolve, society must address these issues to ensure responsible development and implementation.</p>
             
             <h3>Conclusion</h3>
-            <p>AI is reshaping the way we live, work, and interact. As it becomes more integrated into our daily lives, understanding its implications is crucial for harnessing its potential while mitigating risks.</p>`
-        },
-        {
-            id: "TCH1",
-            title: "The Rise of Generative AI: Shaping the Future of Creativity",
-            content: `<h2>The Rise of Generative AI: Shaping the Future of Creativity</h2>
+            <p>AI is reshaping the way we live, work, and interact. As it becomes more integrated into our daily lives, understanding its implications is crucial for harnessing its potential while mitigating risks.</p>`,
+    },
+    {
+      id: "TCH1",
+      title: "The Rise of Generative AI: Shaping the Future of Creativity",
+      content: `<h2>The Rise of Generative AI: Shaping the Future of Creativity</h2>
 
             <p>Generative AI is revolutionizing the way we create and innovate. From art and music to writing and software development, AI tools like ChatGPT, DALL-E, and MidJourney are enabling unprecedented levels of creativity. But what does this mean for the future of human ingenuity?</p>
             
@@ -369,12 +371,12 @@ const POSTS_DATA = {
             <p>While generative AI democratizes creativity, it raises questions about copyright, ethics, and the value of human-made content. Striking a balance between AI and human effort is key to its sustainable use.</p>
             
             <h3>Conclusion</h3>
-            <p>Generative AI is a transformative force reshaping industries and redefining creativity. As technology evolves, its impact will continue to inspire awe and innovation while posing challenges we must address responsibly.</p>`
-        },
-        {
-            id: "TCH2",
-            title: "The Metaverse: A New Dimension of Connectivity",
-            content: `<h2>The Metaverse: A New Dimension of Connectivity</h2>
+            <p>Generative AI is a transformative force reshaping industries and redefining creativity. As technology evolves, its impact will continue to inspire awe and innovation while posing challenges we must address responsibly.</p>`,
+    },
+    {
+      id: "TCH2",
+      title: "The Metaverse: A New Dimension of Connectivity",
+      content: `<h2>The Metaverse: A New Dimension of Connectivity</h2>
 
             <p>The metaverse has gone from science fiction to reality, promising a fully immersive digital universe. Combining virtual reality (VR), augmented reality (AR), and blockchain, it’s reshaping how we interact, work, and play. But what exactly is the metaverse?</p>
             
@@ -396,12 +398,12 @@ const POSTS_DATA = {
             </ul>
             
             <h3>Conclusion</h3>
-            <p>The metaverse represents a new frontier in technology. While it’s still in its infancy, its potential to revolutionize connectivity and redefine digital experiences is undeniable.</p>`
-        },
-        {
-            id: "TCH3",
-            title: "The Dawn of Quantum Computing: Breaking the Limits of Technology",
-            content: `<h2>The Dawn of Quantum Computing: Breaking the Limits of Technology</h2>
+            <p>The metaverse represents a new frontier in technology. While it’s still in its infancy, its potential to revolutionize connectivity and redefine digital experiences is undeniable.</p>`,
+    },
+    {
+      id: "TCH3",
+      title: "The Dawn of Quantum Computing: Breaking the Limits of Technology",
+      content: `<h2>The Dawn of Quantum Computing: Breaking the Limits of Technology</h2>
 
             <p>Quantum computing is poised to solve problems that are impossible for classical computers. With advancements from tech giants like IBM, Google, and Microsoft, quantum computing could redefine industries and revolutionize science.</p>
             
@@ -419,12 +421,12 @@ const POSTS_DATA = {
             <p>Quantum computing faces hurdles like error correction and scalability. However, ongoing research promises to unlock its full potential within the next decade.</p>
             
             <h3>Conclusion</h3>
-            <p>Quantum computing is not just the next step in technology—it’s a leap. Its transformative potential will shape the future of innovation, solving problems we once deemed unsolvable.</p>`
-        },
-        {
-            id: "TCH4",
-            title: "The Internet of Things (IoT): Transforming Everyday Life",
-            content: `<h2>The Internet of Things (IoT): Transforming Everyday Life</h2>
+            <p>Quantum computing is not just the next step in technology—it’s a leap. Its transformative potential will shape the future of innovation, solving problems we once deemed unsolvable.</p>`,
+    },
+    {
+      id: "TCH4",
+      title: "The Internet of Things (IoT): Transforming Everyday Life",
+      content: `<h2>The Internet of Things (IoT): Transforming Everyday Life</h2>
 
             <p>The Internet of Things (IoT) is connecting devices like never before. From smart homes to industrial automation, IoT is reshaping how we interact with technology and our environment.</p>
             
@@ -442,12 +444,12 @@ const POSTS_DATA = {
             <p>While IoT improves efficiency, it raises concerns about privacy, data security, and device compatibility. Addressing these issues is crucial for IoT’s widespread adoption.</p>
             
             <h3>Conclusion</h3>
-            <p>IoT is creating a seamlessly connected world. As technology advances, it promises to make our lives smarter, safer, and more efficient.</p>`
-        },
-        {
-            id: "TCH5",
-            title: "Cybersecurity in the Age of AI: Risks and Solutions",
-            content: `<h2>Cybersecurity in the Age of AI: Risks and Solutions</h2>
+            <p>IoT is creating a seamlessly connected world. As technology advances, it promises to make our lives smarter, safer, and more efficient.</p>`,
+    },
+    {
+      id: "TCH5",
+      title: "Cybersecurity in the Age of AI: Risks and Solutions",
+      content: `<h2>Cybersecurity in the Age of AI: Risks and Solutions</h2>
 
             <p>As AI becomes more integrated into our lives, cybersecurity threats are evolving in complexity. From data breaches to AI-generated attacks, the stakes have never been higher. How can we protect ourselves in this new digital age?</p>
             
@@ -469,14 +471,14 @@ const POSTS_DATA = {
             </ul>
             
             <h3>Conclusion</h3>
-            <p>Cybersecurity in the AI era is a constant battle between innovation and protection. By leveraging AI responsibly and staying vigilant, we can mitigate risks and safeguard our digital future.</p>`
-        }
-    ],
-    gossip: [
-        {
-            id: "GSP0",
-            title: "The Celebrity Couples We Can’t Stop Talking About",
-            content: `<h2>The Celebrity Couples We Can’t Stop Talking About</h2>
+            <p>Cybersecurity in the AI era is a constant battle between innovation and protection. By leveraging AI responsibly and staying vigilant, we can mitigate risks and safeguard our digital future.</p>`,
+    },
+  ],
+  gossip: [
+    {
+      id: "GSP0",
+      title: "The Celebrity Couples We Can’t Stop Talking About",
+      content: `<h2>The Celebrity Couples We Can’t Stop Talking About</h2>
 
             <p>Hollywood love stories are a cornerstone of celebrity culture, keeping fans intrigued and gossip columns busy. From long-lasting power couples to whirlwind romances and shocking breakups, celebrity relationships offer drama, romance, and sometimes, scandal. Let's take a closer look at the couples who have captured our attention.</p>
             
@@ -499,12 +501,12 @@ const POSTS_DATA = {
             <p>Ben Affleck and Jennifer Lopez’s reunion nearly two decades after their initial romance is proof that sometimes, love gets a second chance. Their rekindled relationship, culminating in a surprise wedding, has reignited fans’ belief in happily-ever-afters.</p>
             
             <h3>Conclusion</h3>
-            <p>From fairy-tale weddings to dramatic breakups, celebrity couples remind us that love is as complicated in Hollywood as it is anywhere else. As fans, we can’t help but cheer for the happy endings, dissect the breakups, and speculate about what’s next. With new romances brewing every day, there’s no shortage of stories to keep us entertained.</p>`
-        },
-        {
-            id: "GSP1",
-            title: "Scandals That Shook the Entertainment World",
-            content: `<h2>Scandals That Shook the Entertainment World</h2>
+            <p>From fairy-tale weddings to dramatic breakups, celebrity couples remind us that love is as complicated in Hollywood as it is anywhere else. As fans, we can’t help but cheer for the happy endings, dissect the breakups, and speculate about what’s next. With new romances brewing every day, there’s no shortage of stories to keep us entertained.</p>`,
+    },
+    {
+      id: "GSP1",
+      title: "Scandals That Shook the Entertainment World",
+      content: `<h2>Scandals That Shook the Entertainment World</h2>
             
             <p>Hollywood thrives on drama, and scandals are the lifeblood of celebrity gossip. From shocking moments on live television to long-hidden secrets that came to light, these scandals left an indelible mark on the entertainment industry. Let’s delve into some of the most unforgettable controversies of recent years.</p>
             
@@ -524,12 +526,12 @@ const POSTS_DATA = {
             <p>When actresses Lori Loughlin and Felicity Huffman were implicated in a college admissions bribery scandal, it exposed a dark side of privilege. The revelation that wealthy parents had paid to secure their children’s spots at elite universities sparked outrage and led to widespread reforms in college admissions practices.</p>
             
             <h3>Conclusion</h3>
-            <p>Hollywood scandals are more than just juicy gossip—they often reveal deeper issues within the industry and society. Whether they inspire change or simply entertain, these controversies remind us that behind the glitz and glamour, celebrities are human too.</p>`
-        },
-        {
-            id: "GSP2",
-            title: "The Biggest Feuds in Celebrity History",
-            content: `<h2>The Biggest Feuds in Celebrity History</h2>
+            <p>Hollywood scandals are more than just juicy gossip—they often reveal deeper issues within the industry and society. Whether they inspire change or simply entertain, these controversies remind us that behind the glitz and glamour, celebrities are human too.</p>`,
+    },
+    {
+      id: "GSP2",
+      title: "The Biggest Feuds in Celebrity History",
+      content: `<h2>The Biggest Feuds in Celebrity History</h2>
             
             <p>Hollywood isn’t just about glittering red carpets and heartwarming camaraderie. It’s also a battleground where egos clash, drama unfolds, and rivalries turn into public spectacles. Here’s a deep dive into some of the most iconic celebrity feuds that have kept fans and tabloids buzzing.</p>
             
@@ -549,12 +551,12 @@ const POSTS_DATA = {
             <p>The *Fast & Furious* franchise became the backdrop for a feud between two of Hollywood’s biggest action stars. Dwayne Johnson’s cryptic social media posts about unprofessional behavior on set fueled speculation about a rift with Vin Diesel. Despite public pleas for reconciliation, the tension has cast a shadow over the beloved film series.</p>
             
             <h3>Conclusion</h3>  
-            <p>Celebrity feuds are more than just entertainment—they reveal the human side of fame and the inevitable clashes that arise in high-pressure, high-stakes environments. Whether resolved with a handshake or a diss track, these rivalries remind us that even in Hollywood, drama is never far behind.</p>`
-        },
-        {
-            id: "GSP3",
-            title: "The Secrets Celebrities Tried to Keep Hidden",
-            content: `<h2>The Secrets Celebrities Tried to Keep Hidden</h2>
+            <p>Celebrity feuds are more than just entertainment—they reveal the human side of fame and the inevitable clashes that arise in high-pressure, high-stakes environments. Whether resolved with a handshake or a diss track, these rivalries remind us that even in Hollywood, drama is never far behind.</p>`,
+    },
+    {
+      id: "GSP3",
+      title: "The Secrets Celebrities Tried to Keep Hidden",
+      content: `<h2>The Secrets Celebrities Tried to Keep Hidden</h2>
             
             <p>While we often see the glamorous side of celebrities, there’s always more happening behind the scenes. Some secrets eventually come to light, revealing surprising, shocking, or even inspiring truths about our favorite stars. Here are some of the most intriguing celebrity secrets that were eventually exposed.</p>
             
@@ -574,12 +576,12 @@ const POSTS_DATA = {
             <p>Known for his down-to-earth demeanor, Keanu Reeves kept his acts of kindness under the radar for years. Stories eventually emerged of him giving away large portions of his earnings to film crews and quietly supporting charitable causes. His humility and generosity have made him one of Hollywood’s most beloved figures.</p>
             
             <h3>Conclusion</h3>  
-            <p>While celebrities often strive to maintain a polished public image, their secrets—whether surprising or inspiring—remind us of their humanity. These revelations add depth to their stories and keep fans endlessly fascinated by the lives of the rich and famous.</p>`
-        },
-        {
-            id: "GSP4",
-            title: "The Most Unexpected Celebrity Friendships",
-            content: `<h2>The Most Unexpected Celebrity Friendships</h2>
+            <p>While celebrities often strive to maintain a polished public image, their secrets—whether surprising or inspiring—remind us of their humanity. These revelations add depth to their stories and keep fans endlessly fascinated by the lives of the rich and famous.</p>`,
+    },
+    {
+      id: "GSP4",
+      title: "The Most Unexpected Celebrity Friendships",
+      content: `<h2>The Most Unexpected Celebrity Friendships</h2>
 
 <p>Hollywood is full of unlikely friendships that defy expectations. Whether it’s due to different career paths, age gaps, or contrasting personalities, these connections prove that in the world of fame, friendship knows no bounds. Let’s explore some of the most surprising celebrity pairings.</p>
 
@@ -599,14 +601,14 @@ const POSTS_DATA = {
 <p>The singer-songwriter and *Friends* star struck up a friendship when Sheeran stayed at Cox’s home while recording in LA. Their unlikely connection has led to years of camaraderie, with Sheeran even introducing Cox to her current partner.</p>
 
 <h3>Conclusion</h3>  
-<p>Unexpected friendships in Hollywood remind us that genuine connections can happen anywhere. These friendships, often crossing boundaries of genre and generation, highlight the importance of shared experiences and mutual respect.</p>`
-        }
-    ],
-    entertainment: [
-        {
-            id: "ENT0",
-            title: "The Art of Meme Culture: From LOLcats to Viral Trends",
-            content: `<h2>The Art of Meme Culture: From LOLcats to Viral Trends</h2>
+<p>Unexpected friendships in Hollywood remind us that genuine connections can happen anywhere. These friendships, often crossing boundaries of genre and generation, highlight the importance of shared experiences and mutual respect.</p>`,
+    },
+  ],
+  entertainment: [
+    {
+      id: "ENT0",
+      title: "The Art of Meme Culture: From LOLcats to Viral Trends",
+      content: `<h2>The Art of Meme Culture: From LOLcats to Viral Trends</h2>
 
             <h3>Introduction</h3>
             <p>Meme culture has become a significant aspect of internet communication, shaping how we interact, express humor, and share ideas. This article explores the evolution of memes and their impact on modern culture.</p>
@@ -627,12 +629,12 @@ const POSTS_DATA = {
             <p>As technology advances, so too does meme culture. The rise of AI-generated memes and deepfakes is transforming the landscape, raising questions about authenticity and originality in the digital age.</p>
         
             <h3>Conclusion</h3>
-            <p>Meme culture reflects our collective experiences and emotions, often providing a humorous lens through which we view the world. As we navigate the ever-changing internet landscape, memes will continue to shape our conversations and culture.</p>`
-        },
-        {
-            id: "ENT1",
-            title: "The Best Movie Soundtracks of All Time",
-            content: `<h2>The Best Movie Soundtracks of All Time</h2>
+            <p>Meme culture reflects our collective experiences and emotions, often providing a humorous lens through which we view the world. As we navigate the ever-changing internet landscape, memes will continue to shape our conversations and culture.</p>`,
+    },
+    {
+      id: "ENT1",
+      title: "The Best Movie Soundtracks of All Time",
+      content: `<h2>The Best Movie Soundtracks of All Time</h2>
 
           <h3>Introduction</h3>
           <p>Movie soundtracks can elevate a film from good to unforgettable. They evoke emotions, set the tone, and even tell stories of their own. In this article, we’ll explore some of the best soundtracks that have left an indelible mark on cinema and popular music.</p>
@@ -653,12 +655,12 @@ const POSTS_DATA = {
           <p>Hans Zimmer’s haunting score for “Inception” employs intricate layers and a distinct use of sound that enhances the film's complex narrative. Tracks like “Time” linger in the mind long after the credits roll, encapsulating the movie's themes of dreams and reality.</p>
           
           <h3>Conclusion</h3>
-          <p>The best movie soundtracks do more than accompany the film; they become a part of its identity. Whether through memorable melodies or nostalgic hits, these soundtracks enrich our cinematic experience and continue to influence music and culture.</p>`
-        },
-        {
-            id: "ENT2",
-            title: "The Evolution of Pop Culture: From the 1960s to Today",
-            content: `
+          <p>The best movie soundtracks do more than accompany the film; they become a part of its identity. Whether through memorable melodies or nostalgic hits, these soundtracks enrich our cinematic experience and continue to influence music and culture.</p>`,
+    },
+    {
+      id: "ENT2",
+      title: "The Evolution of Pop Culture: From the 1960s to Today",
+      content: `
             <h2>The Evolution of Pop Culture: From the 1960s to Today</h2>
 
             <h3>Introduction</h3>
@@ -680,12 +682,12 @@ const POSTS_DATA = {
             <p>The advent of the internet transformed how pop culture is consumed and shared. Social media platforms like Instagram and TikTok have democratized content creation, allowing anyone to become a cultural influencer.</p>
             
             <h3>Conclusion</h3>
-            <p>Pop culture continues to evolve, reflecting the complexities of society. As new technologies and trends emerge, the landscape will undoubtedly change, offering fresh perspectives on culture and identity.</p>`
-        },
-        {
-            id: "ENT3",
-            title: "Binge-Worthy TV Shows",
-            content: `<h2>Binge-Worthy TV Shows</h2>
+            <p>Pop culture continues to evolve, reflecting the complexities of society. As new technologies and trends emerge, the landscape will undoubtedly change, offering fresh perspectives on culture and identity.</p>`,
+    },
+    {
+      id: "ENT3",
+      title: "Binge-Worthy TV Shows",
+      content: `<h2>Binge-Worthy TV Shows</h2>
 
             <p>With the rise of streaming services, TV enthusiasts are spoiled for choice. From drama to comedy, here are some binge-worthy shows to add to your watchlist.</p>
             
@@ -711,12 +713,12 @@ const POSTS_DATA = {
             </ul>
             
             <h3>Conclusion:</h3>
-            <p>Whether you're a drama aficionado or comedy fan, there's something for everyone in the world of TV.</p>`
-        },
-        {
-            id: "ENT4",
-            title: "Defining Musical Artists of the 21st Century",
-            content: `
+            <p>Whether you're a drama aficionado or comedy fan, there's something for everyone in the world of TV.</p>`,
+    },
+    {
+      id: "ENT4",
+      title: "Defining Musical Artists of the 21st Century",
+      content: `
             <h2>Defining Musical Artists of the 21st Century</h2>
             
             <p>The 21st century has witnessed a transformative music landscape, shaped by innovators who pushed boundaries, defied genres, and captivated audiences worldwide. Here are the defining musical artists of the 21st century, whose influence will resonate for generations to come.</p>
@@ -777,14 +779,14 @@ const POSTS_DATA = {
             <h3>The Future of Music</h3>
             <p>As we look to the future, emerging artists will continue to push boundaries, blend genres, and inspire new generations. The 21st century's musical legacy will be marked by innovation, diversity, and creativity.</p>
             
-            <p>Who will be the next defining artists of the century?</p>`
-        }
-    ],
-    health: [
-        {
-            id: "HLT0",
-            title: "Top 10 Bizarre Food Combinations That Actually Work",
-            content: `<h2>Top 10 Bizarre Food Combinations That Actually Work</h2>
+            <p>Who will be the next defining artists of the century?</p>`,
+    },
+  ],
+  health: [
+    {
+      id: "HLT0",
+      title: "Top 10 Bizarre Food Combinations That Actually Work",
+      content: `<h2>Top 10 Bizarre Food Combinations That Actually Work</h2>
 
             <h3>Introduction</h3>
             <p>Food can be a delightful adventure, and some unexpected flavor pairings might surprise you. Here’s a list of bizarre food combinations that actually taste fantastic!</p>
@@ -820,12 +822,12 @@ const POSTS_DATA = {
             <p>Drizzling balsamic vinegar over fresh strawberries enhances their sweetness and adds a sophisticated touch. This combination works great in salads or as a dessert topping.</p>
             
             <h3>Conclusion</h3>
-            <p>Exploring unique food combinations can lead to delicious discoveries. Don’t hesitate to experiment in the kitchen; you might just find your new favorite dish!</p>`
-        },
-        {
-            id: "HLT1",
-            title: "Managing Allergies: Tips for a Healthier Life",
-            content: `
+            <p>Exploring unique food combinations can lead to delicious discoveries. Don’t hesitate to experiment in the kitchen; you might just find your new favorite dish!</p>`,
+    },
+    {
+      id: "HLT1",
+      title: "Managing Allergies: Tips for a Healthier Life",
+      content: `
             <h2>Managing Allergies: Tips for a Healthier Life</h2>
 
         <h3>Introduction</h3>
@@ -880,12 +882,12 @@ const POSTS_DATA = {
         <p>If your allergy symptoms persist despite management strategies or worsen, consult a healthcare professional. They can help identify underlying issues and adjust your treatment plan accordingly.</p>
         
         <h3>Conclusion</h3>
-        <p>Managing allergies requires a proactive approach, from understanding triggers to implementing lifestyle changes. By taking these steps, you can minimize allergy symptoms and improve your overall quality of life. Remember, with the right strategies and support, it is possible to live well with allergies.</p>`
-        },
-        {
-            id: "HLT2",
-            title: "The Art of Mindful Eating",
-            content: `
+        <p>Managing allergies requires a proactive approach, from understanding triggers to implementing lifestyle changes. By taking these steps, you can minimize allergy symptoms and improve your overall quality of life. Remember, with the right strategies and support, it is possible to live well with allergies.</p>`,
+    },
+    {
+      id: "HLT2",
+      title: "The Art of Mindful Eating",
+      content: `
             <h2>The Art of Mindful Eating</h2>
             
             <p>Mindful eating is a powerful tool for developing a healthier relationship with food. By paying attention to our physical and emotional sensations, we can break free from unhealthy patterns and cultivate a more balanced approach to nutrition.</p>
@@ -919,12 +921,12 @@ const POSTS_DATA = {
             </ul>
             
             <h3>Conclusion:</h3>
-            <p>Mindful eating offers a transformative approach to nourishing our bodies and souls. By embracing this practice, we can develop a more intuitive and joyful relationship with food.</p>`
-        },
-        {
-            id: "HLT3",
-            title: "Yoga for Beginners",
-            content: `
+            <p>Mindful eating offers a transformative approach to nourishing our bodies and souls. By embracing this practice, we can develop a more intuitive and joyful relationship with food.</p>`,
+    },
+    {
+      id: "HLT3",
+      title: "Yoga for Beginners",
+      content: `
             <h2>Yoga for Beginners</h2>
 
             <p>Yoga is a powerful practice for uniting body, mind, and spirit. As a beginner, it's essential to start with foundational poses and gradually build your practice.</p>
@@ -951,12 +953,13 @@ const POSTS_DATA = {
             </ul>
             
             <h3>Conclusion:</h3>
-            <p>Yoga offers a transformative journey for those willing to embark. Begin your practice today and discover the numerous benefits.</p>`
-        },
-        {
-            id: "HLT4",
-            title: "The Ultimate Guide to Health and Wellness: A Holistic Approach to Living Your Best Life",
-            content: `<h2>The Ultimate Guide to Health and Wellness: A Holistic Approach to Living Your Best Life</h2>
+            <p>Yoga offers a transformative journey for those willing to embark. Begin your practice today and discover the numerous benefits.</p>`,
+    },
+    {
+      id: "HLT4",
+      title:
+        "The Ultimate Guide to Health and Wellness: A Holistic Approach to Living Your Best Life",
+      content: `<h2>The Ultimate Guide to Health and Wellness: A Holistic Approach to Living Your Best Life</h2>
 
             <p>In today’s fast-paced world, health and wellness are more important than ever. While modern medicine plays a critical role in addressing illnesses, true well-being requires a holistic approach that balances physical, mental, and emotional health. This guide dives deep into the pillars of health and wellness, offering actionable insights to help you achieve a more balanced and fulfilling life.</p>
             
@@ -1034,14 +1037,14 @@ const POSTS_DATA = {
             </ul>  
             
             <h3>Conclusion</h3>  
-            <p>Health and wellness are multifaceted, requiring attention to physical, mental, emotional, social, and spiritual aspects. By taking a holistic approach, you can achieve a harmonious balance that promotes long-term well-being. Start small, make consistent efforts, and remember: wellness is a journey, not a destination. Take the first step today and invest in the most important asset you’ll ever have—your health.</p>`
-        }
-    ],
-    travel: [
-        {
-            id: "TRV0",
-            title: "The Top 10 Hidden Travel Gems Around the World",
-            content: `<h2>The Top 10 Hidden Travel Gems Around the World</h2>
+            <p>Health and wellness are multifaceted, requiring attention to physical, mental, emotional, social, and spiritual aspects. By taking a holistic approach, you can achieve a harmonious balance that promotes long-term well-being. Start small, make consistent efforts, and remember: wellness is a journey, not a destination. Take the first step today and invest in the most important asset you’ll ever have—your health.</p>`,
+    },
+  ],
+  travel: [
+    {
+      id: "TRV0",
+      title: "The Top 10 Hidden Travel Gems Around the World",
+      content: `<h2>The Top 10 Hidden Travel Gems Around the World</h2>
 
             <p>In a world filled with tourist hotspots, some destinations remain beautifully untouched and less explored. These hidden gems offer unique experiences for travelers seeking adventure away from the crowd. Here's a list of 10 underrated destinations to inspire your wanderlust.</p>
             
@@ -1075,12 +1078,12 @@ const POSTS_DATA = {
             <h3>10. Svaneti, Georgia</h3>
             <p>A remote region with medieval towers, snow-capped peaks, and authentic Georgian culture untouched by time.</p>
             
-            <p>These destinations prove that the world still has many treasures waiting to be discovered. Pack your bags and embark on an unforgettable journey!</p>`
-        },
-        {
-            id: "TRV1",
-            title: "The Best Hiking Trails for Adventure Seekers",
-            content: `<h2>The Best Hiking Trails for Adventure Seekers</h2>
+            <p>These destinations prove that the world still has many treasures waiting to be discovered. Pack your bags and embark on an unforgettable journey!</p>`,
+    },
+    {
+      id: "TRV1",
+      title: "The Best Hiking Trails for Adventure Seekers",
+      content: `<h2>The Best Hiking Trails for Adventure Seekers</h2>
             
             <p>If you’re an outdoor enthusiast, these hiking trails from around the world will challenge your endurance and reward you with breathtaking views.</p>
             
@@ -1099,12 +1102,12 @@ const POSTS_DATA = {
             <h3>5. Haute Route, France/Switzerland</h3>
             <p>Traverse the Alps from Mont Blanc to the Matterhorn, surrounded by some of Europe’s most dramatic scenery.</p>
             
-            <p>Adventure awaits on these stunning hiking trails—start lacing up your boots!</p>`
-        },
-        {
-            id: "TRV2",
-            title: "Luxury Travel Destinations Worth Splurging On",
-            content: `<h2>Luxury Travel Destinations Worth Splurging On</h2>
+            <p>Adventure awaits on these stunning hiking trails—start lacing up your boots!</p>`,
+    },
+    {
+      id: "TRV2",
+      title: "Luxury Travel Destinations Worth Splurging On",
+      content: `<h2>Luxury Travel Destinations Worth Splurging On</h2>
             
             <p>If you're dreaming of indulgence, these luxury destinations redefine what it means to travel in style.</p>
             
@@ -1123,12 +1126,12 @@ const POSTS_DATA = {
             <h3>5. Aspen, Colorado</h3>
             <p>For winter enthusiasts, Aspen combines world-class skiing with upscale shopping and dining.</p>
             
-            <p>These destinations prove that luxury travel is an investment in unforgettable memories.</p>`
-        },
-        {
-            id: "TRV3",
-            title: "A Beginner’s Guide to Backpacking Across Europe",
-            content: `<h2>A Beginner’s Guide to Backpacking Across Europe</h2>
+            <p>These destinations prove that luxury travel is an investment in unforgettable memories.</p>`,
+    },
+    {
+      id: "TRV3",
+      title: "A Beginner’s Guide to Backpacking Across Europe",
+      content: `<h2>A Beginner’s Guide to Backpacking Across Europe</h2>
             
             <p>Backpacking across Europe is a rite of passage for many travelers. This guide covers everything you need to know for an epic adventure.</p>
             
@@ -1144,12 +1147,12 @@ const POSTS_DATA = {
             <h3>4. Must-See Landmarks</h3>
             <p>Explore the Eiffel Tower in Paris, the Colosseum in Rome, and the fjords of Norway.</p>
             
-            <p>Backpacking through Europe is a life-changing experience. Plan well, stay flexible, and enjoy the journey!</p>`
-        },
-        {
-            id: "TRV4",
-            title: "How to Plan the Ultimate Solo Adventure",
-            content: `<h2>How to Plan the Ultimate Solo Adventure</h2>
+            <p>Backpacking through Europe is a life-changing experience. Plan well, stay flexible, and enjoy the journey!</p>`,
+    },
+    {
+      id: "TRV4",
+      title: "How to Plan the Ultimate Solo Adventure",
+      content: `<h2>How to Plan the Ultimate Solo Adventure</h2>
             
             <p>Traveling alone can be one of the most empowering and transformative experiences of your life. Whether you’re seeking self-discovery or just a break from routine, this guide will help you plan an unforgettable solo adventure.</p>
             
@@ -1171,14 +1174,15 @@ const POSTS_DATA = {
             <h3>6. Prioritize Safety</h3>
             <p>Research your destination, avoid isolated areas, and trust your instincts. Solo travel is liberating, but safety should always come first.</p>
             
-            <p>Solo adventures are more than a journey—they’re an opportunity to learn about yourself and the world. Start planning your solo adventure today!</p>`
-        }
-    ],
-    inspiration: [
-        {
-            id: "INS0",
-            title: "The Power of Positive Thinking: How to Shift Your Mindset for Success",
-            content: `<h2>The Power of Positive Thinking: How to Shift Your Mindset for Success</h2>
+            <p>Solo adventures are more than a journey—they’re an opportunity to learn about yourself and the world. Start planning your solo adventure today!</p>`,
+    },
+  ],
+  inspiration: [
+    {
+      id: "INS0",
+      title:
+        "The Power of Positive Thinking: How to Shift Your Mindset for Success",
+      content: `<h2>The Power of Positive Thinking: How to Shift Your Mindset for Success</h2>
             
             <p>In a world filled with challenges, a positive mindset can be your greatest asset. Shifting your thinking from negative to positive can unlock your potential and lead to greater success. This post explores how to harness the power of positive thinking for personal and professional growth.</p>
             
@@ -1197,12 +1201,12 @@ const POSTS_DATA = {
             <h3>5. The Benefits of Positive Thinking in Personal and Professional Life</h3>
             <p>By maintaining a positive mindset, you're more likely to seize opportunities, handle setbacks gracefully, and maintain the motivation needed to achieve your goals. Positive thinking fuels perseverance and creativity, key components of success.</p>
             
-            <p>Embrace positive thinking today and watch how it transforms your life. A simple shift in mindset can lead to extraordinary results.</p>`
-        },
-        {
-            id: "INS1",
-            title: "How to Set and Achieve Big Goals: A Step-by-Step Guide",
-            content: `<h2>How to Set and Achieve Big Goals: A Step-by-Step Guide</h2>
+            <p>Embrace positive thinking today and watch how it transforms your life. A simple shift in mindset can lead to extraordinary results.</p>`,
+    },
+    {
+      id: "INS1",
+      title: "How to Set and Achieve Big Goals: A Step-by-Step Guide",
+      content: `<h2>How to Set and Achieve Big Goals: A Step-by-Step Guide</h2>
 
             <p>Setting big goals is an essential part of personal growth, but achieving them requires planning, persistence, and resilience. In this post, we’ll break down the process of setting and accomplishing big goals, one step at a time.</p>
             
@@ -1224,12 +1228,12 @@ const POSTS_DATA = {
             <h3>6. Celebrate Your Progress</h3>
             <p>As you make progress toward your big goal, take time to celebrate your achievements. Acknowledging your hard work reinforces your commitment and motivates you to keep going.</p>
             
-            <p>Remember, big goals don’t happen overnight. But with determination, focus, and persistence, you can achieve anything you set your mind to. Start today, and take the first step toward achieving your dreams.</p>`
-        },
-        {
-            id: "INS2",
-            title: "The Importance of Self-Care: How to Recharge Your Mind and Body",
-            content: `<h2>The Importance of Self-Care: How to Recharge Your Mind and Body</h2>
+            <p>Remember, big goals don’t happen overnight. But with determination, focus, and persistence, you can achieve anything you set your mind to. Start today, and take the first step toward achieving your dreams.</p>`,
+    },
+    {
+      id: "INS2",
+      title: "The Importance of Self-Care: How to Recharge Your Mind and Body",
+      content: `<h2>The Importance of Self-Care: How to Recharge Your Mind and Body</h2>
           
           <p>In the fast-paced world we live in, self-care often takes a backseat. However, taking time for yourself is essential for your well-being and success. In this post, we’ll discuss why self-care is important and share practical tips for making it a priority in your life.</p>
           
@@ -1253,12 +1257,13 @@ const POSTS_DATA = {
           <h3>5. Overcoming Guilt Around Self-Care</h3>
           <p>Many people feel guilty about taking time for themselves, but self-care is not selfish. In fact, it’s necessary for your overall health and well-being. By prioritizing self-care, you enhance your ability to be productive and effective in other areas of life.</p>
           
-          <p>Investing in self-care is one of the best things you can do for yourself. Recharging your body and mind will not only improve your health but also your productivity, creativity, and relationships.</p>`
-        },
-        {
-            id: "INS3",
-            title: "Building Confidence: How to Believe in Yourself and Achieve Your Goals",
-            content: `<h2>Building Confidence: How to Believe in Yourself and Achieve Your Goals</h2>
+          <p>Investing in self-care is one of the best things you can do for yourself. Recharging your body and mind will not only improve your health but also your productivity, creativity, and relationships.</p>`,
+    },
+    {
+      id: "INS3",
+      title:
+        "Building Confidence: How to Believe in Yourself and Achieve Your Goals",
+      content: `<h2>Building Confidence: How to Believe in Yourself and Achieve Your Goals</h2>
           
           <p>Confidence is a key ingredient to achieving success in any area of life. However, it’s not always something we are born with—it’s something that can be developed over time. In this post, we’ll discuss how to build and nurture your confidence so that you can reach your full potential.</p>
           
@@ -1277,12 +1282,12 @@ const POSTS_DATA = {
           <h3>5. Taking Action Despite Fear</h3>
           <p>Confidence grows through action. Don’t wait until you feel perfectly ready to pursue your goals. Take small steps towards your dreams, and with each step, your confidence will strengthen.</p>
           
-          <p>Confidence isn’t something that happens overnight, but with practice and patience, you can develop it. Believe in yourself, and you’ll be amazed at what you can achieve.</p>`
-        },
-        {
-            id: "INS4",
-            title: "The Art of Saying No: Setting Boundaries for a Healthier Life",
-            content: `<h2>The Art of Saying No: Setting Boundaries for a Healthier Life</h2>
+          <p>Confidence isn’t something that happens overnight, but with practice and patience, you can develop it. Believe in yourself, and you’ll be amazed at what you can achieve.</p>`,
+    },
+    {
+      id: "INS4",
+      title: "The Art of Saying No: Setting Boundaries for a Healthier Life",
+      content: `<h2>The Art of Saying No: Setting Boundaries for a Healthier Life</h2>
 
           <p>Learning to say no is one of the most important skills for maintaining your mental and emotional well-being. Setting boundaries allows you to prioritize your needs, protect your time, and reduce stress. In this post, we’ll explore how to say no gracefully and effectively without feeling guilty.</p>
           
@@ -1314,13 +1319,13 @@ const POSTS_DATA = {
           <h3>6. The Positive Impact of Saying No</h3>
           <p>By setting boundaries and learning to say no, you create space for what truly matters. You can focus more on your personal goals, well-being, and the relationships that are most important to you. Saying no allows you to be more present and intentional with your time and energy.</p>
           
-          <p>Remember, saying no is a form of self-care. It is a powerful tool that helps you create a healthier, more balanced life. Embrace it, and you’ll be amazed at how much better you feel!</p>`
-        }
-    ]
+          <p>Remember, saying no is a form of self-care. It is a powerful tool that helps you create a healthier, more balanced life. Embrace it, and you’ll be amazed at how much better you feel!</p>`,
+    },
+  ],
 };
 
 const GET_DATA = function () {
-    return Promise.resolve(POSTS_DATA);
+  return Promise.resolve(POSTS_DATA);
 };
 
 export { GET_DATA };
