@@ -1,0 +1,21 @@
+<%- include('../partials/header.ejs') %>
+<link rel="stylesheet" href="/styles/setup.css" />
+<body class="createPostBody">
+  <div class="wrapper"></div>
+  <form action="<%= pageUrl %>/sendPost">
+    <input type="text" name="" id="" />
+    <select name="" id=""></select>
+    <textarea name="" id="text"></textarea>
+    <div class="selectImage">
+      <input
+        type="file"
+        name="profileImage"
+        id="pfImage"
+        accept=".jpg,.jpeg,.png,.gif"
+      />
+      <div class="cover"></div>
+    </div>
+    <input type="submit" value="submit" />
+  </form>
+  <%- include('../partials/footer.ejs') %>
+</body>

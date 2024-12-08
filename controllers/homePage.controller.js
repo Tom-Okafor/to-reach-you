@@ -200,7 +200,7 @@ ROUTER.get("/avatar", (request, response) => {
   ROUTER.use(routeToBasePage(request, response));
 });
 ROUTER.get("/createBlogPost", (request, response) => {
-  response.send("CREATE BLOG POST");
+  response.render("templates/createPost.ejs", { pageUrl: request.baseUrl });
 });
 ROUTER.get("/createDiaryEntry", (request, response) => {
   response.send("CREATE DIARY ENTRY");
