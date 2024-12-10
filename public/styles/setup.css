@@ -34,7 +34,8 @@ p {
   letter-spacing: 1px;
   line-height: 1.2rem;
 }
-p > a {
+
+p>a {
   text-decoration: underline;
   text-transform: capitalize;
   color: var(--color7);
@@ -92,54 +93,63 @@ p > a {
   grid-row-start: 1;
   grid-row-end: 3;
 }
+
 .avatarBody a:nth-child(2) {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 4;
 }
+
 .avatarBody a:nth-child(3) {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 3;
 }
+
 .avatarBody a:nth-child(4) {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 5;
 }
+
 .avatarBody a:nth-child(5) {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 4;
   grid-row-end: 6;
 }
+
 .avatarBody a:nth-child(6) {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 5;
 }
+
 .avatarBody a:nth-child(6) {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 5;
 }
+
 .avatarBody a:nth-child(7) {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 5;
   grid-row-end: 7;
 }
+
 .avatarBody a:nth-child(8) {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 6;
   grid-row-end: 8;
 }
+
 .avatarBody a:last-child {
   grid-column-start: 4;
   grid-column-end: 6;
@@ -150,6 +160,7 @@ p > a {
 .avatar {
   margin-bottom: 4rem;
 }
+
 .selectImage {
   position: relative;
   height: 250px;
@@ -200,6 +211,7 @@ h3 {
   -ms-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
 }
+
 h3:hover {
   background: #ff9e0f;
   -webkit-background-clip: text;
@@ -208,7 +220,8 @@ h3:hover {
   -webkit-text-stroke-color: transparent;
   -webkit-text-fill-color: var(--color5);
 }
-p > a:hover {
+
+p>a:hover {
   font-size: 1.2rem;
   color: #ff9e0f;
 }
@@ -268,6 +281,7 @@ body.createPostBody {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
+
 .createPostBody form input:not(.selectImage input),
 .createPostBody form select,
 .createPostBody form textarea {
@@ -287,6 +301,7 @@ body.createPostBody {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
 .createPostBody form input:focus,
 .createPostBody form select:focus,
 .createPostBody form textarea:focus {
@@ -300,14 +315,15 @@ body.createPostBody {
   margin-top: 0;
   padding: 0.5rem;
   color: #ffaf00;
-  filter: drop-shadow(0px 2px 2px var(--color7));
-  -webkit-filter: drop-shadow(0.5px 1.5px var(--color1));
+  filter: drop-shadow(0px 1px var(--color1));
+  -webkit-filter: drop-shadow(0px 1px var(--color1));
 }
 
 ::placeholder {
   color: #007870cc;
   font-family: "Courier New", Courier, monospace;
 }
+
 .createPostBody .selectImage {
   height: 150px;
   width: 150px;
@@ -326,6 +342,7 @@ body.createPostBody {
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
 }
+
 .createPostBody input[type="file"]:focus {
   outline: 2px solid var(--color3);
   outline-offset: 5px;
@@ -335,6 +352,7 @@ body.createPostBody {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
 input[type="submit"] {
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -350,28 +368,27 @@ input[type="submit"]:hover {
   background-color: var(--color6);
   color: var(--color5);
 }
-.createPostBody form textarea#text {
+
+.createPostBody form textarea#content {
   height: 200px;
 }
 
 .createPostBody h2 {
   margin-inline: auto;
   text-transform: uppercase;
-  background-image: linear-gradient(
-    to right,
-    #ff9e00,
-    #d1b106,
-    #a4bc37,
-    #7ac260,
-    #54c387,
-    #41bc92,
-    #32b59a,
-    #2cada0,
-    #239f94,
-    #199288,
-    #0d857c,
-    #007870
-  );
+  background-image: linear-gradient(to right,
+      #ff9e00,
+      #d1b106,
+      #a4bc37,
+      #7ac260,
+      #54c387,
+      #41bc92,
+      #32b59a,
+      #2cada0,
+      #239f94,
+      #199288,
+      #0d857c,
+      #007870);
   margin-bottom: 3rem;
 }
 
@@ -383,10 +400,8 @@ input[type="submit"]:hover {
   background-size: 100px 100px;
   background-position: center;
   z-index: -1;
-  animation: shiftBg 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
-    alternate;
-  -webkit-animation: shiftBg 10s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite alternate;
+  animation: shiftBg 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+  -webkit-animation: shiftBg 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
 }
 
 @keyframes shiftBg {
@@ -401,6 +416,7 @@ input[type="submit"]:hover {
     -webkit-animation: none;
   }
 }
+
 @media only screen and (min-width: 800px) {
   p {
     font-size: 1.1rem;
@@ -435,7 +451,7 @@ input[type="submit"]:hover {
     padding: 3rem;
   }
 
-  .inputBlock p{
+  .inputBlock p {
     font-size: 1rem;
   }
 }

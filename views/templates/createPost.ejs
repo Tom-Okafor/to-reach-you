@@ -5,14 +5,14 @@
   <h2>Create Blog Post</h2>
   <form action="<%= pageUrl %>/sendPost" method="post">
     <div class="inputBlock">
-      <input type="text" name="" id="" placeholder="Your Blog Post Title" />
+      <input type="text" name="title" id="title" placeholder="Your Blog Post Title" />
       <p>
         Please, enter a title for your blog post. Keep it simple and relevant to
-        its content. Titles must be less than 200 characters.
+        its content. The title must not be more than 200 characters.
       </p>
     </div>
     <div class="inputBlock">
-      <select name="" id="" required>
+      <select name="category" id="category" required>
         <option value="none" disabled selected>
           Select Blog Post Category
         </option>
@@ -30,12 +30,12 @@
 
     <div class="inputBlock">
       <textarea
-        name=""
-        id="text"
+        name="content"
+        id="content"
         placeholder="Your Blog Post Content"
       ></textarea>
       <p>
-        Please, input the content of you blog post. Content must be at least 700
+        Please, input the content of your blog post. Content must be at least 700
         words.
       </p>
     </div>
@@ -56,4 +56,5 @@
     <input type="submit" value="submit" />
   </form>
   <%- include('../partials/footer.ejs') %>
+  <script src="/scripts/createPost.js"></script>
 </body>
