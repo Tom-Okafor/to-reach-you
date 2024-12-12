@@ -1,60 +1,54 @@
 <%- include('../partials/header.ejs') %>
-<link rel="stylesheet" href="/styles/setup.css" />
-<body class="createPostBody">
-  <div class="wrapper"></div>
-  <h2>Create Blog Post</h2>
-  <form action="<%= pageUrl %>/sendPost" method="post">
-    <div class="inputBlock">
-      <input type="text" name="title" id="title" placeholder="Your Blog Post Title" />
-      <p>
-        Please, enter a title for your blog post. Keep it simple and relevant to
-        its content. The title must not be more than 200 characters.
-      </p>
-    </div>
-    <div class="inputBlock">
-      <select name="category" id="category" required>
-        <option value="none" disabled selected>
-          Select Blog Post Category
-        </option>
-        <option value="science">Science</option>
-        <option value="technology">Technology</option>
-        <option value="lifestyle">Lifestyle</option>
-        <option value="gossip">Gossip</option>
-        <option value="entertainment">Entertainment</option>
-        <option value="health">Health</option>
-        <option value="travel">Travel</option>
-        <option value="inspiration">Inspiration</option>
-      </select>
-      <p>Please, select the category where your blog post best fits into.</p>
-    </div>
+  <link rel="stylesheet" href="/styles/setup.css" />
 
-    <div class="inputBlock">
-      <textarea
-        name="content"
-        id="content"
-        placeholder="Your Blog Post Content"
-      ></textarea>
-      <p>
-        Please, input the content of your blog post. Content must be at least 700
-        words.
-      </p>
-    </div>
-
-    <div class="inputBlock">
-      <div class="selectImage">
-        <input
-          type="file"
-          name="blogImage"
-          id="pfImage"
-          accept=".jpg,.jpeg,.png,.gif"
-        />
-        <div class="cover"></div>
+  <body class="createPostBody">
+    <div class="wrapper"></div>
+    <h2>Create Blog Post</h2>
+    <form action="<%= pageUrl %>/sendPost" method="post">
+      <div class="inputBlock">
+        <input type="text" name="title" id="title" placeholder="Your Blog Post Title" />
+        <p>
+          Please, enter a title for your blog post. Keep it simple and relevant to
+          its content. The title must be at
+          least 20 characters long but not more than 200 characters.
+        </p>
       </div>
-      <p>Select an accompanying image for your post.</p>
-    </div>
+      <div class="inputBlock">
+        <select name="category" id="category" required>
+          <option value="none" disabled selected>
+            Select Blog Post Category
+          </option>
+          <option value="science">Science</option>
+          <option value="technology">Technology</option>
+          <option value="lifestyle">Lifestyle</option>
+          <option value="gossip">Gossip</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="health">Health</option>
+          <option value="travel">Travel</option>
+          <option value="inspiration">Inspiration</option>
+        </select>
+        <p>Please, select the category where your blog post best fits into.</p>
+      </div>
 
-    <input type="submit" value="submit" />
-  </form>
-  <%- include('../partials/footer.ejs') %>
-  <script src="/scripts/createPost.js"></script>
-</body>
+      <div class="inputBlock">
+        <textarea name="content" id="content" placeholder="Your Blog Post Content"></textarea>
+        <p>
+          Please, input the content of your blog post. Content must be at least 700
+          words.
+        </p>
+      </div>
+
+      <div class="inputBlock">
+        <div class="selectImage">
+          <input type="file" name="blogImage" id="pfImage" accept=".jpg,.jpeg,.png,.gif" />
+          <div class="cover"></div>
+        </div>
+        <p>Select an accompanying image for your post. If you do not select an image, a default image will be added for
+          you.</p>
+      </div>
+
+      <input type="submit" value="submit" />
+    </form>
+    <%- include('../partials/footer.ejs') %>
+      <script src="/scripts/createPost.js"></script>
+  </body>
