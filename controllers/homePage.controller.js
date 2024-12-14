@@ -6,6 +6,7 @@ import { userId } from "./register.controller.js";
 import fs from "fs";
 import path from "path";
 import multer from "multer";
+import { title } from "process";
 const ROUTER = Router();
 let pageUrl;
 /*fs.access("./public/images/profile/profileImage.jpg", (err) => {
@@ -18,6 +19,7 @@ let pageUrl;
 let name = fs.readFileSync("./models/currentImage.json", "utf-8");
 
 name = JSON.parse(name);
+
 async function getData() {
   const RESPONSE = GET_DATA();
   return RESPONSE;
@@ -197,7 +199,7 @@ ROUTER.post(
 ROUTER.get("/avatar", (request, response) => {
   profileImageName = request.query.src;
   setProfileImageName();
-  ROUTER.use(routeToBasePage(request, response));
+  routeToBasePage(request, response);
 });
 ROUTER.get("/createBlogPost", (request, response) => {
   response.render("templates/createPost.ejs", { pageUrl: request.baseUrl });
@@ -246,12 +248,59 @@ ROUTER.post(
   "/sendPost",
   uploadBlogImage(`blogImage`).single("blogImage"),
   (request, response) => {
-    response.send("post sent.");
+    // response.send("post sent.");
     if (!request.body.blogImage) {
       console.log("no image was uploaded.");
     } else {
       console.log("image uploaded.");
     }
+    const CATEGORY = request.body.category;
+    let idBase;
+    switch (CATEGORY) {
+      case "science":
+        idBase = "SCS";
+        break;
+
+      case "lifestyle":
+        idBase = "LST";
+        break;
+
+      case "technology":
+        idBase = "TCH";
+        break;
+
+      case "gossip":
+        idBase = "GSP";
+        break;
+
+      case "entertainment":
+        idBase = "ENT";
+        break;
+
+      case "health":
+        idBase = "HLT";
+        break;
+
+      case "travel":
+        idBase = "TRV";
+        break;
+
+      case "inspiration":
+        idBase = "INS";
+        break;
+    }
+    const BLOG_POST_ID = `${idBase}${DATA[CATEGORY].length}`;
+    const BLOG_POST_TITLE = request.body.title.toUpperCase();
+    let content = `<h2>${BLOG_POST_TITLE}</h2>`;
+    const CONTENT_TEXT = `<p>${request.body.content}</p>`;
+    const BLOG_POST_CONTENT = content + CONTENT_TEXT;
+    const BLOG_POST = {
+      id: BLOG_POST_ID,
+      title: BLOG_POST_TITLE,
+      content: BLOG_POST_CONTENT,
+    };
+    DATA[CATEGORY].push(BLOG_POST);
+    routeToBasePage(request, response);
   }
 );
 

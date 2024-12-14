@@ -136,9 +136,9 @@ h3 {
 
 p {
   font-size: 1rem;
-  line-height: 1.4rem;
-  word-spacing: 2px;
-  letter-spacing: 1px;
+  line-height: 1.6rem;
+  word-spacing: 2.1px;
+  letter-spacing: 1.3px;
   max-width: 60ch;
   margin-bottom: 1rem;
 }
@@ -167,9 +167,9 @@ p {
 
   p {
     font-size: 1.1rem;
-    line-height: 1.5rem;
-    word-spacing: 2px;
-    letter-spacing: 1px;
+    line-height: 1.7rem;
+    word-spacing: 2.5px;
+    letter-spacing: 1.5px;
     max-width: 80ch;
   }
 
