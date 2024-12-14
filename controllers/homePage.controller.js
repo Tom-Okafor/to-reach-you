@@ -209,6 +209,52 @@ ROUTER.get("/viewBookmarks", (request, response) => {
   response.send("VIEW BOOKMARKS");
 });
 
+function uploadBlogImage(imageName) {
+  //set up multer storage
+  const STORAGE = multer.diskStorage({
+    destination: "./public/images/blogImages",
+    filename: (request, file, cb) => {
+      profileImageName = `${imageName}.jpg`;
+      cb(null, profileImageName);
+    },
+  });
+
+  //filter uploaded file types
+  const FILE_FILTER = (request, file, cb) => {
+    const ACCEPTABLE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif"];
+    const FILE_EXTENSION = path.extname(file.originalname).toLowerCase();
+    if (ACCEPTABLE_EXTENSIONS.includes(FILE_EXTENSION)) {
+      cb(null, true);
+    } else {
+      cb(
+        new Error(
+          "Invalid File Type! Only .jpg, .jpeg, .png and .gif files are allowed!"
+        ),
+        false
+      );
+    }
+  };
+
+  const UPLOAD = multer({
+    storage: STORAGE,
+    fileFilter: FILE_FILTER,
+  });
+  return UPLOAD;
+}
+
+ROUTER.post(
+  "/sendPost",
+  uploadBlogImage(`blogImage`).single("blogImage"),
+  (request, response) => {
+    response.send("post sent.");
+    if (!request.body.blogImage) {
+      console.log("no image was uploaded.");
+    } else {
+      console.log("image uploaded.");
+    }
+  }
+);
+
 function setProfileImageName() {
   const CURRENT_PROFILE_IMAGE = {
     image: profileImageName,

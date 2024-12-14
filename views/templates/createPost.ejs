@@ -4,7 +4,7 @@
   <body class="createPostBody">
     <div class="wrapper"></div>
     <h2>Create Blog Post</h2>
-    <form action="<%= pageUrl %>/sendPost" method="post">
+    <form action="<%= pageUrl %>/sendPost" method="post" enctype="multipart/form-data">
       <div class="inputBlock">
         <input type="text" name="title" id="title" placeholder="Your Blog Post Title" />
         <p>
